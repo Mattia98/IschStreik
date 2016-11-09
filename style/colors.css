@@ -1,0 +1,16 @@
+header {
+	background-color: #F0F1F1;
+}
+main {
+	background-color: #9AB849;
+}
+nav {
+	background-color: #4DB6AC;
+}
+
+main a:hover {
+	text-shadow: 1px 1px 2px #009688;
+}
+h1, h2, h3, h4, h5, main a {
+	color: #009688;
+}
