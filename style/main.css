@@ -86,7 +86,7 @@ article {
 	z-index: -1;
 }
 header a {
-	color: whitesmoke;
+	color: #9AB849;
 	font-size: 2.5rem;
 	font-weight: bold;
 	text-decoration: none;
@@ -264,4 +264,18 @@ article table td, article table th, form table td, form table th {
 article table th {
 	width: 12ex;
 	text-align: right;
+}
+div.inner_box {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    width: 95%;
+    margin: 2.5%;
+}
+div.outer_box {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    width: 100%;
+    height: 50vw;
 }
