@@ -1,10 +1,10 @@
 <?php
 	require_once 'model/Viewer.class.php';
-	include_once("model/Site.class.php");
+	require_once 'model/Site.class.php';
 
 	//Defining some variables
 	$message = "No messages 4u";
-	$vIDname = "ViewerID_a";
+	$vIDname = "ViewerID";
 	
 	//Doing some thoughts...
 	$firsttime = !isset($_COOKIE[$vIDname]);

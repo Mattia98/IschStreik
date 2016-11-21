@@ -1,5 +1,5 @@
 <?php
-	include_once "model/DB.class.php";
+	include_once "DB.class.php";
 	
 abstract class DBObject {
 	

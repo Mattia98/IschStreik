@@ -1,7 +1,7 @@
 <?php
-include_once "model/DBObject.class.php";
+include_once "DBObject.class.php";
 
-class Viewer extends DBObject {
+class Strike extends DBObject {
 	
 	/* Fields */
 	protected $workersUnion;
@@ -13,7 +13,7 @@ class Viewer extends DBObject {
 	protected $companyId;
 	
 	/* Other configuration */
-	const COLLECTION_NAME = "Strike";
+	const COLLECTION_NAME = "Strikes";
 
 	/* *** Getter & Setter *** */
 

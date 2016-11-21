@@ -1,5 +1,5 @@
 <?php
-include_once "model/DBObject.class.php";
+include_once "DBObject.class.php";
 
 class Viewer extends DBObject {
 	
