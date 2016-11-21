@@ -1,21 +1,16 @@
-<article class="outer_box">
-    <div class="inner_box">
-        <img src="#" alt=""/>
-        <span>Trenitalia</span>
-    </div>
-</article>
-<article class="outer_box">
-    <div class="inner_box">
-        <img src="#" alt=""/>
-        <span>Trenitalia</span>
-    </div>
-</article>
-<article class="outer_box">
-    <div class="inner_box">
-        <img src="#" alt=""/>
-        <span>Trenitalia</span>
-    </div>
-</article>
+
+<div class="box">
+    <img src="media/logos/Trenitalia_logo.svg" alt=""/>
+    <span>Trenitalia</span>
+</div>
+<div class="box">
+    <img src="#" alt=""/>
+    <span>Trenitalia</span>
+</div>
+<div class="box">
+    <img src="#" alt=""/>
+    <span>Trenitalia</span>
+</div>
 <br/>
 <?php
 	if(isset($parse))
