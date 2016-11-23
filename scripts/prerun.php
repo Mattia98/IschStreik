@@ -1,10 +1,17 @@
 <?php
 	require_once 'model/Viewer.class.php';
-	require_once 'model/Site.class.php';
 
 	//Defining some variables
 	$message = "No messages 4u";
 	$vIDname = "ViewerID";
+	
+	//Defining global variables
+	if(isset($_GET["site"]))
+		$GLOBALS["site-name"] = ucfirst($_GET["site"]);
+	else
+		$GLOBALS["site-name"] = "Start";
+	
+	$GLOBALS["views"] = Viewer::getAmount();
 	
 	//Doing some thoughts...
 	$firsttime = !isset($_COOKIE[$vIDname]);
@@ -16,13 +23,6 @@
 	if(isset($_COOKIE[$vIDname])) {
 		$_SESSION["ViewerID"] = $_COOKIE[$vIDname];
 	}
-	
-	//Getting site object and storing it
-	if(isset($_GET["site"]))
-		$GLOBALS["site"] = Site::findByName($_GET["site"]);
-	else
-		$GLOBALS["site"] = Site::findByName("start");
-	$GLOBALS["site-name"] = $GLOBALS["site"]->getPretty_name();
 	
 	//Temporarily disable stat counter
 	//$firsttime = false;
@@ -67,7 +67,7 @@
 			//&& $_SERVER['HTTP_USER_AGENT'] != ""
 			
 			//Temporarily disable check
-			$human = true;
+			//$human = true;
 			
 			if($human) {
 				$viewer = new Viewer($parse);
