@@ -84,6 +84,29 @@ class Viewer extends DBObject {
 		throw new Exception('Not implemented yet.');
 	}
 
+	/* ***** Overridden Methods ***** */
+
+	public function upsert() {
+		$fields = '"userAgent", "os", "osCode", "browser", "browserCode", "device"';
+		$fieldsPDO = ":userAgent, :os, :osCode, :browser, :browserCode, :device";
+		
+		if($this->getId() == 0) {
+			$sql = "INSERT INTO ".static::COLLECTION_NAME
+					."($fields) VALUES ($fieldsPDO)";
+		} else {
+			$sql = "";
+			throw new Exception('Not implemented yet.');
+		}
+		
+		$query = DB::getDB()->prepare($sql);
+		$data = $this->toArray(false);
+		unset($data["timestamp"]);
+		$query->execute($data);
+		
+		// get ID from DB and set it
+		$this->setId(DB::getDB()->lastInsertId(static::COLLECTION_NAME."_id_seq"));
+	}
+
 	/* ***** Static Methods ***** */
 
 	public static function findByPlaygroundID($id) {

@@ -55,6 +55,7 @@
 		</header>
 		<nav>
 		<ul>
+			<li><a href="?site=stats" title="Lorem Ipsum">Stats</a></li>
 			<li><a href="?site=about" title="Lorem Ipsum">About</a></li>
 			<li>
 				<?=

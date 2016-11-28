@@ -70,10 +70,9 @@
 			//$human = true;
 			
 			if($human) {
-				$viewer = new Viewer($parse);
+				$viewer = new Viewer(array("userAgent"=>$_SERVER['HTTP_USER_AGENT'], "os"=>$parse["operating_system"], "osCode"=>$parse["operating_system_name_code"], "browser"=>$parse["browser"], "browserCode"=>$parse["browser_name_code"], "device"=>$parse["simple_operating_platform_string"]));
 				$viewer->upsert();
 				$_SESSION["ViewerID"] = $viewer->getId();
-				//insertViewer($parse["operating_system"], $parse["operating_system_name_code"], $parse["browser"], $parse["browser_name_code"], $parse["simple_operating_platform_string"]);
 			} else {
 				//not...
 			}
