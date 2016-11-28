@@ -121,8 +121,8 @@ abstract class DBObject {
       return $query->fetch();
 	}
 
-	protected static function findBySomething($something, $fieldName) {
-		$sql = "SELECT * FROM ".static::COLLECTION_NAME." WHERE $fieldName = :something";
+	static function findBySomething($something, $fieldName) {
+		$sql = "SELECT * FROM ".static::COLLECTION_NAME." WHERE \"$fieldName\" = :something";
 		$options["something"] = $something;
 		$query = DB::getDB()->prepare($sql);
 		$query->execute($options);
@@ -130,7 +130,7 @@ abstract class DBObject {
 		return $query->fetchAll();
 	}
 	
-	protected static function findBySomethingAmount($something, $fieldName) {
+	static function findBySomethingAmount($something, $fieldName) {
 		$sql = "SELECT count(*) FROM ".static::COLLECTION_NAME." WHERE $fieldName = :something";
 		$options["something"] = $something;
 		$query = DB::getDB()->prepare($sql);

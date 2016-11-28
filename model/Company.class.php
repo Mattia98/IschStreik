@@ -5,9 +5,11 @@ class Company extends DBObject {
 	
 	/* Fields */
 	protected $name;
+	protected $nameCode;
 	protected $website;
 	protected $region;
 	protected $province;
+	protected $guaranteedRoutesUrl;
 	
 	/* Other configuration */
 	const COLLECTION_NAME = "Companies";
@@ -18,6 +20,10 @@ class Company extends DBObject {
 		return $this->name;
 	}
 	
+	public function getNameCode() {
+		return $this->nameCode;
+	}
+
 	public function getWebsite() {
 		return $this->website;
 	}
@@ -30,8 +36,16 @@ class Company extends DBObject {
 		return $this->province;
 	}
 	
+	public function getGuaranteedRoutesUrl() {
+		return $this->guaranteedRoutesUrl;
+	}
+
 	public function setName($value) {
 		$this->name = $value;
+	}
+
+	public function setNameCode($value) {
+		$this->nameCode = $value;
 	}
 	
 	public function setWebsite($value) {
@@ -46,6 +60,10 @@ class Company extends DBObject {
 		$this->province = $value;
 	}
 	
+	public function setGuaranteedRoutesUrl($value) {
+		$this->guaranteedRoutesUrl = $value;
+	}
+
 	/* Virtual getters */
 	
 	public function getSomething() {
