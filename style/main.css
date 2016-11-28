@@ -268,11 +268,9 @@ article table th {
 	text-align: right;
 }
 div.box {
-    /*border-width: 1px;
-    border-style: solid;
-    border-radius: 10px;*/
+    border-bottom: 1px solid gray;
     width: 100%;
-    margin-bottom: 10%;
+    /*margin-bottom: 2%;*/
     height: 21%;
     padding: 2% 0 2% 0;
 }
@@ -299,12 +297,11 @@ div.box {
     color: #fff;
 }
 .box:first-child {
+    /*margin-top: 5%;*/
+}
+.red {
     background-color: #71112e;
-    margin-top: 11%;
 }
-.box:nth-child(2) {
-    background-color: #a7c712;
-}
-.box:nth-child(3) {
+.green {
     background-color: #a7c712;
 }
