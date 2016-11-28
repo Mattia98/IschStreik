@@ -1,14 +1,20 @@
 
 <div class="box">
-    <img src="media/logos/Trenitalia_logo.svg" alt=""/>
+    <div class="imgBox">
+        <img src="media/logos/svg/LogoSAD_NEGATIV.svg" alt=""/>
+    </div>
     <span>Trenitalia</span>
 </div>
 <div class="box">
-    <img src="#" alt=""/>
+    <div class="imgBox">
+        <img src="media/logos/svg/LogoSASA_NEGATIV.svg" alt=""/>
+    </div>
     <span>Trenitalia</span>
 </div>
 <div class="box">
-    <img src="#" alt=""/>
+    <div class="imgBox">
+        <img src="media/logos/svg/LogoTRENITALIA_NEGATIV.svg" alt=""/>
+    </div>
     <span>Trenitalia</span>
 </div>
 <br/>

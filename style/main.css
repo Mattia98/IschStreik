@@ -7,6 +7,7 @@ html {
 body {
 	font-family: Ubuntu, Arial, "Lucida Grande", sans-serif;
 	margin-top: 3.5rem;
+    /*background-image: url(../media/backgrounds/bg-darker.gif);*/
 }
 svg {
 	width: 100%;
@@ -44,7 +45,10 @@ header {
 	
 	text-align: center;
 	
-	box-shadow: 3px 3px 5px #888888;
+	/*box-shadow: 3px 3px 5px #888888;*/
+}
+header img {
+    height: 3.2rem;
 }
 article {
 	background-color: white;
@@ -96,7 +100,7 @@ header a {
 	width: 100%;
 	margin-left: 4rem;
 }
-nav, main {
+nav {
 	position: absolute;
 	box-shadow: 3px 3px 5px #888888;
 }
@@ -141,11 +145,10 @@ nav li div td {
 	border: none;
 }
 main {
+    position: absolute;
 	width: 100%;
 	right: 0;
-	
 	box-sizing: border-box;
-	padding: 1rem;
     height: calc(100% - 3.5rem);
 }
 section {
@@ -265,21 +268,43 @@ article table th {
 	text-align: right;
 }
 div.box {
-    border-width: 1px;
+    /*border-width: 1px;
     border-style: solid;
-    border-radius: 10px;
-    width: 95%;
-    margin: 2.5%;
-    height: 16%;
+    border-radius: 10px;*/
+    width: 100%;
+    margin-bottom: 10%;
+    height: 21%;
     padding: 2% 0 2% 0;
 }
-.box img {
-    height: auto;
-    width:  20%;
-    margin: 2%;
-    vertical-align: middle;
+.imgBox {
+    height: 80%;
+    max-width: 100%;
 }
-.box span {
+.box img {
+    max-height: 90%;
+    height: 100%;
+    max-width: calc(100% - 4%);
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*.box p {
     text-align: center;
-    /*position relative*/
+}*/
+.box span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.box:first-child {
+    background-color: #71112e;
+    margin-top: 11%;
+}
+.box:nth-child(2) {
+    background-color: #a7c712;
+}
+.box:nth-child(3) {
+    background-color: #a7c712;
 }
