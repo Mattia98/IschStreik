@@ -131,7 +131,7 @@ abstract class DBObject {
 	}
 	
 	static function findBySomethingAmount($something, $fieldName) {
-		$sql = "SELECT count(*) FROM ".static::COLLECTION_NAME." WHERE $fieldName = :something";
+		$sql = "SELECT count(*) FROM ".static::COLLECTION_NAME." WHERE \"$fieldName\" = :something";
 		$options["something"] = $something;
 		$query = DB::getDB()->prepare($sql);
 		$query->execute($options);

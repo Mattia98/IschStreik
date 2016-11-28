@@ -1,23 +1,27 @@
+<?php
+    include_once "model/Company.class.php";
+    include_once "model/Strike.class.php";
+    $companies = Company::findAll();
+?>
 
-<div class="box">
-    <div class="imgBox">
-        <img src="media/logos/svg/LogoSAD_NEGATIV.svg" alt=""/>
+<?php for($i=0; $i<count($companies); $i++): ?>
+    <?php
+        $colourClass = "red";
+        if(Strike::findBySomethingAmount($companies[$i]->getId(), "companyId")==0)
+            $colourClass = "green";
+    ?>
+    <a href="?site=company&id=<?= $companies[$i]->getId() ?>">
+    <div class="box <?= $colourClass ?>">
+        <div class="imgBox">
+            <img src="media/logos/companies/<?= $companies[$i]->getNameCode() ?>.svg" alt="<?= $companies[$i]->getNameCode() ?>"/>
+        </div>
+        <span><?= $companies[$i]->getName() ?></span>
     </div>
-    <span>Trenitalia</span>
-</div>
-<div class="box">
-    <div class="imgBox">
-        <img src="media/logos/svg/LogoSASA_NEGATIV.svg" alt=""/>
-    </div>
-    <span>Trenitalia</span>
-</div>
-<div class="box">
-    <div class="imgBox">
-        <img src="media/logos/svg/LogoTRENITALIA_NEGATIV.svg" alt=""/>
-    </div>
-    <span>Trenitalia</span>
-</div>
+    </a>
+<?php endfor; ?>
+
 <br/>
+
 <?php
 	if(isset($parse))
 		var_dump($parse);
