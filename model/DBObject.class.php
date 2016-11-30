@@ -57,7 +57,7 @@ abstract class DBObject {
 		$farray = $this->toArray(false);
 		foreach($farray as $key => $val) {
 			$fields .= ", ";
-			$fields .= $key;
+			$fields .= "\"".$key."\"";
 		}
 		foreach($farray as $key => $val) {
 			$fieldsPDO .= ", :";
@@ -99,6 +99,13 @@ abstract class DBObject {
 
 	/* === Static Methods === */
 
+	public static function clearTable() {
+		$sql = "TRUNCATE ".static::COLLECTION_NAME." RESTART IDENTITY";
+		$query = DB::getDB()->query($sql);
+		$query->setFetchMode(PDO::FETCH_COLUMN, 0);
+ 		return $query->fetch();
+	}
+
 	public static function find($id) {
 		$sql = "SELECT * FROM ".static::COLLECTION_NAME." WHERE id=?";
 		$query = DB::getDB()->prepare($sql);
@@ -117,8 +124,8 @@ abstract class DBObject {
 	public static function getAmount() {
 		$sql = "SELECT count(*) FROM ".static::COLLECTION_NAME;
 		$query = DB::getDB()->query($sql);
-      $query->setFetchMode(PDO::FETCH_COLUMN, 0);
-      return $query->fetch();
+		$query->setFetchMode(PDO::FETCH_COLUMN, 0);
+ 		return $query->fetch();
 	}
 
 	static function findBySomething($something, $fieldName) {

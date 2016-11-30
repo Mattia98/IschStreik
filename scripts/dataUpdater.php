@@ -1,6 +1,6 @@
 <?php
 	echo "===Data updater script===\n";
-	//echo date();
+	echo date("r");
 	echo "\n";
 	
 	$feedURL = 'http://scioperi.mit.gov.it/mit2/public/scioperi/rss';
@@ -33,20 +33,39 @@
 	}
 	echo "done.\n";
 	
+	echo "Processing data...\n";
+	include_once '../model/Company.class.php';
+	$companyObj = Company::findAll();
+
 	include_once '../model/Strike.class.php';
 	$strikes = array();
 	for($i=0; $i<count($array); $i++) {
 		$startDate = explode(" ", $array[$i]["title"], 4)[2];
+		$companyId = 0;
+		for($j=0; $j<count($companyObj); $j++) {
+			if(strpos(strtolower($array[$i]["description"]["Categoria interessata"]), $companyObj[$j]->getNameCode()) !== false)
+				$companyId = $companyObj[$j]->getId();break;
+		}
 		$strikes[] = new Strike(array(
 					"workersUnion" => $array[$i]["description"]["Sindacati"],
 					"startDate" => $startDate,
 					"endDate" => $array[$i]["description"]["Data fine"],
 					"region" => $array[$i]["description"]["Regione"],
 					"province" => $array[$i]["description"]["Provincia"],
-					"description" => $array[$i]["description"]["Categoria interessata"]
+					"description" => $array[$i]["description"]["Categoria interessata"],
+					"companyId" => $companyId
 				));
 	}
+	echo "done.\n";
+
+	/* Insertion Phase */
+	echo "Inserting data to DB...\n";
+	Strike::clearTable();
+	for($i=0; $i<count($strikes); $i++) {
+		$strikes[$i]->upsert();
+	}
+	echo "done.\n";
 	
-	print_r($strikes);
+	//print_r($strikes);
 	
 ?>
