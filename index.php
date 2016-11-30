@@ -51,7 +51,7 @@
 	<body>
 		<header>
 			<div id="sandwitch"><img src="./media/sandwitch.svg" alt="MENU"></div>
-			<a href="/">IschStreik?</a>
+			<img src="media/logos/LOGO_ISCHSTREIK.svg"/>
 		</header>
 		<nav>
 		<ul>
