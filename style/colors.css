@@ -4,7 +4,7 @@ header {
 main {
 	/*background-color: #9AB849;*/
 }
-nav {
+nav, .green {
 	background-color: #a7c712;
 }
 
@@ -13,4 +13,7 @@ main a:hover {
 }
 h1, h2, h3, h4, h5, main a {
 	color: #9AB849;
+}
+.red {
+    background-color: #71112e;
 }

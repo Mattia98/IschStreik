@@ -13,10 +13,11 @@
     <a href="?site=company&id=<?= $companies[$i]->getId() ?>">
     <div class="box <?= $colourClass ?>">
         <div class="imgBox">
-            <img src="media/logos/companies/<?= $companies[$i]->getNameCode() ?>.svg" alt="<?= $companies[$i]->getNameCode() ?>"/>
+            <img class="logo" src="media/logos/companies/<?= $companies[$i]->getNameCode() ?>.svg" alt="<?= $companies[$i]->getNameCode() ?>"/>
         </div>
         <span><?= $companies[$i]->getName() ?></span>
     </div>
+    <div class="separatorDiv"></div>
     </a>
 <?php endfor; ?>
 
