@@ -17,20 +17,23 @@
 		<!--OpenGraph data-->
 		<meta property="og:title" content="Seitenname"	/>
 		<meta property="og:site_name" content="IschStreik?" />
-		<meta property="og:image" content="./media/favicon/512.png" />
+		<meta property="og:image" content="media/icons/favicon/512.png" />
 		<meta property="og:description" content="desc" />
 		
 		<!--Android meta-tags-->
 		<meta name="theme-color" content="#009688" />
-		<link rel="icon" sizes="128x128" href="./media/favicon/128.png" />
-		<link rel="icon" sizes="256x256" href="./media/favicon/256.png" />
+		<link rel="icon" sizes="64x64" href="media/icons/favicon/64.png" />
+		<link rel="icon" sizes="128x128" href="media/icons/favicon/128.png" />
+		<link rel="icon" sizes="256x256" href="media/icons/favicon/256.png" />
+		<link rel="icon" sizes="512x512" href="media/icons/favicon/512.png" />
 		<link rel="manifest" href="data/manifest.json" />
 		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 		
 		<!--Style-->
-		<link rel="stylesheet" type="text/css" href="./style/main.css" />
-		<link rel="stylesheet" type="text/css" href="./style/colors.css" />
-		<link rel="icon" href="/media/favicon/128.png" type="image/png" />
+		<link rel="stylesheet" type="text/css" href="style/main.css" />
+		<link rel="stylesheet" type="text/css" href="style/colors.css" />
+		<link rel="icon" href="favicon.png" type="image/png" />
+		<link rel="icon" href="media/icons/favicon/favicon.svg" type="image/svg+xml" />
 		<link href='//fonts.googleapis.com/css?family=Ubuntu:400,700,400italic' rel='stylesheet' type='text/css' />
 
 		<!--GPlus-->
