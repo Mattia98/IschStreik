@@ -3,7 +3,7 @@
     include_once "model/Strike.class.php";
     $companies = Company::findAll();
 ?>
-
+<div class="box-container">
 <?php for($i=0; $i<count($companies); $i++): ?>
     <?php
         $colourClass = "red";
@@ -20,7 +20,7 @@
     <div class="separatorDiv"></div>
     </a>
 <?php endfor; ?>
-
+</div>
 <br/>
 
 <?php

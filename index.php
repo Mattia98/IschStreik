@@ -53,8 +53,10 @@
 	</head>
 	<body>
 		<header>
-			<div id="sandwitch"><img src="./media/sandwitch.svg" alt="MENU"></div>
-			<img src="media/logos/LOGO_ISCHSTREIK.svg"/>
+			<div id="sandwitch"><img src="./media/hamburgerGRUEN.svg" alt="MENU"></div>
+			<a href="/">
+                <img src="media/logos/LOGO_ISCHSTREIK.svg"/>
+            </a>
 		</header>
 		<nav>
 		<ul>

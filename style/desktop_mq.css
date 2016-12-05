@@ -13,3 +13,26 @@
 	opacity: 1 !important;
 
 }*/
+/*div.box {
+    width: 20rem !important;
+    height: 20rem !important;
+    display: inline-block !important;
+}*/
+.box-container {
+    text-align: center;
+}
+div.box {
+    width: 20rem !important;
+    height: 20rem !important;
+    max-width: 20rem !important;
+    max-height: 20rem !important;
+    margin: 1rem !important;
+}
+.separatorDiv {
+    width: 20rem !important;
+    height: 0.6rem;
+    margin: -1.6rem 0 0 1rem !important;
+}
+.box-container a {
+    display: inline-block;
+}
