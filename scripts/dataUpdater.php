@@ -42,9 +42,12 @@
 	for($i=0; $i<count($array); $i++) {
 		$startDate = explode(" ", $array[$i]["title"], 4)[2];
 		$companyId = 0;
-		for($j=0; $j<count($companyObj); $j++) {
-			if(strpos(strtolower($array[$i]["description"]["Categoria interessata"]), $companyObj[$j]->getNameCode()) !== false)
-				$companyId = $companyObj[$j]->getId();break;
+		for($j=0; $j<6; $j++) {
+			if(strpos(strtolower($array[$i]["description"]["Categoria interessata"]), $companyObj[$j]->getNameCode()) !== false) {
+				$companyId = $companyObj[$j]->getId();
+				break;
+				echo strtolower($array[$i]["description"]["Categoria interessata"]);
+			}
 		}
 		$strikes[] = new Strike(array(
 					"workersUnion" => $array[$i]["description"]["Sindacati"],
