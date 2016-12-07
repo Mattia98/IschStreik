@@ -9,7 +9,7 @@
 	if(isset($_GET["site"]))
 		$GLOBALS["site-name"] = ucfirst($_GET["site"]);
 	else
-		$GLOBALS["site-name"] = "Start";
+		$GLOBALS["site-name"] = "Home";
 	
 	$GLOBALS["views"] = Viewer::getAmount();
 	
