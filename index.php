@@ -37,7 +37,7 @@
 		<link href='//fonts.googleapis.com/css?family=Ubuntu:400,700,400italic' rel='stylesheet' type='text/css' />
 
 		<!--GPlus-->
-		<link rel="canonical" href="https://ischstreik.duckdns.org/" />
+		<link rel="canonical" href="https://sciopero.news/" />
 		<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 		
 		<!--Sandwitch script-->
