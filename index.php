@@ -15,10 +15,10 @@
 		<meta name="keywords" content="IschStreik, Streik" />
 		
 		<!--OpenGraph data-->
-		<meta property="og:title" content="Seitenname"	/>
+		<meta property="og:title" content="<?= $GLOBALS["site-name"] ?>"	/>
 		<meta property="og:site_name" content="IschStreik?" />
-		<meta property="og:image" content="media/icons/favicon/512.png" />
-		<meta property="og:description" content="desc" />
+		<meta property="og:image" content="/media/icons/favicon/512.png" />
+		<meta property="og:description" content="<?= $GLOBALS["site-name"] ?>" />
 		
 		<!--Android meta-tags-->
 		<meta name="theme-color" content="#a7c712" />
