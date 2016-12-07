@@ -127,13 +127,14 @@ nav {
 nav a:not([rel="license"]) {
 	color: black;
 }
-nav a:not([rel="license"])::before {
+/*nav a:not([rel="license"])::before {
 	content: "► ";
-}
+}*/
 nav ul {
 	list-style: none;
 	padding: 0.5rem;
 	margin: 0;
+    margin-left: 1.5rem;
 }
 nav li {
 	font-size: 1.5rem;
@@ -311,4 +312,7 @@ div.box {
 .box-container {
     width: 100%;
     height: 100%;
+}
+.material-icons {
+    margin-top: 1rem;
 }

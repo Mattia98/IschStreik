@@ -42,7 +42,8 @@
 		
 		<!--Sandwitch script-->
 		<script type="text/javascript" src="js/sandwitch.js" async defer></script>
-		
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 		<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
 		<script type="text/javascript">
 		    window.cookieconsent_options = {"message":"This website uses cookies and whoever thought up this law is an idiot","dismiss":"Got it!","learnMore":"More info","link":null,"theme":"dark-floating"};
@@ -60,9 +61,9 @@
 		</header>
 		<nav>
 		<ul>
-			<li><a href="?site=stats" title="Lorem Ipsum">Stats</a></li>
-			<li><a href="?site=feedback" title="Lorem Ipsum">Feedback</a></li>
-			<li><a href="?site=about" title="Lorem Ipsum">About</a></li>
+			<li><i class="material-icons">timeline</i> <a href="?site=stats" title="Lorem Ipsum">Stats</a></li>
+			<li><i class="material-icons">feedback</i> <a href="?site=feedback" title="Lorem Ipsum">Feedback</a></li>
+			<li><i class="material-icons">info</i> <a href="?site=about" title="Lorem Ipsum">About</a></li>
 			<li>
 				<?=
 					$GLOBALS["views"]." Views"
