@@ -1,5 +1,5 @@
 <?php
-	require_once 'model/Viewer.class.php';
+	include_once("../model/Viewer.class.php");
 
 	//Defining some variables
 	$message = "No messages 4u";

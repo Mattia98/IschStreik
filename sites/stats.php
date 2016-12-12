@@ -1,6 +1,5 @@
 <?php
-	//require_once 'scripts/database.php';
-	require_once 'scripts/chartPrinter.php';
+	include_once "../scripts/chartPrinter.php";
 ?>
 <p>Die Website hat bist jetzt <?= Viewer::getAmount(); ?> Besucher gezählt. Benutzer werden dank Cookies wiedererkannt.<p>
 <p>Die Diagramme beziehen sich auf den Besuchen der letzten 14 Tagen. Die Cookies verfallen nach 14 Tagen.</p>
@@ -29,10 +28,10 @@ foreach($viewers as $viewer): ?>
 		<tr><th>Timestamp</th><td><?= $viewer->getPrettyTimestamp(); ?></td></tr>
 		<tr><th>User-agent</th><td><?= $viewer->getUserAgent(); ?></td></tr>
 		<?php if(!empty($viewer->getBrowser())): ?>
-			<tr><th>Browser</th><td><img src="media/stats_icons/browser/<?= $viewer->getBrowserCode(); ?>.png" alt="<?= $viewer->getBrowserCode(); ?>" style="height: 1em; width: 1em;"><?= $viewer->getBrowser(); ?></td></tr>
+			<tr><th>Browser</th><td><img src="../media/stats_icons/browser/<?= $viewer->getBrowserCode(); ?>.png" alt="<?= $viewer->getBrowserCode(); ?>" style="height: 1em; width: 1em;"><?= $viewer->getBrowser(); ?></td></tr>
 		<?php endif; ?>
 		<?php if(!empty($viewer->getOs())): ?>
-			<tr><th>OS</th><td><img src="media/stats_icons/os/<?= $viewer->getOsCode(); ?>.png" alt="<?= $viewer->getOsCode(); ?>" style="height: 1em; width: 1em;"><?= $viewer->getOs(); ?></td></tr>
+			<tr><th>OS</th><td><img src="../media/stats_icons/os/<?= $viewer->getOsCode(); ?>.png" alt="<?= $viewer->getOsCode(); ?>" style="height: 1em; width: 1em;"><?= $viewer->getOs(); ?></td></tr>
 		<?php endif; ?>
 		<?php if(!empty($viewer->getDevice())): ?>
 			<tr><th>Device</th><td><?= $viewer->getDevice(); ?></td></tr>

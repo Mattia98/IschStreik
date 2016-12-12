@@ -1,8 +1,8 @@
 <?php
-    include_once "model/Company.class.php";
+    include_once "../model/Company.class.php";
     $company = Company::find($_GET["id"]);
 
-    include_once "model/Strike.class.php";
+    include_once "../model/Strike.class.php";
     $strikes = Strike::findBySomething($_GET["id"], "companyId");
 ?>
 
