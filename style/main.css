@@ -314,5 +314,18 @@ div.box {
     height: 100%;
 }
 .material-icons {
-    /*margin-top: 1rem;*/
+    position: absolute;
+    margin-top: 0.7rem;
+    margin-left: -2rem;
+    /*margin-right: 1rem;*/
+    /*margin-right: 1rem;*/
+    /*line-height: 2.5;*/
+    /*font-size: 28px;*/
+}
+li a {
+    /*line-height: 1.5;*/
+    margin-left: 2rem;
+}
+li {
+    line-height: 2;
 }

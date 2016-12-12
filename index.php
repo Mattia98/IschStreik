@@ -61,9 +61,9 @@
 		</header>
 		<nav>
 		<ul>
-			<li><i class="material-icons">timeline</i> <a href="?site=stats" title="Lorem Ipsum">Stats</a></li>
-			<li><i class="material-icons">feedback</i> <a href="?site=feedback" title="Lorem Ipsum">Feedback</a></li>
-			<li><i class="material-icons">info</i> <a href="?site=about" title="Lorem Ipsum">About</a></li>
+			<li><a href="?site=stats" title="Lorem Ipsum"><i class="material-icons">timeline</i>Stats</a></li>
+			<li><a href="?site=feedback" title="Lorem Ipsum"><i class="material-icons">feedback</i>Feedback</a></li>
+			<li><a href="?site=about" title="Lorem Ipsum"><i class="material-icons">info</i>About</a></li>
 			<li>&nbsp;</li>
 			<li>
 				<?=
