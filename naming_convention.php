@@ -15,4 +15,8 @@
 		other_scripts.php
 		a-site.php
 		css_file.css
+
+    Naming convention for CSS:
+        a-class
+        an-id
 */

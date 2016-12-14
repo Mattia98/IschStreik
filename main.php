@@ -98,5 +98,25 @@
 			?>
 		</main>
 		<div id="curtain" class="curtain-open"></div>
+        <div id="language-popup" class="language-popup-closed">
+            <a>
+                <figure>
+                    <img src="../media/flags/en.svg"/>
+                    <figcaption>EN</figcaption>
+                </figure>
+            </a>
+            <a>
+                <figure>
+                    <img src="../media/flags/it.svg"/>
+                    <figcaption>IT</figcaption>
+                </figure>
+            </a>
+            <a>
+                <figure>
+                    <img src="../media/flags/de.svg"/>
+                    <figcaption>DE</figcaption>
+                </figure>
+            </a>
+        </div>
 	</body>
 </html>
