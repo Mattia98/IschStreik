@@ -58,16 +58,13 @@
 			<a href="/">
                 <img src="../media/logos/<?= LANG ?>.svg" alt="LOGO <?= LANG ?>" />
             </a>
-			
+			<i id="language-selector" class="material-icons">language</i>
 		</header>
 		<nav>
 		<ul>
 			<li><a href="?site=stats" title="Lorem Ipsum"><i class="material-icons">timeline</i>Stats</a></li>
 			<li><a href="?site=feedback" title="Lorem Ipsum"><i class="material-icons">feedback</i>Feedback</a></li>
 			<li><a href="?site=about" title="Lorem Ipsum"><i class="material-icons">info</i>About</a></li>
-			<li><a href="../de" title="Lorem Ipsum"><i class="material-icons">language</i>DE</a></li>
-			<li><a href="../it" title="Lorem Ipsum"><i class="material-icons">language</i>IT</a></li>
-			<li><a href="../en" title="Lorem Ipsum"><i class="material-icons">language</i>EN</a></li>
 			<li>&nbsp;</li>
 			<li>
 				<?=
@@ -99,19 +96,19 @@
 		</main>
 		<div id="curtain" class="curtain-open"></div>
         <div id="language-popup" class="language-popup-closed">
-            <a>
+            <a href="../en" style="text-decoration: none;">
                 <figure>
                     <img src="../media/flags/en.svg"/>
                     <figcaption>EN</figcaption>
                 </figure>
             </a>
-            <a>
+            <a href="../it" style="text-decoration: none;">
                 <figure>
                     <img src="../media/flags/it.svg"/>
                     <figcaption>IT</figcaption>
                 </figure>
             </a>
-            <a>
+            <a href="../de" style="text-decoration: none;">
                 <figure>
                     <img src="../media/flags/de.svg"/>
                     <figcaption>DE</figcaption>
