@@ -1,4 +1,4 @@
 <?php
-    const LANG = "en_UK";
+    const LANG = "en_GB";
     include "../main.php";
 ?>

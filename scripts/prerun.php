@@ -13,6 +13,12 @@
 	
 	$GLOBALS["views"] = Viewer::getAmount();
 	
+	//Setting up translation
+	putenv('LANG='.LANG);
+	setlocale(LC_ALL, LANG);
+	bindtextdomain("is", "../locale");
+	textdomain("is");
+
 	//Doing some thoughts...
 	$firsttime = !isset($_COOKIE[$vIDname]);
 	if(!isset($_SESSION["login"])) {

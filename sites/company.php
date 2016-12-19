@@ -6,15 +6,15 @@
     $strikes = Strike::findBySomething($_GET["id"], "companyId");
 ?>
 
-<p><a href="<?= $company->getWebsite() ?>"><b>Name:</b></a> <i><?= $company->getName() ?></i></p>
-<p><b>Region:</b> <i><?= $company->getRegion() ?></i></p>
-<p><b>Province:</b> <i><?= $company->getProvince() ?></i></p>
-<p><a href="<?= $company->getGuaranteedRoutesUrl() ?>"><b>Guaranteed Routes</b></a></p>
+<p><a href="<?= $company->getWebsite() ?>"><i><?= $company->getName() ?></i></a></p>
+<p><b><?= _("region") ?>:</b> <i><?= $company->getRegion() ?></i></p>
+<p><b><?= _("province") ?>:</b> <i><?= $company->getProvince() ?></i></p>
+<p><a href="<?= $company->getGuaranteedRoutesUrl() ?>"><b><?= _("guaranteed_routes") ?></b></a></p>
 <br />
 
 <table border="1">
     <tr>
-        <th>WorkersUnion</th><th>StartDate</th><th>EndDate</th><th>Region</th><th>Province</th><th>Description</th>
+        <th><?= _("workers_union") ?></th><th><?= _("start_date") ?></th><th><?= _("end_date") ?></th><th><?= _("region") ?></th><th><?= _("province") ?></th><th><?= _("description") ?></th>
     </tr>
 <?php for($i=0; $i<count($strikes); $i++): ?>
     <tr>
