@@ -4,6 +4,7 @@
 	const init = () => {
 		$('#sandwitch').addEventListener('click', sandwitch);
 		$('#language-selector').addEventListener('click', languagePopup);
+		$('#curtain').addEventListener('click', curtain);
 	};
 	
 	const sandwitch = () => {
@@ -11,10 +12,12 @@
 			$('nav').setAttribute('class', 'nav-closed');
 			$('#curtain').setAttribute('class', 'curtain-open');
 			$('body').setAttribute('style', '');
+			$('main').setAttribute('style', '');
 		} else {
 			$('nav').setAttribute('class', 'nav-open');
 			$('#curtain').setAttribute('class', 'curtain-closed');
 			$('body').setAttribute('style', 'overflow:hidden');
+			$('main').setAttribute('style', 'filter: blur(5px);');
 		}
 	};
 
@@ -29,6 +32,21 @@
 			$('#curtain').setAttribute('class', 'curtain-closed');
 			$('body').setAttribute('style', 'overflow:hidden');
 			$('main').setAttribute('style', 'filter: blur(5px);');
+		}
+	};
+
+	const curtain = () => {
+		if (isLangPopupOpen()) {
+			$('#language-popup').setAttribute('class', 'language-popup-closed');
+			$('#curtain').setAttribute('class', 'curtain-open');
+			$('body').setAttribute('style', '');
+			$('main').setAttribute('style', '');
+		}
+		if (isNavOpen()) {
+			$('nav').setAttribute('class', 'nav-closed');
+			$('#curtain').setAttribute('class', 'curtain-open');
+			$('body').setAttribute('style', '');
+			$('main').setAttribute('style', '');
 		}
 	};
 	
