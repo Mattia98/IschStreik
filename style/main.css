@@ -331,9 +331,9 @@ li a {
 li {
     line-height: 2;
 }
-.language-popup-closed {
+/*.language-popup-closed {
     display: none;
-}
+}*/
 .language-popup-opened {
     
 }
@@ -359,5 +359,10 @@ li {
     height: 3rem;
     width: auto;
     -webkit-clip-path: circle(30.0% at 50% 50%);
-    clip-path: circle(50.0% at 50% 50%);
+    clip-path: circle(30.0% at 50% 50%);
+}
+.blur {/*muss main zugewiesen werden*/
+    filter: blur(5px);
+    overflow-x: hidden;
+    /*overflow-y: auto;*/
 }

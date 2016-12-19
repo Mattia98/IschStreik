@@ -36,3 +36,8 @@ div.box {
 .box-container a {
     display: inline-block;
 }
+#language-popup {
+    margin-left: -15% !important;
+    height: 6rem !important;
+    width: 30% !important;
+}
