@@ -6,19 +6,36 @@
     $strikes = Strike::findBySomething($_GET["id"], "companyId");
 ?>
 
-<p><a href="<?= $company->getWebsite() ?>"><i><?= $company->getName() ?></i></a></p>
-<p><b><?= _("region") ?>:</b> <i><?= $company->getRegion() ?></i></p>
-<p><b><?= _("province") ?>:</b> <i><?= $company->getProvince() ?></i></p>
-<p><a href="<?= $company->getGuaranteedRoutesUrl() ?>"><b><?= _("guaranteed_routes") ?></b></a></p>
-<br />
+<div class="company-logo-div">
+    <a href="<?= $company->getWebsite() ?>">
+        <img src="../media/logos/companies/<?= $company->getNameCode() ?>.svg" alt="<?= $company->getNameCode() ?>" />
+    </a>
+</div>
 
-<table border="1">
-    <tr>
-        <th><?= _("workers_union") ?></th><th><?= _("start_date") ?></th><th><?= _("end_date") ?></th><th><?= _("region") ?></th><th><?= _("province") ?></th><th><?= _("description") ?></th>
-    </tr>
 <?php for($i=0; $i<count($strikes); $i++): ?>
-    <tr>
-        <td><?= $strikes[$i]->getWorkersUnion() ?></td><td><?= $strikes[$i]->getStartDate() ?></td><td><?= $strikes[$i]->getEndDate() ?></td><td><?= $strikes[$i]->getRegion() ?></td><td><?= $strikes[$i]->getProvince() ?></td><td><?= $strikes[$i]->getDescription() ?></td>
-    </tr>
+<div class="strike-box">
+    <div id="content-div">
+        <p id="when-where-tag">Wann:</p>
+        <p><?= $strikes[$i]->getStartDate() ?></p>
+        <p><?= $strikes[$i]->getEndDate() ?></p>
+    </div>
+    <div class="first-separator-div"></div>
+    <div id="content-div">
+        <p  id="when-where-tag">Wo:</p>
+        <p><?= $strikes[$i]->getRegion() ?></p>
+    </div>
+    <div>
+    <div class="first-separator-div"></div>
+    <div id="content-div">
+        <p  id="when-where-tag">Wo:</p>
+        <p><?= $strikes[$i]->getProvince() ?></p>
+    </div>
+    <div class="first-separator-div"></div>
+    <div id="content-div">
+        <p  id="when-where-tag">Wo:</p>
+        <p><?= $strikes[$i]->getDescription() ?></p>
+    </div>
+    </div>
+    <div class="second-separator-div"></div>
+</div>
 <?php endfor; ?>
-</table>

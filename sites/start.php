@@ -17,7 +17,7 @@
         </div>
         <span><?= $companies[$i]->getName() ?></span>
     </div>
-    <div class="separatorDiv"></div>
+    <div class="separator-div"></div>
     </a>
 <?php endfor; ?>
 </div>

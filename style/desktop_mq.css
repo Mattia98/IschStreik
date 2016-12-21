@@ -28,10 +28,11 @@ div.box {
     max-height: 20rem !important;
     margin: 1rem !important;
 }
-.separatorDiv {
+.separator-div {
     width: 20rem !important;
     height: 0.6rem;
-    margin: -1.6rem 0 0 1rem !important;
+    margin-top: -1.6rem !important;
+    margin-left: 1rem !important;
 }
 .box-container a {
     display: inline-block;
