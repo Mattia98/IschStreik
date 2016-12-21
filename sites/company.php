@@ -15,24 +15,24 @@
 <?php for($i=0; $i<count($strikes); $i++): ?>
 <div class="strike-box">
     <div id="content-div">
-        <p id="when-where-tag">Wann:</p>
+        <p id="when-where-tag"><?= _("date") ?>:</p>
         <p><?= $strikes[$i]->getStartDate() ?></p>
         <p><?= $strikes[$i]->getEndDate() ?></p>
     </div>
     <div class="first-separator-div"></div>
     <div id="content-div">
-        <p  id="when-where-tag">Wo:</p>
+        <p  id="when-where-tag"><?= _("region") ?>:</p>
         <p><?= $strikes[$i]->getRegion() ?></p>
     </div>
     <div>
     <div class="first-separator-div"></div>
     <div id="content-div">
-        <p  id="when-where-tag">Wo:</p>
+        <p  id="when-where-tag"><?= _("province") ?>:</p>
         <p><?= $strikes[$i]->getProvince() ?></p>
     </div>
     <div class="first-separator-div"></div>
     <div id="content-div">
-        <p  id="when-where-tag">Wo:</p>
+        <p  id="when-where-tag"><?= _("description") ?>:</p>
         <p><?= $strikes[$i]->getDescription() ?></p>
     </div>
     </div>

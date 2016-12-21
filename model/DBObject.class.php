@@ -157,6 +157,14 @@ abstract class DBObject {
 		$query->setFetchMode(PDO::FETCH_ASSOC);
 		return $query->fetchAll();
 	}
+
+	public static function getListByColumn($column) {
+		$sql = "SELECT DISTINCT $column AS values FROM ".static::COLLECTION_NAME;
+		$query = DB::getDB()->prepare($sql);
+		$query->execute();
+		$query->setFetchMode(PDO::FETCH_COLUMN, 0);
+		return $query->fetchAll();
+	}
 	
 	/* === Pagination === */
 	public static function findByPage($recordsPerPage, $page) {

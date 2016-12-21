@@ -261,10 +261,6 @@ table.invisible, table.invisible td {
 table.invisible td::after {
 	content: "  ";
 }
-label {
-	text-align: right;
-	display: block;
-}
 article table td, article table th, form table td, form table th {
 	border: 5px solid transparent;
 }

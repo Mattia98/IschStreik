@@ -72,12 +72,12 @@ class Company extends DBObject {
 
 	/* ***** Static Methods ***** */
 
-	public static function findByPlaygroundID($id) {
-		return static::findBySomething($id, "playground_id");
+	public static function getRegions() {
+		return static::getListByColumn("region");
 	}
-	
-	public static function findByPlaygroundIDAmount($id) {
-		return static::findBySomethingAmount($id, "playground_id");
-	} 
+
+	public static function findByRegion($region) {
+		return static::findBySomething($region, "region");
+	}
 }
 ?>

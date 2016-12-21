@@ -2,7 +2,30 @@
     include_once("../model/Company.class.php");
     include_once("../model/Strike.class.php");
     $companies = Company::findAll();
+    
+    $region = "";
+    if(!isset($_GET["region"]))
+    	$companies = Company::findAll();
+    else {
+    	$companies = Company::findByRegion($_GET["region"]);
+    	$region = $_GET["region"];
+    }
+    
+    $regions = Company::getRegions();
 ?>
+
+<div style="padding-left: 1rem;">
+	<form method="GET" action="./" >
+		<label for="region"><?= _("region").":" ?></label>
+		<select  name="region">
+			<?php for($i=0; $i<count($regions); $i++): ?>
+			<option <?= ($region == $regions[$i]) ? "selected" : "" ?>><?= $regions[$i] ?></option>
+			<?php endfor; ?>
+		</select>
+		<input type="submit" value="<?= _("search") ?>" />
+	</form>
+</div>
+
 <div class="box-container">
 <?php for($i=0; $i<count($companies); $i++): ?>
     <?php
@@ -21,9 +44,3 @@
     </a>
 <?php endfor; ?>
 </div>
-<br/>
-
-<?php
-	if(isset($parse))
-		var_dump($parse);
-?>

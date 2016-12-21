@@ -55,7 +55,7 @@
 	<body>
 		<header>
 			<div id="sandwitch"><img src="../media/sandwitch.svg" alt="MENU"></div>
-			<a href="/">
+			<a href="./">
                 <img src="../media/logos/<?= LANG ?>.svg" alt="LOGO <?= LANG ?>" />
             </a>
 			<i id="language-selector" class="material-icons">language</i>
