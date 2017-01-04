@@ -7,6 +7,7 @@ html {
 body {
 	font-family: Ubuntu, Arial, "Lucida Grande", sans-serif;
 	margin-top: 3.5rem;
+    color: #333;
     /*background-image: url(../media/backgrounds/bg-darker.gif);*/
 }
 svg {
@@ -188,7 +189,7 @@ button, input[type="submit"], input[type="file"], input[type="button"], a.button
 	background-color: white;
 	border: 1px solid white;
 	border-radius: 1px;
-	box-shadow: 1px 1px 5px #888888;
+	/*box-shadow: 1px 1px 5px #888888;*/
 	margin: 8px 8;
 	padding: 8px 8px;
 	
@@ -417,4 +418,29 @@ li {
     height: 0.6rem;
     background-color: rgba(0,0,0,0.35);
     margin-top: -0.6rem;
+}
+#dropdown-menu {
+    display: flex;
+    margin-bottom: -1rem;
+}
+#dropdown-menu form {
+    margin: auto;
+}
+#dropdown-menu select {
+    background-color: #a7c712;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+#dropdown-menu input {
+    background-color: #a7c712;
+    margin-left: -0.1rem;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+#dropdown-menu select, #dropdown-menu input {
+    border: 1px solid transparent;
+    color: #fff;
+}
+#dropdown-menu option {
+    background-color: #a7c712;
 }

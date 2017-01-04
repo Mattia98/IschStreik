@@ -14,7 +14,7 @@
     $regions = Company::getRegions();
 ?>
 
-<div style="padding-left: 1rem;">
+<div id="dropdown-menu">
 	<form method="GET" action="./" >
 		<label for="region"><?= _("region").":" ?></label>
 		<select  name="region">
