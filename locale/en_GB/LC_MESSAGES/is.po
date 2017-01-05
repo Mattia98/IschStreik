@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: IschStreik\n"
 "POT-Creation-Date: 2016-12-19 08:50+0100\n"
-"PO-Revision-Date: 2016-12-19 08:50+0100\n"
+"PO-Revision-Date: 2017-01-05 12:03+0100\n"
 "Last-Translator: Mattia Dorigatti <io.mattia98@gmail.com>\n"
 "Language-Team: \n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-Basepath: ../../..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -20,31 +20,31 @@ msgstr "IsStrike?"
 
 #: sites/company.php:10 sites/company.php:17
 msgid "region"
-msgstr ""
+msgstr "Region"
 
 #: sites/company.php:11 sites/company.php:17
 msgid "province"
-msgstr ""
+msgstr "Province"
 
 #: sites/company.php:12
 msgid "guaranteed_routes"
-msgstr ""
+msgstr "Guaranteed routes"
 
 #: sites/company.php:17
 msgid "workers_union"
-msgstr ""
+msgstr "Workers union"
 
 #: sites/company.php:17
 msgid "start_date"
-msgstr ""
+msgstr "Start"
 
 #: sites/company.php:17
 msgid "end_date"
-msgstr ""
+msgstr "End"
 
 #: sites/company.php:17
 msgid "description"
-msgstr ""
+msgstr "Description"
 
 #~ msgid "test"
 #~ msgstr "Testicus"
