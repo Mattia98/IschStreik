@@ -35,7 +35,8 @@
 		<link rel="icon" href="../favicon.png" type="image/png" />
 		<link rel="icon" href="../media/icons/favicon/favicon.svg" type="image/svg+xml" />
 		<link href='//fonts.googleapis.com/css?family=Ubuntu:400,700,400italic' rel='stylesheet' type='text/css' />
-		<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Pompiere" rel="stylesheet" />
 
 		<!--GPlus-->
 		<link rel="canonical" href="https://sciopero.news/" />

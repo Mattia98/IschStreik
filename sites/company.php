@@ -11,14 +11,9 @@
         <img src="../media/logos/companies/<?= $company->getNameCode() ?>.svg" alt="<?= $company->getNameCode() ?>" />
     </a>
 </div>
-<!--<?php
-    $guaranteed_routes='<?= _("guaranteed_routes") ?>';
-    $guaranteed_routes_url='<?= $strikes[$i]->getGuaranteedRoutesUrl() ?>';
-    echo'<div id="guarenteed-routes-div">
-        <p id="when-where-tag">'.guaranteed_routes.':</p>
-        <a>'.guaranteed_routes_url.'</a>
-    </div>';
-?>-->
+<div id="guarenteed-routes-div">
+    <a href="#">Guaranteed routes</a>
+</div>
 <?php for($i=0; $i<count($strikes); $i++): ?>
 <div class="strike-box">
     <div id="content-div">
