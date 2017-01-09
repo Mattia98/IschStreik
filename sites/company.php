@@ -34,6 +34,11 @@
     </div>
     <div class="first-separator-div"></div>
     <div id="content-div">
+        <p id="when-where-tag"><?= _("timespan") ?>:</p>
+        <p><?= $strikes[$i]->getTimespan() ?></p>
+    </div>
+    <div class="first-separator-div"></div>
+    <div id="content-div">
         <p  id="when-where-tag"><?= _("description") ?>:</p>
         <p><?= $strikes[$i]->getDescription() ?></p>
     </div>

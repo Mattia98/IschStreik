@@ -7,6 +7,7 @@ class Strike extends DBObject {
 	protected $workersUnion;
 	protected $startDate;
 	protected $endDate;
+	protected $timespan;
 	protected $region;
 	protected $province;
 	protected $description;
@@ -27,6 +28,10 @@ class Strike extends DBObject {
 	
 	public function getEndDate() {
 		return $this->endDate;
+	}
+
+	public function getTimespan() {
+		return $this->timespan;
 	}
 	
 	public function getRegion() {
@@ -55,6 +60,10 @@ class Strike extends DBObject {
 	
 	public function setEndDate($value) {
 		$this->endDate = $value;
+	}
+
+	public function setTimespan($value) {
+		$this->timespan = $value;
 	}
 
 	public function setRegion($value) {

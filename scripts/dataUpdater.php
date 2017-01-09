@@ -41,6 +41,7 @@
 	$strikes = array();
 	for($i=0; $i<count($array); $i++) {
 		$startDate = explode(" ", $array[$i]["title"], 4)[2];
+		$endDate = $array[$i]["description"]["Data fine"];
 		$companyId = 0;
 		for($j=0; $j<6; $j++) {
 			if(strpos(strtolower($array[$i]["description"]["Categoria interessata"]), $companyObj[$j]->getNameCode()) !== false) {
@@ -49,10 +50,27 @@
 				echo strtolower($array[$i]["description"]["Categoria interessata"]);
 			}
 		}
+		/*
+		echo $array[$i]["description"]["modalità"]."\n";
+		echo (strpos($array[$i]["description"]["modalità"], "VARIE MODALITA'") === false)."\n";
+		if($array[$i]["description"]["modalità"] == "24 ORE") {
+			$endDate .= " 24:00";
+		} else if(strpos($array[$i]["description"]["modalità"], " ORE: ") !== false && strpos($array[$i]["description"]["modalità"], "VARIE MODALITA'") === false && strpos($array[$i]["description"]["modalità"], "DEL") === false) {
+			//$from_to = explode(" ORE: ", $array[$i]["description"]["modalità"], 2)[1]; 
+			$timeData = explode(" ", $array[$i]["description"]["modalità"]);
+			$from = str_replace(".", ":", $timeData[3]);
+			$to = str_replace(".", ":", $timeData[5]);
+			$startDate .= " ".$from;
+			$endDate .= " ".$to;
+		}
+		Code for parsing time. Information not consistent -> parsing not consistent.
+		*/
+		
 		$strikes[] = new Strike(array(
 					"workersUnion" => $array[$i]["description"]["Sindacati"],
 					"startDate" => $startDate,
-					"endDate" => $array[$i]["description"]["Data fine"],
+					"endDate" => $endDate,
+					"timespan" => $array[$i]["description"]["modalità"],
 					"region" => $array[$i]["description"]["Regione"],
 					"province" => $array[$i]["description"]["Provincia"],
 					"description" => $array[$i]["description"]["Categoria interessata"],
