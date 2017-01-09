@@ -76,8 +76,19 @@ class Company extends DBObject {
 		return static::getListByColumn("region");
 	}
 
-	public static function findByRegion($region) {
+	/*public static function findByRegion($region) {
 		return static::findBySomething($region, "region");
+	}
+	Old code. Need custom query for including companies with region "all"
+	*/
+
+	static function findByRegion($region) {
+		$sql = "SELECT * FROM ".static::COLLECTION_NAME." WHERE region = :region OR region = 'all'";
+		$options["region"] = $region;
+		$query = DB::getDB()->prepare($sql);
+		$query->execute($options);
+		$query->setFetchMode(PDO::FETCH_CLASS, get_class(new static()));
+		return $query->fetchAll();
 	}
 }
 ?>

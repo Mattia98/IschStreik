@@ -12,7 +12,7 @@
     </a>
 </div>
 <div id="guarenteed-routes-div">
-    <a href="#">Guaranteed routes</a>
+    <a href="<?= $company->getGuaranteedRoutesUrl() ?>"><?= _("guaranteed_routes") ?></a>
 </div>
 <?php for($i=0; $i<count($strikes); $i++): ?>
 <div class="strike-box">
