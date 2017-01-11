@@ -42,3 +42,71 @@ div.box {
     height: 6rem !important;
     width: 30% !important;
 }
+
+.company-logo-div {
+    width: 25% !important;
+    margin-top: 1rem;
+    min-height: 5rem;
+    /*height: 5%;*/
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.company-logo-div img {
+    width: 100%;
+}
+#content-div {
+    display: inline;
+    max-width: 33% !important;
+    min-width: 33% !important;
+    /*float: left;*/
+    min-height: 3rem;
+    padding-top: 1rem;
+    padding-left: 0rem !important;
+}
+#content-div:first-child {
+    margin-top: 0rem !important;
+}
+#content-div:last-child {
+    padding-bottom: 1.5rem;
+    padding-right: 5% !important;
+    max-width: 90% !important;
+    min-width: 90% !important;
+}
+.strike-box p {
+    display: inline;
+    font-size: 1.5rem;
+    color: #333 !important;
+}
+/*#when-where-tag, #guarenteed-routes-div {
+    font-family: 'Pompiere', cursive;
+    font-size: 1.9rem;
+    font-weight: bold;
+}*/
+.first-separator-div {
+    display: none !important;
+    width: 100%;
+    height: 0.3rem;
+    background-color: rgba(0,0,0,0.15);
+    margin-top: -0.3rem;
+}
+.second-separator-div {
+    display: none !important;
+    width: 100%;
+    height: 0.6rem;
+    background-color: rgba(0,0,0,0.35);
+    margin-top: -0.6rem;
+}
+#guarenteed-routes-div {
+    display: flex;
+    margin-top: 0.5rem;
+    margin-bottom: -0.5rem;
+}
+#guarenteed-routes-div a {
+    margin: auto;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: #71112e;
+    color: #fff;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}

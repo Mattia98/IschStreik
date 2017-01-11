@@ -1,6 +1,5 @@
 @import 'desktop_mq.css' screen and (min-width: 768px);
 @import 'high_res.css' screen and (min-width: 1700px);
-
 html {
 	font-size: 100%;
 }
@@ -453,4 +452,15 @@ li {
     color: #fff;
     padding: 0.5rem;
     font-size: 1.5rem;
+}
+.about-div {
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+.about-div h3 {
+    color: #333;
+    font-size: 2rem;
+}
+#contact, #school {
+    font-weight: bold;
 }
