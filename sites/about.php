@@ -4,8 +4,7 @@
     <p id="contact">Contatto:</p>
     <a href="mailto:sciopero.news@gmail.com" >sciopero.news@gmail.com</a>
     <p id="school">Scuola</p>
-    <p><a href="http://www.bozen.berufsschule.it/">Scuola professionale provinciale per l`industria e l`artigianato</a></p>
-
+    <p><a href="http://www.bozen.berufsschule.it/">Scuola professionale provinciale per l`artigianato e l`industria</a></p>
     <details>
         <summary>Used apps:</summary>
         <figure>
