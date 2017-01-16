@@ -423,16 +423,17 @@ li {
 }
 #dropdown-menu select {
     background-color: #a7c712;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-#dropdown-menu input {
-    background-color: #a7c712;
-    margin-left: -0.1rem;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
-#dropdown-menu select, #dropdown-menu input {
+#dropdown-menu label {
+    font-weight: bold;
+    background-color: #a7c712;
+    padding: 0.5rem;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+#dropdown-menu select, #dropdown-menu label {
     border: 1px solid transparent;
     color: #fff;
 }

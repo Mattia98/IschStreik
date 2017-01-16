@@ -22,7 +22,6 @@
 			<option <?= ($region == $regions[$i]) ? "selected" : "" ?>><?= $regions[$i] ?></option>
 			<?php endfor; ?>
 		</select>
-		<input type="submit" value="<?= _("search") ?>" />
 	</form>
 </div>
 
