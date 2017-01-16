@@ -1,12 +1,13 @@
 <div class="about-div">
     <h3>About us</h3>
-    <p>IschStreick - un govane team di teste creative. Il nostro team è composto di un webdesigner e tre programmatori.</p>
+    <p>IschStreick - un giovane team di teste creative. Il nostro team è composto di un web designer e tre programmatori.</p>
     <p id="contact">Contatto:</p>
     <a href="mailto:sciopero.news@gmail.com" >sciopero.news@gmail.com</a>
     <p id="school">Scuola</p>
     <p><a href="http://www.bozen.berufsschule.it/">Scuola professionale provinciale per l`artigianato e l`industria</a></p>
     <details>
-        <summary>Used apps:</summary>
+        <summary>Technical information</summary>
+        <h4>Used apps:</h4>
         <figure>
             <img src="../media/logos/about/bluefish.png" alt="BLUEFISH LOGO" />
             <figcaption>Bluefish editor</figcaption>
