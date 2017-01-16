@@ -17,7 +17,7 @@
 <div id="dropdown-menu">
 	<form method="GET" action="./" >
 		<label for="region"><?= _("region").":" ?></label>
-		<select  name="region">
+		<select  name="region" onchange="if(this.value != 0) { this.form.submit(); }">
 			<?php for($i=0; $i<count($regions); $i++): ?>
 			<option <?= ($region == $regions[$i]) ? "selected" : "" ?>><?= $regions[$i] ?></option>
 			<?php endfor; ?>
