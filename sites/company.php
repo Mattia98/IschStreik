@@ -14,15 +14,26 @@
 <div id="guarenteed-routes-div">
     <a href="<?= $company->getGuaranteedRoutesUrl() ?>"><?= _("guaranteed_routes") ?></a>
 </div>
-<!--<table>
-    <tr>
-        <td>Region</td>
-        <td>Province</td>
-        <td>Date</td>
-        <td>Timespan</td>
-        <td>Description</td>
-    </tr>
-</table>-->
+<div class="strike-box-desktop">
+    <table>
+        <tr>
+            <th><?= _("region") ?></th>
+            <th><?= _("province") ?></th>
+            <th><?= _("date") ?></th>
+            <th><?= _("timespan") ?></th>
+            <th><?= _("description") ?></th>
+        </tr>
+        <?php for($i=0; $i<count($strikes); $i++): ?>
+        <tr>
+            <td><?= $strikes[$i]->getRegion() ?></td>
+            <td><?= $strikes[$i]->getProvince() ?></td>
+            <td><?= $strikes[$i]->getStartDate() ?> <?= $strikes[$i]->getEndDate() ?></td>
+            <td><?= $strikes[$i]->getTimespan() ?></td>
+            <td><?= $strikes[$i]->getDescription() ?></td>
+        </tr>
+        <?php endfor; ?>
+    </table>
+</div>
 <?php for($i=0; $i<count($strikes); $i++): ?>
 <div class="strike-box">
     <div id="content-div">

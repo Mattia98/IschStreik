@@ -173,16 +173,16 @@ figure figcaption {
 	text-align: center;
 }
 
-table {
+/*table {
 	border-collapse: collapse;
 	width: 100%;
 	border-spacing: 0;
 	border-radius: 10px;
-}
-td, th {
+}*/
+/*td, th {
 	border: 0.3em solid grey;
 	border-spacing: 0;
-}
+}*/
 
 button, input[type="submit"], input[type="file"], input[type="button"], a.button {
 	background-color: white;
@@ -241,7 +241,7 @@ option:hover {
 }
 
 /* Tables */
-table tr:first-child th:first-child, table tr:first-child td:first-child {
+/*table tr:first-child th:first-child, table tr:first-child td:first-child {
 	border-top-left-radius: 10px;
 }
 table tr:first-child th:last-child, table tr:first-child td:last-child {
@@ -255,10 +255,10 @@ table tr:last-child td:last-child {
 }
 table.invisible, table.invisible td {
 	border: none;
-}
+}*/
 
 /* Other Tables */
-table.invisible td::after {
+/*table.invisible td::after {
 	content: "  ";
 }
 article table td, article table th, form table td, form table th {
@@ -267,7 +267,7 @@ article table td, article table th, form table td, form table th {
 article table th {
 	width: 12ex;
 	text-align: right;
-}
+}*/
 div.box {
     width: 100%;
     margin-top: 1rem;
@@ -463,4 +463,32 @@ li {
 }
 #contact, #school {
     font-weight: bold;
+}
+table {
+    color: #fff;
+    border-collapse: collapse;
+    width: 100%;
+}
+th {
+    background-color: #efeff0;
+    font-size: 1.2rem;
+    color: #333;
+    border-top: 1px solid rgba(143, 145, 148, 0.15);
+}
+th:last-child {
+    border-collapse: collapse;
+}
+th, td {
+    border-bottom: 1px solid #efeff0;
+    padding: 0.9rem;
+    border-right: 1px solid rgba(143, 145, 148, 0.15);
+}
+tr:nth-child(even) {
+    background-color: #a5bb2f;
+}
+tr:nth-child(odd) {
+    background-color: #8ca127;
+}
+.strike-box-desktop {
+    display: none;
 }
