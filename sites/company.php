@@ -14,6 +14,15 @@
 <div id="guarenteed-routes-div">
     <a href="<?= $company->getGuaranteedRoutesUrl() ?>"><?= _("guaranteed_routes") ?></a>
 </div>
+<!--<table>
+    <tr>
+        <td>Region</td>
+        <td>Province</td>
+        <td>Date</td>
+        <td>Timespan</td>
+        <td>Description</td>
+    </tr>
+</table>-->
 <?php for($i=0; $i<count($strikes); $i++): ?>
 <div class="strike-box">
     <div id="content-div">

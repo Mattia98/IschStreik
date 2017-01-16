@@ -44,23 +44,22 @@ div.box {
 }
 
 .company-logo-div {
-    width: 25% !important;
+    width: 5% !important;
     margin-top: 1rem;
-    min-height: 5rem;
+    min-height: 1rem !important;
     /*height: 5%;*/
-    padding-top: 2%;
-    padding-bottom: 2%;
+    padding-top: 0% !important;
+    padding-bottom: 0% !important;
 }
 .company-logo-div img {
     width: 100%;
 }
 #content-div {
-    display: inline;
-    max-width: 33% !important;
-    min-width: 33% !important;
+    /*max-width: 33% !important;
+    min-width: 33% !important;*/
     /*float: left;*/
-    min-height: 3rem;
-    padding-top: 1rem;
+    min-height: 2rem !important;
+    padding-top: 1rem !important;
     padding-left: 0rem !important;
 }
 #content-div:first-child {
@@ -72,10 +71,14 @@ div.box {
     max-width: 90% !important;
     min-width: 90% !important;
 }
+.strike-box {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
 .strike-box p {
     display: inline;
     font-size: 1.5rem;
-    color: #333 !important;
+    color: #fff !important;
 }
 /*#when-where-tag, #guarenteed-routes-div {
     font-family: 'Pompiere', cursive;
@@ -99,7 +102,7 @@ div.box {
 #guarenteed-routes-div {
     display: flex;
     margin-top: 0.5rem;
-    margin-bottom: -0.5rem;
+    margin-bottom: 0.5rem !important;
 }
 #guarenteed-routes-div a {
     margin: auto;
