@@ -5,6 +5,7 @@
 		$('#sandwitch').addEventListener('click', sandwitch);
 		$('#language-selector').addEventListener('click', languagePopup);
 		$('#curtain').addEventListener('click', curtain);
+		$$('.logo').forEach((obj) => obj.addEventListener('error', noLogo));
 	};
 	
 	const sandwitch = () => {
@@ -48,6 +49,11 @@
 			$('body').setAttribute('style', '');
 			$('main').setAttribute('style', '');
 		}
+	};
+
+	const noLogo = (e) => {
+		console.log(e);
+		e.srcElement.remove();
 	};
 	
 	const isNavOpen = () => $('nav').classList.contains('nav-open');
