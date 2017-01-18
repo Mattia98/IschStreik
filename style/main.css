@@ -280,11 +280,11 @@ div.box {
     max-width: 100%;
 }
 .box img {
-    max-height: 90%;
-    height: 100%;
+    max-height: 80%;
     max-width: calc(100% - 4%);
     width: auto;
     display: block;
+    margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -378,6 +378,7 @@ li {
 }
 .company-logo-div img {
     width: 100%;
+    color: blue;
 }
 #content-div {
     max-width: 100%;
@@ -492,4 +493,13 @@ tr:nth-child(odd) {
 }
 .strike-box-desktop {
     display: none;
+}
+.company-name-big {
+    font-size: 8rem;
+}
+.without-logo  {/*to add to imgBox*/
+    height: 0%;
+}
+.centered-span {/*to add to span*/
+    height: 100%;
 }
