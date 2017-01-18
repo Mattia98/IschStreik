@@ -378,7 +378,6 @@ li {
 }
 .company-logo-div img {
     width: 100%;
-    color: blue;
 }
 #content-div {
     max-width: 100%;
@@ -486,10 +485,10 @@ th, td {
     border-right: 1px solid rgba(143, 145, 148, 0.15);
 }
 tr:nth-child(even) {
-    background-color: #a5bb2f;
+    background-color: #a7c712;
 }
 tr:nth-child(odd) {
-    background-color: #8ca127;
+    background-color: #849824;
 }
 .strike-box-desktop {
     display: none;
@@ -502,4 +501,6 @@ tr:nth-child(odd) {
 }
 .centered-span {/*to add to span*/
     height: 100%;
+    font-size: 5vh !important;
+    margin-top: 0%;
 }
