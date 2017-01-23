@@ -51,14 +51,16 @@ div.box {
 .company-logo-div {
     position: absolute;
     margin-top: 0 !important;
-    width: 4rem !important;
-    min-height: 1rem !important;
-    max-height: 2.1rem !important;
-    padding: 0.3rem !important;
-    left: 0.8rem;
+    width: 11rem !important;
+    min-height: 4rem !important;
+    max-height: 4rem !important;
+    padding: 0.1rem !important;
+    left: 1rem;
 }
 .company-logo-div img {
     width: 100%;
+    max-height: 4.2rem;
+    filter: invert(100%);
 }
 #guarenteed-routes-div {
     background-color: #fff !important;
@@ -67,4 +69,6 @@ div.box {
     float: right !important;
     margin-bottom: 1rem;
     background-color: #a7c712;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }

@@ -59,6 +59,7 @@
 			<a href="./">
                 <img src="../media/logos/<?= LANG ?>.svg" alt="LOGO <?= LANG ?>" />
             </a>
+            <i id="description-selector" class="material-icons">information</i>
 			<i id="language-selector" class="material-icons">language</i>
 		</header>
 		<nav>
@@ -96,7 +97,23 @@
 			?>
 		</main>
 		<div id="curtain" class="curtain-open"></div>
-        <div id="language-popup" class="language-popup-closed">
+        <div id="description-popup" class="popup-closed">
+            <table>
+                <tr>
+                    <td><img src="../media/icons/green.svg"/></td>
+                    <td>OK</td>
+                </tr>
+                <tr>
+                    <td><img src="../media/icons/orange.svg"/></td>
+                    <td>maybe</td>
+                </tr>
+                <tr>
+                    <td><img src="../media/icons/red.svg"/></td>
+                    <td>no</td>
+                </tr>
+            </table>
+        </div>
+        <div id="language-popup" class="popup-closed">
             <a href="../en" style="text-decoration: none;">
                 <figure>
                     <img src="../media/flags/en.svg"/>
