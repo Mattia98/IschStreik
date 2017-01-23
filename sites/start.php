@@ -29,9 +29,13 @@
 <div class="box-container">
 <?php for($i=0; $i<count($companies); $i++): ?>
     <?php
-        $colourClass = "red";
-        if(Strike::findBySomethingAmount($companies[$i]->getId(), "companyId")==0)
-            $colourClass = "green";
+        $colourClass = "green";
+        if(Strike::findBySomethingAmount($companies[$i]->getId(), "companyId")>0) {
+            $colourClass = "orange";
+            if($companies[$i]->getTimeToNextStrike()>-2) {
+                $colourClass = "red";
+            }
+        }
     ?>
     <a href="?site=company&id=<?= $companies[$i]->getId() ?>">
     <div class="box <?= $colourClass ?>">

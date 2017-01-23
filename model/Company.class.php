@@ -66,8 +66,11 @@ class Company extends DBObject {
 
 	/* Virtual getters */
 	
-	public function getSomething() {
-		throw new Exception('Not implemented yet.');
+	public function getTimeToNextStrike() {
+		$sql = "SELECT age(min(\"startDate\")) FROM strikes WHERE \"companyId\" = ".$this->getId();
+		$query = DB::getDB()->query($sql);
+		$query->setFetchMode(PDO::FETCH_COLUMN, 0);
+ 		return $query->fetch();
 	}
 
 	/* ***** Static Methods ***** */

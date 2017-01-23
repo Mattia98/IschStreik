@@ -26,6 +26,9 @@ h1, h2, h3, h4, h5, main a {
 .red {
     background-color: #71112e;
 }
+.orange {
+    background-color: orange;
+}
 /*.company-logo-div {
     background-color: #849824;
 }*/
