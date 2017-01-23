@@ -76,7 +76,8 @@ class Company extends DBObject {
 	/* ***** Static Methods ***** */
 
 	public static function getRegions() {
-		return static::getListByColumn("region");
+		$arr = static::getListByColumn("region");
+		return array_values(array_diff($arr, ["all"]));
 	}
 
 	/*public static function findByRegion($region) {

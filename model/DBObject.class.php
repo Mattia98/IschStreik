@@ -159,7 +159,7 @@ abstract class DBObject {
 	}
 
 	public static function getListByColumn($column) {
-		$sql = "SELECT DISTINCT $column AS values FROM ".static::COLLECTION_NAME;
+		$sql = "SELECT DISTINCT $column AS values FROM ".static::COLLECTION_NAME." ORDER BY values";
 		$query = DB::getDB()->prepare($sql);
 		$query->execute();
 		$query->setFetchMode(PDO::FETCH_COLUMN, 0);
