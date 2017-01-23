@@ -1,50 +1,59 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: IschStreik\n"
-"POT-Creation-Date: 2016-12-19 08:59+0100\n"
-"PO-Revision-Date: 2017-01-05 12:03+0100\n"
+"POT-Creation-Date: 2017-01-23 11:49+0100\n"
+"PO-Revision-Date: 2017-01-23 11:49+0100\n"
 "Last-Translator: Mattia Dorigatti <io.mattia98@gmail.com>\n"
 "Language-Team: \n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 1.8.9\n"
 "X-Poedit-Basepath: ../../..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: main.php:21 main.php:53
+#: main.php:14
+msgid "site-description"
+msgstr ""
+
+#: main.php:21 main.php:54
 msgid "sitename"
 msgstr "IschStreik?"
 
-#: sites/company.php:10 sites/company.php:17
-msgid "region"
-msgstr "Region"
-
-#: sites/company.php:11 sites/company.php:17
-msgid "province"
-msgstr "Provinz"
-
-#: sites/company.php:12
+#: sites/company.php:15
 msgid "guaranteed_routes"
 msgstr "Garantierte Verbindungen"
 
-#: sites/company.php:17
-msgid "workers_union"
-msgstr "Gewerkschaft"
+#: sites/company.php:20 sites/company.php:40 sites/start.php:19
+msgid "region"
+msgstr "Region"
 
-#: sites/company.php:17
-msgid "start_date"
-msgstr "Beginn"
+#: sites/company.php:21 sites/company.php:45
+msgid "province"
+msgstr "Provinz"
 
-#: sites/company.php:17
-msgid "end_date"
-msgstr "Ende"
+#: sites/company.php:22 sites/company.php:51
+msgid "date"
+msgstr ""
 
-#: sites/company.php:17
+#: sites/company.php:23 sites/company.php:57
+msgid "timespan"
+msgstr ""
+
+#: sites/company.php:24 sites/company.php:62
 msgid "description"
 msgstr "Beschreibung"
+
+#~ msgid "workers_union"
+#~ msgstr "Gewerkschaft"
+
+#~ msgid "start_date"
+#~ msgstr "Beginn"
+
+#~ msgid "end_date"
+#~ msgstr "Ende"
 
 #~ msgid "test"
 #~ msgstr "Testicus"

@@ -11,7 +11,7 @@
 		<meta charset="UTF-8" />
 		
 		<!--Informational meta-tags-->
-		<meta name="description" content="W.I.P." />
+		<meta name="description" content="<?= _("site-description") ?>" />
 		<meta name="keywords" content="IschStreik, Streik" />
 		
 		<!--OpenGraph data-->
