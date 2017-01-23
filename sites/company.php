@@ -8,7 +8,7 @@
 
 <div class="company-logo-div">
     <a href="<?= $company->getWebsite() ?>">
-        <img src="../media/logos/companies/<?= $company->getNameCode() ?>.svg" alt="<?= $company->getNameCode() ?>" />
+        <img src="../media/logos/companies/<?= $company->getNameCode() ?>.svg" alt="<?= $company->getName() ?>" class="logo-cp" />
     </a>
 </div>
 <div id="guarenteed-routes-div">

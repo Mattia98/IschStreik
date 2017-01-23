@@ -5,7 +5,8 @@
 		$('#sandwitch').addEventListener('click', sandwitch);
 		$('#language-selector').addEventListener('click', languagePopup);
 		$('#curtain').addEventListener('click', curtain);
-		$$('.logo').forEach((obj) => obj.addEventListener('error', noLogo));
+		$$('.logo').forEach((obj) => obj.addEventListener('error', removeLogo));
+		$$('.logo-cp').forEach((obj) => obj.addEventListener('error', replaceLogo));
 	};
 	
 	const sandwitch = () => {
@@ -51,10 +52,9 @@
 		}
 	};
 
-	const noLogo = (e) => {
-		console.log(e);
-		e.srcElement.remove();
-	};
+	const removeLogo = (e) => e.srcElement.remove();
+
+	const replaceLogo = (e) => e.srcElement.parentElement.innerHTML = e.srcElement.alt;
 	
 	const isNavOpen = () => $('nav').classList.contains('nav-open');
 
