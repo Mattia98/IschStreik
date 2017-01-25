@@ -178,8 +178,8 @@ figure figcaption {
 	width: 100%;
 	border-spacing: 0;
 	border-radius: 10px;
-}*/
-/*td, th {
+}
+td, th {
 	border: 0.3em solid grey;
 	border-spacing: 0;
 }*/
@@ -370,31 +370,45 @@ li {
     width: auto;
     -webkit-clip-path: circle(30.0% at 50% 50%);
     clip-path: circle(30.0% at 50% 50%);
+    /*mask: url(../media/flags/Kreis1.svg);*/
 }
 #language-popup a {
     text-decoration: none;
-    color: black;
+    color: #333;
+}
+#bg-language {
+    width: 100%;
 }
 #description-popup {
     position: fixed;
     top: 50%;
     left: 50%;
-    margin-top: -3rem;
-    margin-left: -45%;
+    margin-top: -14rem;
+    margin-left: -36%;
     z-index: 3;
-    height: 6rem;
-    width: 90%;
+    height: 30rem;
+    width: 72%;
+}
+#description-popup img {
+    margin-left: 0.7rem;
+    zoom: 0.5;
+}
+#description-popup table {
+    border-collapse: collapse;
     box-sizing: border-box;
-    text-align: center;
     background-image: url(../media/icons/bg_description.svg);
     background-size: 100%;
     background-repeat: no-repeat;
+    height: 30rem;
 }
 #description-popup td {
-    border-collapse: collapse;
+    color: #333;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    /*border-bottom: 1px solid rgba(143, 145, 148, 0.15);*/
 }
-#bg-language {
-    width: 100%;
+#description-popup th, #description-popup td {
+    /*background-color: #efeff0;*/
 }
 .company-logo-div {
     width: 100%;
@@ -496,29 +510,29 @@ li {
 #contact, #school {
     font-weight: bold;
 }
-table {
+.strike-box-desktop table {
     color: #fff;
     border-collapse: collapse;
     width: 100%;
 }
-th {
+.strike-box-desktop th {
     background-color: #efeff0;
     font-size: 1.2rem;
     color: #333;
     border-top: 1px solid rgba(143, 145, 148, 0.15);
 }
-th:last-child {
+.strike-box-desktop th:last-child {
     border-collapse: collapse;
 }
-th, td {
+.strike-box-desktop th, .strike-box-desktop td {
     border-bottom: 1px solid #efeff0;
     padding: 0.9rem;
     border-right: 1px solid rgba(143, 145, 148, 0.15);
 }
-tr:nth-child(even) {
+.strike-box-desktop tr:nth-child(even) {
     background-color: #a7c712;
 }
-tr:nth-child(odd) {
+.strike-box-desktop tr:nth-child(odd) {
     background-color: #849824;
 }
 .strike-box-desktop {

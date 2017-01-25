@@ -105,16 +105,16 @@
         <div id="description-popup" class="popup-closed">
             <table>
                 <tr>
-                    <td><img src="../media/icons/green.svg"/></td>
-                    <td>OK</td>
+                    <th><img src="../media/icons/green.svg"/></th>
+                    <td>Kein Streik</td>
                 </tr>
                 <tr>
-                    <td><img src="../media/icons/orange.svg"/></td>
-                    <td>maybe</td>
+                    <th><img src="../media/icons/orange.svg"/></th>
+                    <td>Streik in den nächsten 2 Wochen</td>
                 </tr>
                 <tr>
-                    <td><img src="../media/icons/red.svg"/></td>
-                    <td>no</td>
+                    <th><img src="../media/icons/red.svg"/></th>
+                    <td>Streik findet statt</td>
                 </tr>
             </table>
         </div>
