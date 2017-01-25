@@ -1,11 +1,11 @@
 <?php
     include_once("../model/Company.class.php");
     include_once("../model/Strike.class.php");
-    $companies = Company::findAll();
+    
     
     $region = "";
     if(!isset($_GET["region"]))
-    	$companies = Company::findAll();
+    	$companies = Company::findAllAndOrder();
     else {
     	$companies = Company::findByRegion($_GET["region"]);
     	$region = $_GET["region"];

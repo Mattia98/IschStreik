@@ -27,7 +27,7 @@
         <tr>
             <td><?= $strikes[$i]->getRegion() ?></td>
             <td><?= $strikes[$i]->getProvince() ?></td>
-            <td><?= $strikes[$i]->getStartDate() ?> <?= $strikes[$i]->getEndDate() ?></td>
+            <td><?= $strikes[$i]->getPrettyStartDate() ?> <?= $strikes[$i]->getPrettyEndDate() ?></td>
             <td><?= $strikes[$i]->getTimespan() ?></td>
             <td><?= $strikes[$i]->getDescription() ?></td>
         </tr>

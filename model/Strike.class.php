@@ -84,8 +84,14 @@ class Strike extends DBObject {
 	
 	/* Virtual getters */
 	
-	public function getSomething() {
-		throw new Exception('Not implemented yet.');
+	public function getPrettyStartDate() {
+		$dt = new DateTime($this->getStartDate());
+		return $dt->format("d/m/y");
+	}
+
+	public function getPrettyEndDate() {
+		$dt = new DateTime($this->getEndDate());
+		return $dt->format("d/m/y");
 	}
 
 	/* ***** Static Methods ***** */
