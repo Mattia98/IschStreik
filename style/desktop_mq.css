@@ -72,3 +72,10 @@ div.box {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
+#description-popup table {
+    height: 35.5rem !important;
+}
+#description-popup {
+    top: 45% !important;
+    left: 72% !important;
+}
