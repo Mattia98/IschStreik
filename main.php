@@ -4,7 +4,7 @@
 	session_start();
 	include_once("scripts/prerun.php");
 ?>
-<html>
+<html lang="<?= SHORT_LANG ?>">
 	<head>
 		<!--Browser and document meta-tags-->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,6 +13,11 @@
 		<!--Informational meta-tags-->
 		<meta name="description" content="<?= _("site-description") ?>" />
 		<meta name="keywords" content="IschStreik, Streik" />
+
+		<!--Languages-->
+		<link rel="alternate" href="https://sciopero.news/en/" hreflang="en" />
+		<link rel="alternate" href="https://sciopero.news/de/" hreflang="de" />
+		<link rel="alternate" href="https://sciopero.news/it/" hreflang="it" />
 		
 		<!--OpenGraph data-->
 		<meta property="og:title" content="<?= $GLOBALS["site-name"] ?>" />
