@@ -75,7 +75,7 @@
 
 	const removeLogo = (e) => e.srcElement.remove();
 
-	const replaceLogo = (e) => e.srcElement.parentElement.innerHTML = e.srcElement.alt;
+	const replaceLogo = (e) => e.srcElement.parentElement.innerHTML = "<span>"+e.srcElement.alt+"</span>";
 	
 	const isNavOpen = () => $('nav').classList.contains('nav-open');
 

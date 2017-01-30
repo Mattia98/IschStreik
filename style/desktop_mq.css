@@ -62,6 +62,11 @@ div.box {
     max-height: 4.2rem;
     filter: invert(100%);
 }
+.company-logo-div span {
+    font-size: 2rem;
+    margin-top: 1rem;
+    display: block;
+}
 #guarenteed-routes-div {
     background-color: #fff !important;
 }
