@@ -106,15 +106,15 @@
             <table>
                 <tr>
                     <th><img src="../media/icons/green.svg"/></th>
-                    <td>Kein Streik</td>
+                    <td><?= _("no_strike") ?></td>
                 </tr>
                 <tr>
                     <th><img src="../media/icons/orange.svg"/></th>
-                    <td>Streik in den nächsten 2 Wochen</td>
+                    <td><?= _("strike_near_future")?></td>
                 </tr>
                 <tr>
                     <th><img src="../media/icons/red.svg"/></th>
-                    <td>Streik findet statt</td>
+                    <td><?= _("strike_2days")?></td>
                 </tr>
             </table>
         </div>

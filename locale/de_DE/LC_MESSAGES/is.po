@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: IschStreik\n"
-"POT-Creation-Date: 2017-01-23 11:49+0100\n"
-"PO-Revision-Date: 2017-01-23 12:20+0100\n"
+"POT-Creation-Date: 2017-01-30 08:59+0100\n"
+"PO-Revision-Date: 2017-01-30 09:11+0100\n"
 "Last-Translator: Ken Zöggeler\n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -16,11 +16,25 @@ msgstr ""
 
 #: main.php:14
 msgid "site-description"
-msgstr "\"Isch-Streik\" informiert Sie über die aktuellen Streiks Italiens und bietet Ihnen evtl. Links zu den garantierte Linien an."
+msgstr ""
+"\"Isch-Streik\" informiert Sie über die aktuellen Streiks Italiens und "
+"bietet Ihnen evtl. Links zu den garantierte Linien an."
 
-#: main.php:21 main.php:54
+#: main.php:26 main.php:59
 msgid "sitename"
 msgstr "IschStreik?"
+
+#: main.php:109
+msgid "no_strike"
+msgstr "Kein bekannter Streik"
+
+#: main.php:113
+msgid "strike_near_future"
+msgstr "Streik der in den nächsten 2-3 Wochen (kann gestrichen werden)"
+
+#: main.php:117
+msgid "strike_2days"
+msgstr "Streik in den nächsten 48 Std."
 
 #: sites/company.php:15
 msgid "guaranteed_routes"
