@@ -96,7 +96,7 @@ class Company extends DBObject {
 	}
 
 	static function findAllAndOrder() {
-		$sql = 'SELECT companies.*, count(strikes) FROM strikes RIGHT JOIN companies ON "companyId"=companies.id GROUP BY companies.id ORDER BY count(strikes) DESC';
+		$sql = 'SELECT companies.* FROM strikes RIGHT JOIN companies ON "companyId"=companies.id GROUP BY companies.id ORDER BY age(min("startDate"))*-1, count(strikes) DESC';
 		$query = DB::getDB()->query($sql);
 		$query->setFetchMode(PDO::FETCH_CLASS, get_class(new static()));
 		return $query->fetchAll();
