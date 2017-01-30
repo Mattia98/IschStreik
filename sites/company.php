@@ -11,7 +11,7 @@
         <img src="../media/logos/companies/<?= $company->getNameCode() ?>.svg" alt="<?= $company->getName() ?>" class="logo-cp" />
     </a>
 </div>
-<div id="guarenteed-routes-div">
+<div id="guaranteed-routes-div">
     <a href="<?= $company->getGuaranteedRoutesUrl() ?>"><?= _("guaranteed_routes") ?></a>
 </div>
 <div class="strike-box-desktop">

@@ -63,14 +63,14 @@ div.box {
     filter: invert(100%);
 }
 .company-logo-div span {
-    font-size: 2rem;
-    margin-top: 1rem;
-    display: block;
+    font-size: 2rem !important;
+    margin-top: 1rem !important;
+    text-align: left !important;
 }
-#guarenteed-routes-div {
+#guaranteed-routes-div {
     background-color: #fff !important;
 }
-#guarenteed-routes-div a {
+#guaranteed-routes-div a {
     float: right !important;
     margin-bottom: 1rem;
     background-color: #a7c712;

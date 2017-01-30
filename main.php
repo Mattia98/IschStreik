@@ -64,14 +64,14 @@
 			<a href="./">
                 <img src="../media/logos/<?= LANG ?>.svg" alt="LOGO <?= LANG ?>" />
             </a>
-            <i id="description-selector" class="material-icons">information</i>
+            <i id="description-selector" class="material-icons">info_outline</i>
 			<i id="language-selector" class="material-icons">language</i>
 		</header>
 		<nav>
 		<ul>
 			<li><a href="?site=stats" title="Lorem Ipsum"><i class="material-icons">timeline</i>Stats</a></li>
 			<li><a href="?site=feedback" title="Lorem Ipsum"><i class="material-icons">feedback</i>Feedback</a></li>
-			<li><a href="?site=about" title="Lorem Ipsum"><i class="material-icons">info</i>About</a></li>
+			<li><a href="?site=about" title="Lorem Ipsum"><i class="material-icons">info_outline</i>About</a></li>
 			<li>&nbsp;</li>
 			<li>
 				<?=
@@ -110,11 +110,11 @@
                 </tr>
                 <tr>
                     <th><img src="../media/icons/orange.svg"/></th>
-                    <td><?= _("strike_near_future")?></td>
+                    <td><?= _("strike_near_future") ?></td>
                 </tr>
                 <tr>
                     <th><img src="../media/icons/red.svg"/></th>
-                    <td><?= _("strike_2days")?></td>
+                    <td><?= _("strike_2days") ?></td>
                 </tr>
             </table>
         </div>

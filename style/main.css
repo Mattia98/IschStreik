@@ -342,7 +342,7 @@ li {
     cursor: pointer;
 }
 #description-selector {
-	right: -120px;
+	right: 45px;
     top: 8px;
 }
 #language-popup {
@@ -421,6 +421,12 @@ li {
 .company-logo-div img {
     width: 100%;
 }
+.company-logo-div span {
+    font-size: 5rem;
+    margin-top: -1rem;
+    text-align: center;
+    display: block;
+}
 #content-div {
     max-width: 100%;
     min-height: 3rem;
@@ -439,7 +445,7 @@ li {
     font-size: 1.5rem;
     color: #fff;
 }
-/*#when-where-tag, #guarenteed-routes-div {
+/*#when-where-tag, #guaranteed-routes-div {
     font-family: 'Pompiere', cursive;
     font-size: 1.9rem;
     font-weight: bold;
@@ -482,14 +488,14 @@ li {
 #dropdown-menu option {
     background-color: #a7c712;
 }
-#guarenteed-routes-div {
+#guaranteed-routes-div {
     padding-top: 1rem;
     padding-bottom: 1rem;
     width: 100%;
     background-color: #a7c712;
     text-align: center;
 }
-#guarenteed-routes-div a {
+#guaranteed-routes-div a {
     /*margin-top: 1rem;
     margin-bottom: 1rem;*/
     /*border: 1px solid transparent;
@@ -497,7 +503,7 @@ li {
     /*background-color: #a7c712;*/
     color: #fff;
     padding: 0.5rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 .about-div {
     margin-left: 3rem;
@@ -528,6 +534,10 @@ li {
     border-bottom: 1px solid #efeff0;
     padding: 0.9rem;
     border-right: 1px solid rgba(143, 145, 148, 0.15);
+    text-align: center;
+}
+.strike-box-desktop td:nth-last-of-type(-n+2) {
+    text-align: left;
 }
 .strike-box-desktop tr:nth-child(even) {
     background-color: #a7c712;
