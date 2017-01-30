@@ -15,7 +15,7 @@
 	
 	//Setting up translation
 	putenv('LANG='.LANG);
-	setlocale(LC_ALL, LANG);
+	setlocale(LC_ALL, LANG.".UTF-8");
 	bindtextdomain("is", "../locale");
 	textdomain("is");
 
