@@ -60,7 +60,7 @@
 			$('main').setAttribute('style', '');
 		}
         if (isDescPopupOpen()) {
-			$('#language-popup').setAttribute('class', 'popup-closed');
+			$('#description-popup').setAttribute('class', 'popup-closed');
 			$('#curtain').setAttribute('class', 'curtain-open');
 			$('body').setAttribute('style', '');
 			$('main').setAttribute('style', '');
