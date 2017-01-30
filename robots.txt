@@ -1,4 +1,8 @@
 User-agent: *
-Allow: /index.php
-Allow: /sitemap.xml
-Crawl-Delay: 5
+Disallow: /
+Allow: /it/
+Allow: /de/
+Allow: /en/
+Allow: /favicon.png
+Crawl-Delay: 120
+Host: sciopero.news
