@@ -1,27 +1,17 @@
 header {
 	background-color: #ececec;
 }
-main {
-	/*background-color: #9AB849;*/
-}
-nav, .green, .strike-box:nth-child(even) {
+nav, .green, .strike-box:nth-child(even), .strike-box-desktop tr:nth-child(even), #guaranteed-routes-div, #dropdown-menu option, #dropdown-menu label, #dropdown-menu select {
 	background-color: #a7c712;
 }
-.strike-box:nth-child(odd) {
+.strike-box:nth-child(odd), .strike-box-desktop tr:nth-child(odd) {
     background-color: #849824;
 }
-.box, .separator-div {
-    transition: transform 0.2s linear;
-}
-.box:hover, .separator-div:hover {
-    transform: translateY(-3px);
-    transition: transform 0.2s linear;
+header a, h1, h2, h3, h4, h5, main a {
+    color: #849824;
 }
 .box:hover, #dropdown-menu select:hover, #dropdown-menu input:hover, #guarenteed-routes-div a:hover {
     box-shadow: 0px 0px 2px 1px #888888;
-}
-h1, h2, h3, h4, h5, main a {
-	color: #849824;
 }
 .red {
     background-color: #71112e;
@@ -29,6 +19,59 @@ h1, h2, h3, h4, h5, main a {
 .orange {
     background-color: orange;
 }
-/*.company-logo-div {
-    background-color: #849824;
-}*/
+.first-separator-div, .separator-div {
+    background-color: rgba(0,0,0,0.15);
+}
+.second-separator-div {
+    background-color: rgba(0,0,0,0.35);
+}
+#curtain {
+	background-color: rgba(0, 0, 0, 0.45);
+}
+body, .strike-box-desktop th, .about-div h3, #description-popup td, #language-popup a, select, button, input[type="submit"], input[type="file"], input[type="button"], a.button, nav a:not([rel="license"])  {
+    color: #333;
+}
+.strike-box-desktop th {
+    background-color: #efeff0;
+    border-top: 1px solid rgba(143, 145, 148, 0.15);
+}
+.strike-box-desktop th, .strike-box-desktop td {
+    border-bottom: 1px solid #efeff0;
+    border-right: 1px solid rgba(143, 145, 148, 0.15);
+}
+nav a:hover {
+	text-shadow: 1px 1px 2px black;
+}
+option, article, button, input[type="submit"], input[type="file"], input[type="button"], a.button, select:hover  {
+	background-color: white;
+}
+article, nav, button:hover, input[type="submit"]:hover, input[type="file"]:hover, input[type="button"]:hover, a.button:hover {
+	box-shadow: 3px 3px 5px #888888;
+}
+button, input[type="submit"], input[type="file"], input[type="button"], a.button {
+	border: 1px solid white;
+}
+button:active {
+	box-shadow: 6px 6px 5px #888888;
+}
+select {
+	background-color: transparent;
+	border-top: 1px solid gray;
+	border-bottom: 1px solid gray;
+	border-left-color: transparent;
+	border-right-color: transparent;
+}
+select:focus {
+	border: 1px solid white;
+	box-shadow: 1px 1px 5px #888888;
+}
+option:hover {
+	background-color: lightgray;
+}
+.strike-box p, .box span, .strike-box-desktop table, #guaranteed-routes-div a, #dropdown-menu select, #dropdown-menu label {
+    color: #fff;
+}
+#dropdown-menu select, #dropdown-menu label {
+    border: 1px solid transparent;
+}
+
