@@ -17,7 +17,7 @@ header a, h1, h2, h3, h4, h5, main a {
     background-color: #71112e;
 }
 .orange {
-    background-color: orange;
+    background-color: #ffa100;
 }
 .first-separator-div, .separator-div {
     background-color: rgba(0,0,0,0.15);
@@ -74,4 +74,6 @@ option:hover {
 #dropdown-menu select, #dropdown-menu label {
     border: 1px solid transparent;
 }
-
+.box {
+    box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.75);
+}
