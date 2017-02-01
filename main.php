@@ -47,7 +47,7 @@
 		<link rel="canonical" href="https://sciopero.news/" />
 		<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 		
-		<!--Sandwitch script-->
+		<!--JScripts-->
 		<script type="text/javascript" src="../js/sandwitch.js" async defer></script>
 		
 		<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
@@ -138,5 +138,8 @@
                 </figure>
             </a>
         </div>
+        <a href="#">
+            <div class="back-to-the-top" ></div>
+        </a>
 	</body>
 </html>

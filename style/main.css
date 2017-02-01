@@ -440,3 +440,13 @@ li {
     font-size: 3rem !important;
     padding-top: 4rem;
 }*/
+.back-to-the-top {
+    position: fixed;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 5rem;
+    width: 5rem;
+    right: 2rem;
+    bottom: 1rem;
+    background-image: url(../media/icons/backtothetopbutton.svg);
+}
