@@ -31,7 +31,7 @@
 		<link rel="icon" sizes="128x128" href="../media/icons/favicon/128.png" />
 		<link rel="icon" sizes="256x256" href="../media/icons/favicon/256.png" />
 		<link rel="icon" sizes="512x512" href="../media/icons/favicon/512.png" />
-		<link rel="manifest" href="../data/manifest.json" />
+		<link rel="manifest" href="manifest.json" />
 		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 		
 		<!--Style-->
