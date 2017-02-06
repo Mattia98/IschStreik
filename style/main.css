@@ -229,7 +229,7 @@ div.box {
 }
 .box-container {
     width: 100%;
-    height: 100%;
+    height: calc(100% - 4rem);
 }
 .material-icons {
     position: absolute;
@@ -259,7 +259,7 @@ li {
 	right: 10px;
     top: 8px;
 }
-#language-selector:hover, #description-selector:hover {
+#language-selector:hover, #description-selector:hover, #description-popup i:hover, #language-popup i:hover  {
     cursor: pointer;
 }
 #description-selector {
@@ -278,7 +278,7 @@ li {
     box-sizing: border-box;
     text-align: center;
     background-image: url(../media/flags/bg_language.svg);
-    background-size: 100%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 #language-popup figure {
@@ -297,8 +297,7 @@ li {
     text-decoration: none;
 }
 #language-popup i {
-    top: -28px;
-    right: -8px;
+    top: -3.5rem;
 }
 #bg-language {
     width: 100%;
@@ -330,11 +329,11 @@ li {
     padding-right: 0.5rem;
 }
 #description-popup i {
-    right: -20px;
-    top: -25px;
+    right: -13px;
+    top: 28px;
 }
 #description-popup i, #language-popup i {
-    position: absolute;
+    position: relative;
     font-size: 45px;
     border-radius: 25px;
 }

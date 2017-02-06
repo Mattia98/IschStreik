@@ -27,24 +27,24 @@ div.box {
     max-width: 20rem !important;
     max-height: 20rem !important;
     margin: 1rem !important;
-    border-radius: 5px !important;
+    border-radius: 10px !important;
 }
 .separator-div {
     width: 20rem !important;
     height: 0.6rem;
     margin-top: -1.6rem !important;
     margin-left: 1rem !important;
-    border-bottom-left-radius: 5px !important;
-    border-bottom-right-radius: 5px !important;
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
 }
 .box-container a {
     display: inline-block;
 }
-#language-popup {
+/*#language-popup {
     margin-left: -15% !important;
     height: 6rem !important;
     width: 30% !important;
-}
+}*/
 .strike-box {
     display: none;
 }
@@ -80,9 +80,14 @@ div.box {
     border-bottom-left-radius: 5px;
 }
 #description-popup table {
-    height: 20rem !important;
+    height: 17rem !important;
     background-image: url(../media/icons/bg_description_rot.svg) !important;
-    margin
+    background-size: 100% 100% !important;
+}
+#description-popup table td,  #description-popup table th{
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    height: 0rem;
 }
 #description-popup {
     top: 45% !important;
@@ -91,4 +96,8 @@ div.box {
     margin-left: -20% !important;
     height: 35rem !important;
     width: 40% !important;
+}
+#description-popup img {
+    zoom: 0 !important;
+    width: 3rem;
 }
