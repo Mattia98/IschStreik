@@ -4,7 +4,7 @@ html {
 	font-size: 100%;
 }
 body {
-	font-family: Ubuntu, Arial, "Lucida Grande", sans-serif;
+	font-family: ABeeZee, Arial, "Lucida Grande", sans-serif;
 	margin-top: 3.5rem;
 }
 svg {
@@ -51,7 +51,7 @@ article {
 	z-index: 1;
 }
 #sandwitch img {
-	width: 100%;
+	width: 110%;
 	height: 100%;
 	cursor: pointer;
 }
@@ -157,7 +157,7 @@ button, input[type="submit"], input[type="file"], input[type="button"], a.button
 select {
 	margin: 8px 0;
 	padding: 4px 16px 4px 14px;
-	min-height: 36px;
+	min-height: 35px;
 	min-width: 64px;
 	font-family: inherit;
 	font-size: inherit;
@@ -296,6 +296,10 @@ li {
 #language-popup a {
     text-decoration: none;
 }
+#language-popup i {
+    top: -28px;
+    right: -8px;
+}
 #bg-language {
     width: 100%;
 }
@@ -324,6 +328,15 @@ li {
 #description-popup td {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+}
+#description-popup i {
+    right: -20px;
+    top: -25px;
+}
+#description-popup i, #language-popup i {
+    position: absolute;
+    font-size: 45px;
+    border-radius: 25px;
 }
 .company-logo-div {
     width: 100%;

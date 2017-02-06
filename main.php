@@ -41,7 +41,7 @@
 		<link rel="icon" href="../media/icons/favicon/favicon.svg" type="image/svg+xml" />
 		<link href='//fonts.googleapis.com/css?family=Ubuntu:400,700,400italic' rel='stylesheet' type='text/css' />
 		<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Pompiere" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet" type='text/css'>
 
 		<!--GPlus-->
 		<link rel="canonical" href="https://sciopero.news/" />
@@ -104,40 +104,42 @@
 		</main>
 		<div id="curtain" class="curtain-open"></div>
         <div id="description-popup" class="popup-closed">
-            <table>
-                <tr>
-                    <th><img src="../media/icons/green.svg"/></th>
-                    <td><?= _("no_strike") ?></td>
-                </tr>
-                <tr>
-                    <th><img src="../media/icons/orange.svg"/></th>
-                    <td><?= _("strike_near_future") ?></td>
-                </tr>
-                <tr>
-                    <th><img src="../media/icons/red.svg"/></th>
-                    <td><?= _("strike_2days") ?></td>
-                </tr>
-            </table>
+            <i class="material-icons">highlight_off</i>
+                <table>
+                    <tr>
+                        <th><img src="../media/icons/green.svg"/></th>
+                        <td><?= _("no_strike") ?></td>
+                    </tr>
+                    <tr>
+                        <th><img src="../media/icons/orange.svg"/></th>
+                        <td><?= _("strike_near_future") ?></td>
+                    </tr>
+                    <tr>
+                        <th><img src="../media/icons/red.svg"/></th>
+                        <td><?= _("strike_2days") ?></td>
+                    </tr>
+                </table>
         </div>
         <div id="language-popup" class="popup-closed">
-            <a href="../en" style="text-decoration: none;">
-                <figure>
-                    <img src="../media/flags/en.svg"/>
-                    <figcaption>EN</figcaption>
-                </figure>
-            </a>
-            <a href="../it" style="text-decoration: none;">
-                <figure>
-                    <img src="../media/flags/it.svg"/>
-                    <figcaption>IT</figcaption>
-                </figure>
-            </a>
-            <a href="../de" style="text-decoration: none;">
-                <figure>
-                    <img src="../media/flags/de.svg"/>
-                    <figcaption>DE</figcaption>
-                </figure>
-            </a>
+            <i class="material-icons">highlight_off</i>
+                <a href="../en" style="text-decoration: none;">
+                    <figure>
+                        <img src="../media/flags/en.svg"/>
+                        <figcaption>EN</figcaption>
+                    </figure>
+                </a>
+                <a href="../it" style="text-decoration: none;">
+                    <figure>
+                        <img src="../media/flags/it.svg"/>
+                        <figcaption>IT</figcaption>
+                    </figure>
+                </a>
+                <a href="../de" style="text-decoration: none;">
+                    <figure>
+                        <img src="../media/flags/de.svg"/>
+                        <figcaption>DE</figcaption>
+                    </figure>
+                </a>
         </div>
         <a href="#">
             <div class="back-to-the-top" ></div>

@@ -27,12 +27,15 @@ div.box {
     max-width: 20rem !important;
     max-height: 20rem !important;
     margin: 1rem !important;
+    border-radius: 5px !important;
 }
 .separator-div {
     width: 20rem !important;
     height: 0.6rem;
     margin-top: -1.6rem !important;
     margin-left: 1rem !important;
+    border-bottom-left-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
 }
 .box-container a {
     display: inline-block;
@@ -73,7 +76,6 @@ div.box {
 #guaranteed-routes-div a {
     float: right !important;
     margin-bottom: 1rem;
-    background-color: #a7c712;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }

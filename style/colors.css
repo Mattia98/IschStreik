@@ -1,7 +1,7 @@
-header {
+header, #description-popup i, #language-popup i {
 	background-color: #ececec;
 }
-nav, .green, .strike-box:nth-child(even), .strike-box-desktop tr:nth-child(even), #guaranteed-routes-div, #dropdown-menu option, #dropdown-menu label, #dropdown-menu select {
+nav, .green, .strike-box:nth-child(even), .strike-box-desktop tr:nth-child(even), #guaranteed-routes-div, #dropdown-menu option, #dropdown-menu label, #dropdown-menu select, #guaranteed-routes-div a {
 	background-color: #a7c712;
 }
 .strike-box:nth-child(odd), .strike-box-desktop tr:nth-child(odd) {
@@ -72,8 +72,8 @@ option:hover {
     color: #fff;
 }
 #dropdown-menu select, #dropdown-menu label {
-    border: 1px solid transparent;
+    border: 0px solid transparent;
 }
-.box {
+.box, header {
     box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.75);
 }
