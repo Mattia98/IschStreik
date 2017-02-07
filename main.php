@@ -15,9 +15,9 @@
 		<meta name="keywords" content="IschStreik, Streik" />
 
 		<!--Languages-->
-		<link rel="alternate" href="https://sciopero.news/en/" hreflang="en" />
-		<link rel="alternate" href="https://sciopero.news/de/" hreflang="de" />
-		<link rel="alternate" href="https://sciopero.news/it/" hreflang="it" />
+		<link rel="alternate" href="https://sciopero.news/en/<?= substr(strrchr($_SERVER['REQUEST_URI'], "/"), 1) ?>" hreflang="en" />
+		<link rel="alternate" href="https://sciopero.news/de/<?= substr(strrchr($_SERVER['REQUEST_URI'], "/"), 1) ?>" hreflang="de" />
+		<link rel="alternate" href="https://sciopero.news/it/<?= substr(strrchr($_SERVER['REQUEST_URI'], "/"), 1) ?>" hreflang="it" />
 		
 		<!--OpenGraph data-->
 		<meta property="og:title" content="<?= $GLOBALS["site-name"] ?>" />
