@@ -4,7 +4,7 @@
 	const init = () => {
 		$('#sandwitch').addEventListener('click', sandwitch);
 		$('#language-selector').addEventListener('click', languagePopup);
-        $('#description-selector').addEventListener('click', descriptionPopup);
+		$('#description-selector').addEventListener('click', descriptionPopup);
 		$('#curtain').addEventListener('click', closeAll);
 		$$('.logo').forEach((obj) => obj.addEventListener('error', removeLogo));
 		$$('.logo-cp').forEach((obj) => obj.addEventListener('error', replaceLogo));
@@ -20,8 +20,9 @@
 	};
 
 	const sandwitch = () => {
+		let state = !isNavOpen();
 		closeAll();
-		if(!isNavOpen()) {
+		if(state) {
 			$('nav').setAttribute('class', 'nav-open');
 			$('#curtain').setAttribute('class', 'curtain-closed');
 			$('body').setAttribute('style', 'overflow:hidden');
@@ -30,8 +31,9 @@
 	};
 
 	const languagePopup = () => {
+		let state = !isLangPopupOpen();
 		closeAll();
-		if (!isLangPopupOpen()) {
+		if (state) {
 			$('#language-popup').setAttribute('class', 'popup-open');
 			$('#curtain').setAttribute('class', 'curtain-closed');
 			$('body').setAttribute('style', 'overflow:hidden');
@@ -39,9 +41,10 @@
 		}
 	};
     
-    const descriptionPopup = () => {
+	const descriptionPopup = () => {
+		let state = !isDescPopupOpen();
 		closeAll();
-		if (!isDescPopupOpen()) {
+		if (state) {
 			$('#description-popup').setAttribute('class', 'popup-open');
 			$('#curtain').setAttribute('class', 'curtain-closed');
 			$('body').setAttribute('style', 'overflow:hidden');
@@ -57,7 +60,7 @@
 
 	const isLangPopupOpen = () => $('#language-popup').classList.contains('popup-open');
     
-    const isDescPopupOpen = () => $('#description-popup').classList.contains('popup-open');
+	const isDescPopupOpen = () => $('#description-popup').classList.contains('popup-open');
 		
 	const $ = document.querySelector.bind(document);
 	const $$ = document.querySelectorAll.bind(document);
