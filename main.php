@@ -70,9 +70,10 @@
 		</header>
 		<nav>
 		<ul>
-			<li><a href="?site=stats" title="Lorem Ipsum"><i class="material-icons">timeline</i>Stats</a></li>
-			<li><a href="?site=feedback" title="Lorem Ipsum"><i class="material-icons">feedback</i>Feedback</a></li>
-			<li><a href="?site=about" title="Lorem Ipsum"><i class="material-icons">info</i>About</a></li>
+            <li><a href="?site=settings"><i class="material-icons">settings</i>Settings</a></li>
+			<li><a href="?site=stats"><i class="material-icons">timeline</i>Stats</a></li>
+			<li><a href="?site=feedback"><i class="material-icons">feedback</i>Feedback</a></li>
+			<li><a href="?site=about"><i class="material-icons">info</i>About</a></li>
 			<li>&nbsp;</li>
 			<li>
 				<?=

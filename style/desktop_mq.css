@@ -1,23 +1,3 @@
-/*body main {
-	width: 80%;
-	max-width: calc(100% - 16rem);
-}*/
-/*body nav {
-	min-width: 16rem;
-	width: 20%;
-	height: 98%;
-	top: 3.5rem;
-	
-	
-	z-index: 1 !important;
-	opacity: 1 !important;
-
-}*/
-/*div.box {
-    width: 20rem !important;
-    height: 20rem !important;
-    display: inline-block !important;
-}*/
 .box-container {
     text-align: center;
 }
@@ -40,11 +20,6 @@ div.box {
 .box-container a {
     display: inline-block;
 }
-/*#language-popup {
-    margin-left: -15% !important;
-    height: 6rem !important;
-    width: 30% !important;
-}*/
 .strike-box {
     display: none;
 }
@@ -83,22 +58,13 @@ div.box {
     height: 14rem !important;
     background-image: none !important;
 }
-/*#description-popup table td,  #description-popup table th{
-    padding-top: 0rem;
-    padding-bottom: 0rem;
-    height: 0rem;
-}*/
 #description-popup table td {
     padding-right: 1.5rem;
 }
 #description-popup {
     top: 60% !important;
     left: 68% !important;
-    /*margin-top: -8rem !important;
-    margin-left: -20% !important;
-    height: 35rem !important;*/
     width: 35% !important;
-    
     background-image: url(../media/icons/bg_description_rot.svg) !important;
     background-repeat: no-repeat;
     background-size: 95% 67%;
