@@ -5,6 +5,8 @@
 		$('#sandwitch').addEventListener('click', sandwitch);
 		$('#language-selector').addEventListener('click', languagePopup);
 		$('#description-selector').addEventListener('click', descriptionPopup);
+        $('#description-popup i').addEventListener('click', closeAll);
+        $('#language-popup i').addEventListener('click', closeAll); 
 		$('#curtain').addEventListener('click', closeAll);
 		$$('.logo').forEach((obj) => obj.addEventListener('error', removeLogo));
 		$$('.logo-cp').forEach((obj) => obj.addEventListener('error', replaceLogo));
