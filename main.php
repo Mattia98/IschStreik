@@ -69,18 +69,10 @@
 			<i id="language-selector" class="material-icons">language</i>
 		</header>
 		<nav>
-		<ul>
+		<ul class="list-up">
 			<li><a href="?site=stats" title="Lorem Ipsum"><i class="material-icons">timeline</i>Stats</a></li>
 			<li><a href="?site=feedback" title="Lorem Ipsum"><i class="material-icons">feedback</i>Feedback</a></li>
 			<li><a href="?site=about" title="Lorem Ipsum"><i class="material-icons">info_outline</i>About</a></li>
-			<li>&nbsp;</li>
-			<li>
-				<?=
-					$GLOBALS["views"]." Views"
-				?>
-				<g:plusone></g:plusone>
-			</li>
-			<li><?php echo date('Y'); ?> IschStreik-Team</li>
 			<!--<li>
 				<div>
 				<table><tr><td>
@@ -93,6 +85,15 @@
 				</div>
 			</li>-->
 		</ul>
+        <ul class="list-down">
+            <li>
+				<?=
+					$GLOBALS["views"]." Views"
+				?>
+				<g:plusone></g:plusone>
+			</li>
+			<li><?php echo date('Y'); ?> IschStreik-Team</li>    
+        </ul>    
 		</nav>
 		<main>
 			<?php

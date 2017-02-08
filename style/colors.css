@@ -39,9 +39,6 @@ body, .strike-box-desktop th, .about-div h3, #description-popup td, #language-po
     border-bottom: 1px solid #efeff0;
     border-right: 1px solid rgba(143, 145, 148, 0.15);
 }
-nav a:hover {
-	text-shadow: 1px 1px 2px black;
-}
 option, article, button, input[type="submit"], input[type="file"], input[type="button"], a.button, select:hover  {
 	background-color: white;
 }
@@ -76,4 +73,14 @@ option:hover {
 }
 .box, header {
     box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.75);
+}
+.box:hover, .separator-div:hover {
+    transform: translateY(-3px);
+    transition: transform 0.2s linear;
+}
+#language-selector:hover, #description-selector:hover, #description-popup i:hover, #language-popup i:hover  {
+    cursor: pointer;
+}
+nav .list-up li:hover{
+    background-color: #859F0E;
 }
