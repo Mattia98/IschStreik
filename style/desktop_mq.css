@@ -81,21 +81,27 @@ div.box {
 }
 #description-popup table {
     height: 14rem !important;
-    background-image: url(../media/icons/bg_description_rot.svg) !important;
-    background-size: 100% 100% !important;
+    background-image: none !important;
 }
-#description-popup table td,  #description-popup table th{
+/*#description-popup table td,  #description-popup table th{
     padding-top: 0rem;
     padding-bottom: 0rem;
     height: 0rem;
+}*/
+#description-popup table td {
+    padding-right: 1.5rem;
 }
 #description-popup {
     top: 60% !important;
-    left: 72% !important;
+    left: 68% !important;
     /*margin-top: -8rem !important;
     margin-left: -20% !important;
     height: 35rem !important;*/
-    width: 28% !important;
+    width: 35% !important;
+    
+    background-image: url(../media/icons/bg_description_rot.svg) !important;
+    background-repeat: no-repeat;
+    background-size: 95% 67%;
 }
 #description-popup img {
     zoom: 0 !important;

@@ -239,10 +239,6 @@ div.box {
 .box, .separator-div {
     transition: transform 0.2s linear;
 }
-.box:hover, .separator-div:hover {
-    transform: translateY(-3px);
-    transition: transform 0.2s linear;
-}
 li a {
     margin-left: 2rem;
 }
@@ -258,9 +254,6 @@ li {
 #language-selector {
 	right: 10px;
     top: 8px;
-}
-#language-selector:hover, #description-selector:hover, #description-popup i:hover, #language-popup i:hover  {
-    cursor: pointer;
 }
 #description-selector {
 	right: 45px;
@@ -309,7 +302,7 @@ li {
     margin-top: -19rem;
     margin-left: -35%;
     z-index: 3;
-    height: 30rem;
+    height: 32rem;
     width: 72%;
 }
 #description-popup img {
