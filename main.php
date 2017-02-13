@@ -69,30 +69,12 @@
 			<i id="language-selector" class="material-icons">language</i>
 		</header>
 		<nav>
-<<<<<<< HEAD
-		<ul>
+
+		<ul class="list-up">
             <li><a href="?site=settings"><i class="material-icons">settings</i>Settings</a></li>
 			<li><a href="?site=stats"><i class="material-icons">timeline</i>Stats</a></li>
 			<li><a href="?site=feedback"><i class="material-icons">feedback</i>Feedback</a></li>
 			<li><a href="?site=about"><i class="material-icons">info</i>About</a></li>
-=======
-		<ul class="list-up">
-			<li><a href="?site=stats" title="Lorem Ipsum"><i class="material-icons">timeline</i>Stats</a></li>
-			<li><a href="?site=feedback" title="Lorem Ipsum"><i class="material-icons">feedback</i>Feedback</a></li>
-<<<<<<< HEAD
-			<li><a href="?site=about" title="Lorem Ipsum"><i class="material-icons">info_outline</i>About</a></li>
-=======
-			<li><a href="?site=about" title="Lorem Ipsum"><i class="material-icons">info</i>About</a></li>
->>>>>>> origin/master
-			<li>&nbsp;</li>
-			<li>
-				<?=
-					$GLOBALS["views"]." Views"
-				?>
-				<g:plusone></g:plusone>
-			</li>
-			<li><?php echo date('Y'); ?> IschStreik-Team</li>
->>>>>>> origin/master
 			<!--<li>
 				<div>
 				<table><tr><td>

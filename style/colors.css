@@ -73,8 +73,6 @@ option:hover {
 }
 .box, header {
     box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.75);
-<<<<<<< HEAD
-=======
 }
 .box:hover, .separator-div:hover {
     transform: translateY(-3px);
@@ -85,5 +83,4 @@ option:hover {
 }
 nav .list-up li:hover{
     background-color: #859F0E;
->>>>>>> origin/master
 }
