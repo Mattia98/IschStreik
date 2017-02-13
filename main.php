@@ -71,10 +71,14 @@
 		<nav>
 
 		<ul class="list-up">
-            <li><a href="?site=settings"><i class="material-icons">settings</i>Settings</a></li>
-			<li><a href="?site=stats"><i class="material-icons">timeline</i>Stats</a></li>
-			<li><a href="?site=feedback"><i class="material-icons">feedback</i>Feedback</a></li>
-			<li><a href="?site=about"><i class="material-icons">info</i>About</a></li>
+            <a href="?site=settings"><li><i class="material-icons">settings</i>Settings</li></a>
+			<a href="?site=stats"><li><i class="material-icons">timeline</i>Stats</li></a>
+			<a href="?site=feedback"><li><i class="material-icons">feedback</i>Feedback<i class="material-icons arrow">arrow_drop_down</i></li></a>
+            <ul class="list-feedback">
+                <a href="mailto:sciopero.news@gmail.com"><li><i class="material-icons">email</i>E-Mail</li></a>
+                <a href="https://github.com/Mattia98/IschStreik/issues"><li><i class="material-icons">bug_report</i>GitHub</li></a>
+            </ul>
+            <a href="?site=about"><li><i class="material-icons">info</i>About</li></a>
 			<!--<li>
 				<div>
 				<table><tr><td>
