@@ -54,9 +54,9 @@
 		}
 	};
 
-	const removeLogo = (e) => e.srcElement.remove();
+	const removeLogo = (e) => e.target.remove();
 
-	const replaceLogo = (e) => e.srcElement.parentElement.innerHTML = "<span>"+e.srcElement.alt+"</span>";
+	const replaceLogo = (e) => e.target.parentElement.innerHTML = "<span>"+e.target.alt+"</span>";
 	
 	const isNavOpen = () => $('nav').classList.contains('nav-open');
 
