@@ -74,8 +74,8 @@
 		<ul class="list-up">
             <a href="?site=settings"><li><i class="material-icons">settings</i>Settings</li></a>
 			<a href="?site=stats"><li><i class="material-icons">timeline</i>Stats</li></a>
-			<a href="?site=feedback"><li><i class="material-icons">feedback</i>Feedback<i class="material-icons arrow">arrow_drop_down</i></li></a>
-            <ul class="list-feedback">
+			<li id="li-feedback"><i class="material-icons">feedback</i>Feedback<i class="material-icons arrow">arrow_drop_down</i></li>
+            <ul id="list-feedback" class="popup-closed">
                 <a href="mailto:sciopero.news@gmail.com"><li><i class="material-icons">email</i>E-Mail</li></a>
                 <a href="https://github.com/Mattia98/IschStreik/issues"><li><i class="material-icons">bug_report</i>GitHub</li></a>
             </ul>

@@ -56,7 +56,7 @@ div.box {
 }
 #description-popup table {
     height: 14rem !important;
-    background-image: none !important;
+    /*background-image: none !important;*/
 }
 #description-popup table td {
     padding-right: 1.5rem;
@@ -65,11 +65,14 @@ div.box {
     top: 60% !important;
     left: 68% !important;
     width: 35% !important;
-    background-image: url(../media/icons/bg_description_rot.svg) !important;
+    /*background-image: url(../media/icons/bg_description_rot.svg) !important;
     background-repeat: no-repeat;
-    background-size: 95% 67%;
+    background-size: 95% 67%;*/
 }
 #description-popup img {
     zoom: 0 !important;
     width: 3rem;
+}
+#description-popup i {
+    right: -27rem !important;
 }

@@ -1,4 +1,4 @@
-header, #description-popup i, #language-popup i {
+header, #description-popup i, #language-popup i, #description-popup table, #language-popup {
 	background-color: #ececec;
 }
 nav, .green, .strike-box:nth-child(even), .strike-box-desktop tr:nth-child(even), #guaranteed-routes-div, #dropdown-menu option, #dropdown-menu label, #dropdown-menu select, #guaranteed-routes-div a {

@@ -6,7 +6,8 @@
 		$('#language-selector').addEventListener('click', languagePopup);
 		$('#description-selector').addEventListener('click', descriptionPopup);
         $('#description-popup i').addEventListener('click', closeAll);
-        $('#language-popup i').addEventListener('click', closeAll); 
+        $('#language-popup i').addEventListener('click', closeAll);
+        $('#li-feedback').addEventListener('click', listFeedback);
 		$('#curtain').addEventListener('click', closeAll);
 		$$('.logo').forEach((obj) => obj.addEventListener('error', removeLogo));
 		$$('.logo-cp').forEach((obj) => obj.addEventListener('error', replaceLogo));
@@ -53,6 +54,14 @@
 			$('main').setAttribute('style', 'filter: blur(5px);');
 		}
 	};
+    
+    const listFeedback = () => {
+		if (isFeedbackDropdownOpen()) {
+			$('#list-feedback').setAttribute('class', 'popup-closed');
+		} else {
+			$('#list-feedback').setAttribute('class', 'popup-open');
+        }
+	};
 
 	const removeLogo = (e) => e.target.remove();
 
@@ -63,6 +72,8 @@
 	const isLangPopupOpen = () => $('#language-popup').classList.contains('popup-open');
     
 	const isDescPopupOpen = () => $('#description-popup').classList.contains('popup-open');
+    
+	const isFeedbackDropdownOpen = () => $('#list-feedback').classList.contains('popup-open');
 		
 	const $ = document.querySelector.bind(document);
 	const $$ = document.querySelectorAll.bind(document);

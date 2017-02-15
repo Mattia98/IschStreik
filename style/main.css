@@ -125,12 +125,18 @@ nav .list-up li{
     transition: background-color 0.4s;
     padding-left: 3.5rem;
 }
-.list-feedback li {
+#list-feedback li {
     padding-left: 5.5rem !important;
     line-height: 1.3;
     font-size: 1.3rem;
 }
-.list-feedback i {
+#li-feedback:hover {
+    cursor: pointer;
+}
+#li-feedback {
+    user-select: none;
+}
+#list-feedback i {
     line-height: 0;
     margin-top: 0.8rem;
 }
@@ -233,7 +239,6 @@ div.box {
     margin-left: auto;
     margin-right: auto;
     padding-top: 2%;
-    color: transparent;
 }
 .box span {
     display: flex;
@@ -285,17 +290,18 @@ li {
 #language-popup {
     position: fixed;
     top: 50%;
-    left: 50%;
-    margin-top: -3rem;
-    margin-left: -45%;
+    left: calc(50% - 10rem);
+    /*margin-top: -3rem;
+    margin-left: -45%;*/
     z-index: 3;
     height: 6rem;
-    width: 90%;
+    width: 20rem;
     box-sizing: border-box;
     text-align: center;
-    background-image: url(../media/flags/bg_language.svg);
+    border-radius: 20px;
+   /* background-image: url(../media/flags/bg_language.svg);
     background-size: 100% 100%;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;*/
 }
 #language-popup figure {
     display: inline-block;
@@ -314,6 +320,7 @@ li {
 }
 #language-popup i {
     top: -3.5rem;
+    right: -20rem;
 }
 #bg-language {
     width: 100%;
@@ -335,22 +342,23 @@ li {
 #description-popup table {
     border-collapse: collapse;
     box-sizing: border-box;
-    background-image: url(../media/icons/bg_description.svg);
+    /*background-image: url(../media/icons/bg_description.svg);*/
     background-size: 100%;
     background-repeat: no-repeat;
     height: 30rem;
+    border-radius: 30px;
 }
 #description-popup td {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
 #description-popup i {
-    right: -13px;
-    top: 28px;
+    right: calc(-100% - 9px);
+    top: 2rem;
 }
 #description-popup i, #language-popup i {
     position: relative;
-    font-size: 45px;
+    font-size: 40px;
     border-radius: 25px;
 }
 .company-logo-div {
