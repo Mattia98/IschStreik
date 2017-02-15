@@ -179,6 +179,7 @@ select {
 	font-family: inherit;
 	font-size: inherit;
 	font-weight: bold;
+    height: 1rem;
 }
 select:focus {
 	border-radius: 1px;
@@ -232,6 +233,7 @@ div.box {
     margin-left: auto;
     margin-right: auto;
     padding-top: 2%;
+    color: transparent;
 }
 .box span {
     display: flex;
