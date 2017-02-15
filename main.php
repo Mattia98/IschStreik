@@ -50,6 +50,7 @@
 		<!--JScripts-->
 		<script type="text/javascript" src="../js/sandwitch.js" async defer></script>
 		<script type="text/javascript" src="../js/location.js" async defer></script>
+		<script type="text/javascript" src="../js/notifications.js" async defer></script>
 		
 		<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
 		<script type="text/javascript">
@@ -92,6 +93,9 @@
 			</li>-->
 		</ul>
         <ul class="list-down">
+			<li>
+				<button id="notification-test">Notification Test</button>
+			</li>
             <li>
 				<?=
 					$GLOBALS["views"]." Views"
