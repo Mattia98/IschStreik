@@ -10,14 +10,36 @@
             localStorage.setItem("notifications_unsupported", false);
         } else {
             Notification.requestPermission();
-		    $('#notification-test').addEventListener('click', testNotification);
+            if(getSelectedCompanies() == null)
+            	setSelectedCompanies([0]);
+				$('#notification-test').addEventListener('click', testNotification);
+            $$('.bell').forEach((obj) => obj.addEventListener('click', bellClicked));
+            $$('.bell').forEach((obj) => updateBell(obj));
         }
 	};
 	
+    const bellClicked = (e) => {
+        let id = e.target.dataset.cid;
+        if(getSelectedCompanies().includes(id))
+        		setSelectedCompanies(getSelectedCompanies().filter((obj) => obj != id));
+        else
+            setSelectedCompanies(getSelectedCompanies().concat([id]));
+        
+        updateBell(e.target);
+    };
+
+    const updateBell = (bell) => {
+        let id = bell.dataset.cid;
+        if(getSelectedCompanies().includes(id))
+            bell.innerHTML = "notifications_active";
+        else
+            bell.innerHTML = "notifications_off";
+    };
+
     const testNotification = (jsonData) => {
         let data;// = JSON.parse(jsonData);
         data = [{cid: 1, name: "Trenitalia"}, {cid: 3, name: "SAD"}, {cid: 25, name: "atap di pordenone"}];
-        let wantCompanies = [3, 25];
+        let wantCompanies = localStorage.getItem("selected_companies");
         
         let interestedCompanies = data.filter((obj) => wantCompanies.includes(obj.cid));
         console.log(interestedCompanies);
@@ -55,6 +77,10 @@
             window.open("?site=company&id="+cid, '_blank');
         };
     };
+    
+   const getSelectedCompanies = () => JSON.parse(localStorage.getItem("selected_companies"));
+   
+   const setSelectedCompanies = (companies) => localStorage.setItem("selected_companies", JSON.stringify(companies));
 
 	const $ = document.querySelector.bind(document);
 	const $$ = document.querySelectorAll.bind(document);
