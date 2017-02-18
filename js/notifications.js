@@ -36,12 +36,14 @@
             bell.innerHTML = "notifications_off";
     };
 
-    const testNotification = (jsonData) => {
-        let data;// = JSON.parse(jsonData);
-        data = [{cid: 1, name: "Trenitalia"}, {cid: 3, name: "SAD"}, {cid: 25, name: "atap di pordenone"}];
+    const testNotification = () => {
+        let companies = JSON.parse(httpGet("/API/?action=getCompanies"));
+        if(companies.length == 0)
+            alert("No strikes for today and tomorrow!");
+        
         let wantCompanies = localStorage.getItem("selected_companies");
         
-        let interestedCompanies = data.filter((obj) => wantCompanies.includes(obj.cid));
+        let interestedCompanies = companies.filter((obj) => wantCompanies.includes(obj.cid));
         console.log(interestedCompanies);
 
         interestedCompanies.forEach(makeNotificationFromCompany);
@@ -50,7 +52,7 @@
     const makeNotificationFromCompany = (company) => {
         let options = {
             body: company.name+' is striking!',
-            icon: '../media/logos/companies/'+company.name+'.png',
+            icon: '../media/logos/companies/'+company.nameCode+'.png',
             badge: '../favicon.png'
         };
 
@@ -62,25 +64,16 @@
         };
     };
 
-    const testNotificationORIG = () => {
-        let cid = prompt("CID PLEASE:");
-        const options = {
-            body: 'Redit to cid "'+cid+'"',
-            icon: '../favicon.png',
-            badge: '../favicon.png'
-        };
-
-        let not = new Notification("Hi!", options);
-        not.onclick = () => {
-            //window.location.replace("?site=company&id="+cid);
-            event.preventDefault(); // prevent the browser from focusing the Notification's tab
-            window.open("?site=company&id="+cid, '_blank');
-        };
-    };
+    const httpGet = (url) => {
+		let xmlHttp = new XMLHttpRequest();
+		xmlHttp.open( "GET", url, false ); // false for synchronous request
+		xmlHttp.send( null );
+		return xmlHttp.responseText;
+	}
     
-   const getSelectedCompanies = () => JSON.parse(localStorage.getItem("selected_companies"));
+    const getSelectedCompanies = () => JSON.parse(localStorage.getItem("selected_companies"));
    
-   const setSelectedCompanies = (companies) => localStorage.setItem("selected_companies", JSON.stringify(companies));
+    const setSelectedCompanies = (companies) => localStorage.setItem("selected_companies", JSON.stringify(companies));
 
 	const $ = document.querySelector.bind(document);
 	const $$ = document.querySelectorAll.bind(document);

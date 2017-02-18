@@ -32,7 +32,7 @@
         $colourClass = "green";
         if(Strike::findBySomethingAmount($companies[$i]->getId(), "companyId")>0) {
             $colourClass = "orange";
-            if($companies[$i]->getTimeToNextStrike()>-2) {
+            if($companies[$i]->getTimeToNextStrike()<2) {
                 $colourClass = "red";
             }
         }
