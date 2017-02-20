@@ -7,7 +7,7 @@
         
         if (!("Notification" in window)) {
             alert("This browser does not support desktop notifications! Please use another browser.");
-            localStorage.setItem("notifications_unsupported", false);
+            localStorage.setItem("notifications_unsupported", true);
         } else {
             Notification.requestPermission();
             if(getSelectedCompanies() == null)
@@ -37,7 +37,7 @@
     };
 
     const testNotification = () => {
-        let companies = JSON.parse(httpGet("/API/?action=getCompanies"));
+        let companies = JSON.parse(httpGet("../API/?action=getCompanies"));
         if(companies.length == 0)
             alert("No strikes for today and tomorrow!");
         
