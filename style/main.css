@@ -486,3 +486,9 @@ li {
     bottom: 1rem;
     background-image: url(../media/icons/backtothetopbutton.svg);
 }
+.bell {
+    cursor: pointer;
+    top: 0.5rem;
+    right: 1rem;
+    padding: 1.5rem;
+}

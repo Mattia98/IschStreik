@@ -6,7 +6,7 @@
     $strikes = Strike::findBySomething($_GET["id"], "companyId");
 ?>
 
-<i class="material-icons bell" style="top:50%;left:3rem;" data-cid="<?= $company->getId() ?>">notifications_paused</i>
+<i class="material-icons bell" data-cid="<?= $company->getId() ?>">notifications_paused</i>
 
 <div class="company-logo-div">
     <a href="<?= $company->getWebsite() ?>">

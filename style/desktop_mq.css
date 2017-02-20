@@ -73,3 +73,8 @@ div.box {
     zoom: 0 !important;
     width: 3rem;
 }
+.bell {
+    top: 0.9rem !important;
+    right: 21rem !important;
+    padding: 0 !important;
+}
