@@ -35,7 +35,7 @@
 	
 	if($firsttime) {
 		//Whatismybrowser.com Parser
-		$data = array('user_key' => '2f2d7fc9cfe2115adf7b009aca7c0738', 'user_agent' => $_SERVER['HTTP_USER_AGENT']);
+		$data = array('user_key' => '8b9d51e6661f8e8016f04db794c995f3', 'user_agent' => $_SERVER['HTTP_USER_AGENT']);
 		$options = array(
 		        'http' => array(
 		            'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
