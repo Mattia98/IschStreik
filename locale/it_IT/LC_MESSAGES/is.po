@@ -30,8 +30,7 @@ msgstr "Nessun sciopero"
 
 #: main.php:113
 msgid "strike_near_future"
-msgstr ""
-"Sciopero nelle prossime 2-3 settimane (possibilitá di essere revocato)"
+msgstr "Sciopero nelle prossime 2-3 settimane (possibilitá di essere revocato)"
 
 #: main.php:117
 msgid "strike_2days"

@@ -73,7 +73,7 @@
 		<nav>
 
 		<ul class="list-up">
-            <a href="?site=settings"><li><i class="material-icons">settings</i>Settings</li></a>
+            <a href="?site=settings"><li><i class="material-icons">notifications</i>Notifications</li></a>
 			<a href="?site=stats"><li><i class="material-icons">timeline</i>Stats</li></a>
 			<li id="li-feedback"><i class="material-icons">feedback</i>Feedback<i class="material-icons arrow">arrow_drop_down</i></li>
             <ul id="list-feedback" class="popup-closed">

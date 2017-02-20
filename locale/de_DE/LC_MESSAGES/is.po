@@ -30,7 +30,7 @@ msgstr "Kein bekannter Streik"
 
 #: main.php:113
 msgid "strike_near_future"
-msgstr "Streik der in den nächsten 2-3 Wochen (kann gestrichen werden)"
+msgstr "Streik in den nächsten 2-3 Wochen (kann gestrichen werden)"
 
 #: main.php:117
 msgid "strike_2days"

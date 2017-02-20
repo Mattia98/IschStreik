@@ -30,7 +30,7 @@ msgstr "No known strike"
 
 #: main.php:113
 msgid "strike_near_future"
-msgstr "There will be a strike in the next 2-3 weeks (can be canceled)"
+msgstr "There will be a strike in the next 2-3 weeks (may be cancelled)"
 
 #: main.php:117
 msgid "strike_2days"
