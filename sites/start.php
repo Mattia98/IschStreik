@@ -12,14 +12,14 @@
     
     $regions = Company::getRegions();
 ?>
-
+<script type="text/javascript" src="../js/content.js" async defer></script>
 <div id="dropdown-menu">
     <form method="GET" action="./" >
         <label for="region"><?= _("region").":" ?></label>
         <select name="region">
             <option value="">..</option>
             <?php for($i=0; $i<count($regions); $i++): ?>
-            <option <?= ($region == $regions[$i]) ? "selected" : "" ?>><?= $regions[$i] ?></option>
+            <option <?= ($region == $regions[$i]) ? "selected" : "" ?> value="<?= $regions[$i] ?>"><?= $regions[$i] ?></option>
             <?php endfor; ?>
         </select>
         <noscript>

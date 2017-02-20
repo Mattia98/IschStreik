@@ -51,7 +51,6 @@
 		<script type="text/javascript" src="../js/sandwitch.js" async defer></script>
 		<script type="text/javascript" src="../js/location.js" async defer></script>
 		<script type="text/javascript" src="../js/notifications.js" async defer></script>
-		<script type="text/javascript" src="../js/content.js" async defer></script>
 		
 		<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
 		<script type="text/javascript">
