@@ -2,9 +2,8 @@
     include_once("../model/Company.class.php");
     include_once("../model/Strike.class.php");
     
-    
     $region = "";
-    if(!isset($_GET["region"]))
+    if(!isset($_GET["region"]) || $_GET["region"] == "")
     	$companies = Company::findAllAndOrder();
     else {
     	$companies = Company::findByRegion($_GET["region"]);
@@ -15,15 +14,18 @@
 ?>
 
 <div id="dropdown-menu">
-	<form method="GET" action="./" >
-		<label for="region"><?= _("region").":" ?></label>
-		<select  name="region" onchange="if(this.value != 0) { this.form.submit(); }">
-            <option value="all">..</option>
-			<?php for($i=0; $i<count($regions); $i++): ?>
-			<option <?= ($region == $regions[$i]) ? "selected" : "" ?>><?= $regions[$i] ?></option>
-			<?php endfor; ?>
-		</select>
-	</form>
+    <form method="GET" action="./" >
+        <label for="region"><?= _("region").":" ?></label>
+        <select name="region">
+            <option value="">..</option>
+            <?php for($i=0; $i<count($regions); $i++): ?>
+            <option <?= ($region == $regions[$i]) ? "selected" : "" ?>><?= $regions[$i] ?></option>
+            <?php endfor; ?>
+        </select>
+        <noscript>
+            <input type="submit" value="Go!" />
+        </noscript>
+    </form>
 </div>
 
 <div class="box-container">

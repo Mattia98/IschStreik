@@ -11,6 +11,9 @@
 		$('#curtain').addEventListener('click', closeAll);
 		$$('.logo').forEach((obj) => obj.addEventListener('error', removeLogo));
 		$$('.logo-cp').forEach((obj) => obj.addEventListener('error', replaceLogo));
+
+		//For dynamic content, when change reset listeners
+		$('#dropdown-menu select').addEventListener('change', () => setTimeout(() => $$('.logo').forEach((obj) => obj.addEventListener('error', removeLogo)) , 1));
 	};
 	
 	const closeAll = () => {
