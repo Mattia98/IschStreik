@@ -62,10 +62,13 @@ select:focus {
 	border: 1px solid white;
 	box-shadow: 1px 1px 5px #888888;
 }
-option:hover {
-	background-color: lightgray;
+option:hover, #div-bell span {
+	background-color: #d3d3d3;
 }
-.strike-box p, .box span, .strike-box-desktop table, #guaranteed-routes-div a, #dropdown-menu select, #dropdown-menu label {
+#div-bell span:after {
+    border-left: 8px solid #d3d3d3;
+}
+.strike-box p, .box span, .strike-box-desktop table, #guaranteed-routes-div a, #dropdown-menu select, #dropdown-menu label, #div-bell span {
     color: #fff;
 }
 #dropdown-menu select, #dropdown-menu label {

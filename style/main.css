@@ -492,3 +492,29 @@ li {
     right: 1rem;
     padding: 1.5rem;
 }
+#div-bell {
+    position: relative;
+}
+#div-bell span {
+    visibility: hidden;
+    position: absolute;
+    text-align: center;
+    top: 1.6rem;
+    right: 23rem;
+    border-radius: 6px;
+    padding: 0.2rem 1rem 0.2rem 0.7rem;
+}
+#div-bell span:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -8px;
+  width: 0; height: 0;
+  border-left: 9px solid #000000;
+  border-top: 9px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+#div-bell:hover span {
+    visibility: visible;
+}
