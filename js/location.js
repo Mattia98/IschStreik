@@ -20,9 +20,9 @@
 		let regionElement = document.createElement("option");
 		regionElement.innerHTML = region;
 		regionElement.selected = "selected";
+	    	sessionStorage.setItem("last_location", region);
 		$("#dropdown-menu form select").add(regionElement);
 		$("#dropdown-menu form select").form.submit();
-		sessionStorage.setItem("last_location", region);
     };
 
 	const httpGet = (url) => {
