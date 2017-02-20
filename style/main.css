@@ -14,6 +14,16 @@
         padding-right: 0.5rem !important;
     }
 }
+/*fix for portrait mode*/
+@media screen and (orientation: landscape) {
+    #description-popup table {
+        height: 18rem !important;
+        margin-top: 7rem !important;;
+    }
+    #description-popup i {
+        top: 9rem !important;
+    }
+}
 /*main style*/
 html {
 	font-size: 100%;
@@ -351,8 +361,6 @@ li {
 #description-popup table {
     border-collapse: collapse;
     box-sizing: border-box;
-    background-size: 100%;
-    background-repeat: no-repeat;
     height: 30rem;
     border-radius: 30px;
 }
