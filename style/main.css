@@ -502,7 +502,18 @@ li {
     bottom: 1rem;
     background-image: url(../media/icons/backtothetopbutton.svg);
 }
-.bell {
+#picture-box{
+    display: flex;
+    width: 100%;
+}
+#picture-box figure{
+    margin: auto;
+    width: 25%;
+}
+#picture-box figure img{
+    width: 100%;
+    border-radius: 50%;  
+}.bell {
     cursor: pointer;
     top: 0.5rem;
     right: 1rem;

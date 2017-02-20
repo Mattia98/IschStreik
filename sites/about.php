@@ -1,12 +1,53 @@
 <div class="about-div">
+    <?php if(SHORT_LANG == "de"): ?>
+    
+    <h3>Über uns</h3>
+    <p>Hinter der Website „isch Streik“ stehen vier südtiroler Maturanten der <a href="http://www.bozen.berufsschule.it/">Landesberufsschule für Handwerk und Industrie</a> in Bozen. Beeinflusst wurde die Seite von ständigen Streiks in Südtirol, welche spät oder gar nicht bekannt gegeben wurden. Die Idee hinter dem Maturaprojekt ist es, Schüler und Pendler rechtzeitig über bevorstehende Streiks und garantierte Verbindungen italienweit zu informieren.</p>
+    
+    <?php endif; if(SHORT_LANG == "it"): ?>
+    
+    <h3>Über uns</h3>
+    <p></p>
+    
+    <?php endif; if(SHORT_LANG == "en"): ?>
+
     <h3>About us</h3>
-    <p>IschStreick - un giovane team di teste creative. Il nostro team è composto di un web designer e tre programmatori.</p>
-    <p id="contact">Contatto:</p>
-    <a href="mailto:sciopero.news@gmail.com" >sciopero.news@gmail.com</a>
-    <p id="school">Scuola</p>
-    <p><a href="http://www.bozen.berufsschule.it/">Scuola professionale provinciale per l`artigianato e l`industria</a></p>
-    <details>
-        <summary>Technical information</summary>
+    <p>Behind the website "is Strike" stand four south tyrolean high school graduates of the <a href="http://www.bozen.berufsschule.it/">Landesberufsschule für Handwerk und Industrie</a>. The Site got influenced by the constantly upcoming strikes which information was nearly ungiven. The idea behind the project is to inform commuter about upcomming strikes in time. </p>
+    
+    <?php endif; ?>
+    
+    <div id="picture-box" >
+        <figure>
+            <img src="KEN" alt="KenZoeggeler" />
+            <figcaption>Ken Zöggeler - Programmier</figcaption>
+        </figure>
+        <figure>
+            <img src="MATTEO" alt="MatteoScheitzVioli" />
+            <figcaption>Matteo Scheitz Violi - Programmier</figcaption>
+        </figure>
+        <figure>
+            <img src="MATTIA" alt="MattiaDorigatti" />
+            <figcaption>Mattia Dorigatti - Programmier</figcaption>
+        </figure>
+        <figure>
+            <img src="IRIS" alt="IrisGasser" />
+            <figcaption>Iris Gasser - Designerin</figcaption>
+        </figure>
+    </div>
+    
+        <?php if(SHORT_LANG == "de"): ?>
+            <p id="contact">Kontakt:</p>
+            <a href="mailto:sciopero.news@gmail.com" >sciopero.news@gmail.com</a>
+        <?php endif; if(SHORT_LANG == "it"): ?>
+            <p id="contact">Contatto:</p>
+            <a href="mailto:sciopero.news@gmail.com" >sciopero.news@gmail.com</a>
+        <?php endif; if(SHORT_LANG == "en"): ?>
+            <p id="contact">Contact us:</p>
+            <a href="mailto:sciopero.news@gmail.com" >sciopero.news@gmail.com</a>
+        <?php endif; ?>
+    <br>
+    <details style="margin-top: 1rem;">
+        <summary> Technical information</summary>
         <h4>Used apps:</h4>
         <figure>
             <img src="../media/logos/about/bluefish.png" alt="BLUEFISH LOGO" />
