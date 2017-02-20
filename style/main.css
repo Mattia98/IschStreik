@@ -1,5 +1,20 @@
 @import 'desktop_mq.css' screen and (min-width: 768px);
 @import 'high_res.css' screen and (min-width: 1700px);
+/*fix für iPhone 5*/
+@media screen and (max-width: 320px) {
+    header img {
+        height: 2rem !important;
+        vertical-align: text-bottom !important;
+    }
+    #sandwitch img {
+        margin-top: 0.5rem!important;
+    }
+    .bell {
+        right: 0rem !important;
+        padding-right: 0.5rem !important;
+    }
+}
+/*main style*/
 html {
 	font-size: 100%;
 }
@@ -291,17 +306,12 @@ li {
     position: fixed;
     top: 50%;
     left: calc(50% - 10rem);
-    /*margin-top: -3rem;
-    margin-left: -45%;*/
     z-index: 3;
     height: 6rem;
     width: 20rem;
     box-sizing: border-box;
     text-align: center;
     border-radius: 20px;
-   /* background-image: url(../media/flags/bg_language.svg);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;*/
 }
 #language-popup figure {
     display: inline-block;
@@ -313,7 +323,6 @@ li {
     width: auto;
     -webkit-clip-path: circle(30.0% at 50% 50%);
     clip-path: circle(30.0% at 50% 50%);
-    /*mask: url(../media/flags/Kreis1.svg);*/
 }
 #language-popup a {
     text-decoration: none;
@@ -342,7 +351,6 @@ li {
 #description-popup table {
     border-collapse: collapse;
     box-sizing: border-box;
-    /*background-image: url(../media/icons/bg_description.svg);*/
     background-size: 100%;
     background-repeat: no-repeat;
     height: 30rem;
