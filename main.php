@@ -72,7 +72,12 @@
 		<nav>
 
 		<ul class="list-up">
-            <a href="?site=settings"><li><i class="material-icons">notifications</i>Notifications</li></a>
+            <a href="?site=settings"><li><i class="material-icons">notifications</i>Notifications</li>
+                <div class="onoffswitcher">
+                    <input type="checkbox" name="onoffswitch" id="settingsswitcher" checked>
+                    <label class="onoffswitch-label" for="settingsswitcher"></label>
+                </div>
+            </a>
 			<a href="?site=stats"><li><i class="material-icons">timeline</i>Stats</li></a>
 			<li id="li-feedback"><i class="material-icons">feedback</i>Feedback<i class="material-icons arrow">arrow_drop_down</i></li>
             <ul id="list-feedback" class="popup-closed">
