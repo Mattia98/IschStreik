@@ -105,14 +105,6 @@
 			<li><?php echo date('Y'); ?> IschStreik-Team</li>    
         </ul>    
 		</nav>
-		<main>
-			<?php
-				if(isset($_GET["site"]))
-					include("sites/".$_GET["site"].".php");
-				else
-					include("sites/start.php");
-			?>
-		</main>
 		<div id="curtain" class="curtain-open"></div>
         <div id="description-popup" class="popup-closed">
             <i class="material-icons">highlight_off</i>
@@ -155,5 +147,13 @@
         <a href="#">
             <div class="back-to-the-top" ></div>
         </a>
+		<main>
+			<?php
+				if(isset($_GET["site"]))
+					include("sites/".$_GET["site"].".php");
+				else
+					include("sites/start.php");
+			?>
+		</main>
 	</body>
 </html>
