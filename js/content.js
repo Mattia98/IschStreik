@@ -3,6 +3,10 @@
   
 	const init = () => {
         $('#dropdown-menu select').addEventListener('change', regionChanged);
+        $$('.logo').forEach((obj) => obj.addEventListener('error', removeLogo));
+        //For dynamic content, when change reset listeners
+		$(".box-container").addEventListener('DOMSubtreeModified', () => $$('.logo').forEach((obj) => obj.addEventListener('error', removeLogo)));
+
         if(sessionStorage.getItem("last_location")!=null)
             setRegion(sessionStorage.getItem("last_location"));
 	};
@@ -25,6 +29,8 @@
 	};
 
     const changeRegion = (region) => $(".box-container").innerHTML = httpGet("../API/html.php?action=getCompaniesByRegion&argument="+region);
+
+    const removeLogo = (e) => e.target.remove();
 
 	const $ = document.querySelector.bind(document);
 	const $$ = document.querySelectorAll.bind(document);

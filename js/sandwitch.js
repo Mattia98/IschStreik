@@ -9,11 +9,8 @@
         $('#language-popup i').addEventListener('click', closeAll);
         $('#li-feedback').addEventListener('click', listFeedback);
 		$('#curtain').addEventListener('click', closeAll);
-		$$('.logo').forEach((obj) => obj.addEventListener('error', removeLogo));
-		$$('.logo-cp').forEach((obj) => obj.addEventListener('error', replaceLogo));
 
-		//For dynamic content, when change reset listeners
-		$('#dropdown-menu select').addEventListener('change', () => setTimeout(() => $$('.logo').forEach((obj) => obj.addEventListener('error', removeLogo)) , 1));
+		$$('.logo-cp').forEach((obj) => obj.addEventListener('error', replaceLogo));
 	};
 	
 	const closeAll = () => {
@@ -65,9 +62,7 @@
 			$('#list-feedback').setAttribute('class', 'popup-open');
         }
 	};
-
-	const removeLogo = (e) => e.target.remove();
-
+	
 	const replaceLogo = (e) => e.target.parentElement.innerHTML = "<span>"+e.target.alt+"</span>";
 	
 	const isNavOpen = () => $('nav').classList.contains('nav-open');
