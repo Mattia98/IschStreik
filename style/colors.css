@@ -4,7 +4,7 @@ header, #description-popup i, #language-popup i, #description-popup table, #lang
 nav, .green, .strike-box:nth-child(even), .strike-box-desktop tr:nth-child(even), #guaranteed-routes-div, #dropdown-menu option, #dropdown-menu label, #dropdown-menu select, #guaranteed-routes-div a {
 	background-color: #a7c712;
 }
-.strike-box:nth-child(odd), .strike-box-desktop tr:nth-child(odd) {
+.strike-box:nth-child(odd), .strike-box-desktop tr:nth-child(odd), .onoffswitch input:checked + .onoffswitch-label  {
     background-color: #849824;
 }
 header a, h1, h2, h3, h4, h5, main a {
@@ -13,7 +13,7 @@ header a, h1, h2, h3, h4, h5, main a {
 .box:hover, #dropdown-menu select:hover, #dropdown-menu input:hover, #guarenteed-routes-div a:hover {
     box-shadow: 0px 0px 2px 1px #888888;
 }
-.red {
+.red, .onoffswitch-label {
     background-color: #71112e;
 }
 .orange {
@@ -86,4 +86,19 @@ option:hover, #div-bell span {
 }
 nav .list-up li:hover{
     background-color: #859F0E;
+}
+#div-bell span:after {
+  border-left: 9px solid #000000;
+}
+#div-bell span:after {
+  border-left: 9px solid #000000;
+  border-top: 9px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+.onoffswitch-label:before {
+    background: #ECECED;
+    border: 2px solid #ECECED;
+}
+.onoffswitch input:checked + .onoffswitch-label, .onoffswitch input:checked + .onoffswitch-label:before {
+    border-color: #ECECED;
 }

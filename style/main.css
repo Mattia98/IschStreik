@@ -539,14 +539,11 @@ li {
   left: 100%;
   margin-top: -8px;
   width: 0; height: 0;
-  border-left: 9px solid #000000;
-  border-top: 9px solid transparent;
-  border-bottom: 8px solid transparent;
 }
 #div-bell:hover span {
     visibility: visible;
 }
-.onoffswitcher input {
+.onoffswitch input {
     display: none;
 }
 .onoffswitch-label {
@@ -559,7 +556,6 @@ li {
     cursor: pointer;
     padding: 0;
     border-radius: 15px;
-    background-color: #71112e;
     transition: background-color 0.2s ease-in;
 }
 .onoffswitch-label:before {
@@ -567,21 +563,13 @@ li {
     display: block;
     width: 1.3rem;
     margin: 0px;
-    background: #ECECED;
     position: absolute;
     top: 0;
     bottom: 0;
     right: 1.55rem;
-    border: 2px solid #ECECED;
     border-radius: 15px;
-    transition: all 0.3s ease-in 0s; 
+    transition: all 0.2s ease-in 0s; 
 }
-.onoffswitcher input:checked + .onoffswitch-label {
-    background-color: #849824;
-}
-.onoffswitcher input:checked + .onoffswitch-label, .onoffswitcher input:checked + .onoffswitch-label:before {
-    border-color: #ECECED;
-}
-.onoffswitcher input:checked + .onoffswitch-label:before {
+.onoffswitch input:checked + .onoffswitch-label:before {
     right: 0px;
 }

@@ -73,7 +73,7 @@
 
 		<ul class="list-up">
             <a href="?site=settings"><li><i class="material-icons">notifications</i>Notifications</li>
-                <div class="onoffswitcher">
+                <div class="onoffswitch">
                     <input type="checkbox" name="onoffswitch" id="settingsswitcher" checked>
                     <label class="onoffswitch-label" for="settingsswitcher"></label>
                 </div>
