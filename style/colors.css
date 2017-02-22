@@ -77,10 +77,7 @@ option:hover, #div-bell span {
 .box, header {
     box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.75);
 }
-.box:hover, .separator-div:hover {
-    transform: translateY(-3px);
-    transition: transform 0.2s linear;
-}
+
 #language-selector:hover, #description-selector:hover, #description-popup i:hover, #language-popup i:hover  {
     cursor: pointer;
 }

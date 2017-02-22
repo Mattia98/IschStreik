@@ -273,7 +273,7 @@ div.box {
 }
 .box:hover, .separator-div:hover {
     transform: translateY(-3px);
-    transition: transform 0.2s linear;
+    transition: transform 0.2s linear;   
 }
 .separator-div {
     width: 100%;
