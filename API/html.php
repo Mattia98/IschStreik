@@ -1,7 +1,13 @@
 <?php
+    include_once("../model/Company.class.php");
+    include_once("../model/Strike.class.php");
+
     switch($_GET["action"]) {
         case "getCompaniesByRegion":
-            getCompaniesByRegion($_GET["argument"]);
+            printFormattedCompanies(Company::findByRegion($_GET["argument"]));
+            break;
+        case "getCompanies":
+            printFormattedCompanies(Company::findAllAndOrder());
             break;
         default:
             echo "Error";
@@ -9,10 +15,7 @@
     }
 
     /* Actions */
-    function getCompaniesByRegion($region) {
-        include_once("../model/Company.class.php");
-        include_once("../model/Strike.class.php");
-        $companies = Company::findByRegion($region);
+    function printFormattedCompanies($companies) {
         for($i=0; $i<count($companies); $i++): ?>
             <?php
                 $colourClass = "green";

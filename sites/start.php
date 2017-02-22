@@ -17,7 +17,7 @@
     <form method="GET" action="./" >
         <label for="region"><?= _("region").":" ?></label>
         <select name="region">
-            <option value="">..</option>
+            <option value="all">..</option>
             <?php for($i=0; $i<count($regions); $i++): ?>
             <option <?= ($region == $regions[$i]) ? "selected" : "" ?> value="<?= $regions[$i] ?>"><?= $regions[$i] ?></option>
             <?php endfor; ?>

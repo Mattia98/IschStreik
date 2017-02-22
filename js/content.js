@@ -13,11 +13,11 @@
 	
     const regionChanged = (e) => {
         sessionStorage.setItem("last_location", e.target.options[e.target.selectedIndex].value);
-        changeRegion(e.target.options[e.target.selectedIndex].value);
+        reloadCompanies(e.target.options[e.target.selectedIndex].value);
     };
 
     const setRegion = (region) => {
-        changeRegion(region);
+        reloadCompanies(region);
         $('#dropdown-menu form select [value="'+region+'"]').selected = true;
     };
 
@@ -28,8 +28,13 @@
 		return xmlHttp.responseText;
 	};
 
-    const changeRegion = (region) => $(".box-container").innerHTML = httpGet("../API/html.php?action=getCompaniesByRegion&argument="+region);
-
+    const reloadCompanies = (region) => {
+        if(region=="all")
+            $(".box-container").innerHTML = httpGet("../API/html.php?action=getCompanies");
+        else
+            $(".box-container").innerHTML = httpGet("../API/html.php?action=getCompaniesByRegion&argument="+region);
+    };
+    
     const removeLogo = (e) => e.target.remove();
 
 	const $ = document.querySelector.bind(document);
