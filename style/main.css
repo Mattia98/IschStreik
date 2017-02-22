@@ -513,7 +513,8 @@ li {
 #picture-box figure img{
     width: 100%;
     border-radius: 50%;  
-}.bell {
+}
+.bell {
     cursor: pointer;
     top: 0.5rem;
     right: 1rem;
@@ -526,8 +527,8 @@ li {
     visibility: hidden;
     position: absolute;
     text-align: center;
-    top: 1.6rem;
-    right: 23rem;
+    top: 2.6rem;
+    right: 5rem;
     border-radius: 6px;
     padding: 0.2rem 1rem 0.2rem 0.7rem;
 }
