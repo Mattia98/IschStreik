@@ -13,15 +13,23 @@
     $regions = Company::getRegions();
 ?>
 <script type="text/javascript" src="../js/content.js" async defer></script>
+
+<?php if(!isset($_GET["nojs"])): ?>
+    <noscript><meta http-equiv="refresh" content="0; url=?nojs=true"></noscript>
+<?php endif; ?>
+
 <div id="dropdown-menu">
     <form method="GET" action="./" >
         <label for="region"><?= _("region").":" ?></label>
-        <select name="region">
+        <select name="region" <?php if(isset($_GET["nojs"])): ?>onchange="if(this.value != 0) { this.form.submit(); }"<?php endif; ?>>
             <option value="all">..</option>
             <?php for($i=0; $i<count($regions); $i++): ?>
             <option <?= ($region == $regions[$i]) ? "selected" : "" ?> value="<?= $regions[$i] ?>"><?= $regions[$i] ?></option>
             <?php endfor; ?>
         </select>
+        <?php if(isset($_GET["nojs"])): ?>
+            <input type="hidden" name="nojs" value="true" />
+        <?php endif; ?>
         <noscript>
             <input type="submit" value="Go!" />
         </noscript>
@@ -29,6 +37,7 @@
 </div>
 
 <div class="box-container">
+<?php if(isset($_GET["nojs"])): ?>
 <?php for($i=0; $i<count($companies); $i++): ?>
     <?php
         $colourClass = "green";
@@ -39,7 +48,7 @@
             }
         }
     ?>
-    <a href="?site=company&id=<?= $companies[$i]->getId() ?>">
+    <a href="?site=company&id=<?= $companies[$i]->getId() ?>&nojs=true">
     <div class="box <?= $colourClass ?>">
         <div class="imgBox">
             <img class="logo" src="../media/logos/companies/<?= $companies[$i]->getNameCode() ?>.svg" alt="<?= $companies[$i]->getNameCode() ?>"/>
@@ -49,4 +58,5 @@
     <div class="separator-div"></div>
     </a>
 <?php endfor; ?>
+<?php endif; ?>
 </div>

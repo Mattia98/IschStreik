@@ -9,6 +9,9 @@
 		<!--Browser and document meta-tags-->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta charset="UTF-8" />
+		<!--[if IE]>
+		<meta http-equiv="refresh" content="0; url=?nojs=true">
+		<![endif]-->
 		
 		<!--Informational meta-tags-->
 		<meta name="description" content="<?= _("site-description") ?>" />
@@ -51,7 +54,23 @@
 		<script type="text/javascript" src="../js/sandwitch.js" async defer></script>
 		<script type="text/javascript" src="../js/location.js" async defer></script>
 		<script type="text/javascript" src="../js/notifications.js" async defer></script>
-		
+		<?php if(!isset($_GET["nojs"])): ?>
+		<script type="text/javascript">
+			function check() {
+				"use strict";
+				if (typeof Symbol == "undefined") return false;
+				try {
+					eval("class Foo {}");
+					eval("var bar = (x) => x+1");
+				} catch (e) { return false; }
+				return true;
+			}
+			if (!check()) {
+				window.location = "?nojs=true";
+			}
+		</script>
+		<?php endif; ?>
+
 		<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
 		<script type="text/javascript">
 		    window.cookieconsent_options = {"message":"This website uses cookies and whoever thought up this law is an idiot","dismiss":"Got it!","learnMore":"More info","link":null,"theme":"dark-floating"};
