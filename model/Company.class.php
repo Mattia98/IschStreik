@@ -80,14 +80,8 @@ class Company extends DBObject {
 		return array_values(array_diff($arr, ["all"]));
 	}
 
-	/*public static function findByRegion($region) {
-		return static::findBySomething($region, "region");
-	}
-	Old code. Need custom query for including companies with region "all"
-	*/
-
-	static function findByRegion($region) {
-		$sql = "SELECT * FROM ".static::COLLECTION_NAME." WHERE region = :region OR region = 'all'";
+	static function findByRegion($region) { //Find companies by region and order like in "findAllAndOrder"
+		$sql = 'SELECT companies.* FROM strikes RIGHT JOIN companies ON "companyId"=companies.id WHERE companies.region = :region OR companies.region = \'all\' GROUP BY companies.id ORDER BY age(min("startDate"))*-1, count(strikes) DESC';
 		$options["region"] = $region;
 		$query = DB::getDB()->prepare($sql);
 		$query->execute($options);
