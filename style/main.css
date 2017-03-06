@@ -532,14 +532,6 @@ li {
     border-radius: 6px;
     padding: 0.2rem 1rem 0.2rem 0.7rem;
 }
-#div-bell span:after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  margin-top: -8px;
-  width: 0; height: 0;
-}
 #div-bell:hover span {
     visibility: visible;
 }
