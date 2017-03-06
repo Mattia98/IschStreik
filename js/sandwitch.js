@@ -58,9 +58,9 @@
     
     const listFeedback = () => {
 		if (isFeedbackDropdownOpen()) {
-			$('#list-feedback').setAttribute('class', 'popup-closed');
+			$('#list-feedback').setAttribute('class', 'dropdown-closed');
 		} else {
-			$('#list-feedback').setAttribute('class', 'popup-open');
+			$('#list-feedback').setAttribute('class', 'dropdown-open');
         }
 	};
     
@@ -74,7 +74,7 @@
     
 	const isDescPopupOpen = () => $('#description-popup').classList.contains('popup-open');
     
-	const isFeedbackDropdownOpen = () => $('#list-feedback').classList.contains('popup-open');
+	const isFeedbackDropdownOpen = () => $('#list-feedback').classList.contains('dropdown-open');
 		
 	const $ = document.querySelector.bind(document);
 	const $$ = document.querySelectorAll.bind(document);
