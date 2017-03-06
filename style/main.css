@@ -273,7 +273,7 @@ div.box {
 }
 .box:hover, .separator-div:hover {
     transform: translateY(-3px);
-    transition: transform 0.2s linear;
+    transition: transform 0.2s linear;   
 }
 .separator-div {
     width: 100%;
@@ -531,14 +531,6 @@ li {
     right: 5rem;
     border-radius: 6px;
     padding: 0.2rem 1rem 0.2rem 0.7rem;
-}
-#div-bell span:after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  margin-top: -8px;
-  width: 0; height: 0;
 }
 #div-bell:hover span {
     visibility: visible;
