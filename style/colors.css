@@ -4,8 +4,11 @@ header, #description-popup i, #language-popup i, #description-popup table, #lang
 nav, .green, .strike-box:nth-child(even), .strike-box-desktop tr:nth-child(even), #guaranteed-routes-div, #dropdown-menu option, #dropdown-menu label, #dropdown-menu select, #guaranteed-routes-div a {
 	background-color: #a7c712;
 }
-.strike-box:nth-child(odd), .strike-box-desktop tr:nth-child(odd), .onoffswitch input:checked + .onoffswitch-label  {
+.strike-box:nth-child(odd), .strike-box-desktop tr:nth-child(odd) {
     background-color: #849824;
+}
+.onoffswitch input:checked + .onoffswitch-label {
+    background-color: #98b511;
 }
 header a, h1, h2, h3, h4, h5, main a {
     color: #849824;

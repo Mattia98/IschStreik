@@ -146,20 +146,18 @@ nav li {
 nav .list-down li {
     margin-left: 1.5rem;
 }
-nav .list-up li{
+nav .list-up li {
     transition: background-color 0.4s;
     padding-left: 3.5rem;
+}
+nav .list-up li:hover {
+    cursor: pointer;
+    user-select: none;
 }
 #list-feedback li {
     padding-left: 5.5rem !important;
     line-height: 1.3;
     font-size: 1.3rem;
-}
-#li-feedback:hover {
-    cursor: pointer;
-}
-#li-feedback {
-    user-select: none;
 }
 #list-feedback i {
     line-height: 0;
@@ -218,34 +216,6 @@ select:focus {
 option {
 	padding: 12px 6px 12px 14px;
 }
-/* Tables */
-/*table tr:first-child th:first-child, table tr:first-child td:first-child {
-	border-top-left-radius: 10px;
-}
-table tr:first-child th:last-child, table tr:first-child td:last-child {
-	border-top-right-radius: 10px;
-}
-table tr:last-child td:first-child {
-	border-bottom-left-radius: 10px;
-}
-table tr:last-child td:last-child {
-	border-bottom-right-radius: 10px;
-}
-table.invisible, table.invisible td {
-	border: none;
-}*/
-
-/* Other Tables */
-/*table.invisible td::after {
-	content: "  ";
-}
-article table td, article table th, form table td, form table th {
-	border: 5px solid transparent;
-}
-article table th {
-	width: 12ex;
-	text-align: right;
-}*/
 div.box {
     width: 100%;
     margin-top: 1rem;

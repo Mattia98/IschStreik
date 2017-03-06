@@ -9,6 +9,7 @@
         $('#language-popup i').addEventListener('click', closeAll);
         $('#li-feedback').addEventListener('click', listFeedback);
 		$('#curtain').addEventListener('click', closeAll);
+        $('.list-up li').addEventListener('click', triggerSwitch);
 
 		$$('.logo-cp').forEach((obj) => obj.addEventListener('error', replaceLogo));
 	};
@@ -62,6 +63,8 @@
 			$('#list-feedback').setAttribute('class', 'popup-open');
         }
 	};
+    
+    const triggerSwitch = () => $('.onoffswitch input[type=checkbox]').click();
 	
 	const replaceLogo = (e) => e.target.parentElement.innerHTML = "<span>"+e.target.alt+"</span>";
 	
