@@ -64,7 +64,7 @@
         }
 	};
     
-    const triggerSwitch = () => $('.onoffswitch input[type=checkbox]').click();
+    const triggerSwitch = () => $('.onoffswitch input[type=checkbox]').checked = !$('.onoffswitch input[type=checkbox]').checked;
 	
 	const replaceLogo = (e) => e.target.parentElement.innerHTML = "<span>"+e.target.alt+"</span>";
 	
