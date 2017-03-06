@@ -9,9 +9,6 @@
 		<!--Browser and document meta-tags-->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta charset="UTF-8" />
-		<!--[if IE]>
-		<meta http-equiv="refresh" content="0; url=?nojs=true">
-		<![endif]-->
 		
 		<!--Informational meta-tags-->
 		<meta name="description" content="<?= _("site-description") ?>" />
