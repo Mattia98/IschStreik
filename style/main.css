@@ -54,7 +54,7 @@ header {
 	top: 0;
 	left: 0;
 	right: 0;
-	z-index: 2;
+	z-index: 3;
 	text-align: center;
 }
 header img {
@@ -72,7 +72,7 @@ article {
 	left: 0.5rem;
 	height: 3rem;
 	width: 3rem;
-	z-index: 1;
+	z-index: 2;
 }
 #sandwitch img {
 	width: 110%;
@@ -90,7 +90,7 @@ article {
 }
 .curtain-closed {
 	opacity: 1;
-    z-index: 1;
+    z-index: 2;
     transition: opacity 0.2s linear;
 }
 .curtain-open {
@@ -117,12 +117,12 @@ nav {
 	position: fixed;
 	top: 4rem;
 	left: 0;
-	z-index: -1;
+	z-index: 0;
 	opacity: 0;
 }
 .nav-open {
 	opacity: 1;
-    z-index: 2;
+    z-index: 3;
     transition: opacity 0.2s linear;
 }
 .nav-closed {
@@ -281,6 +281,9 @@ li {
 #description-selector {
 	right: 45px;
     top: 8px;
+}
+#description-selector, #language-selector {
+    user-select: none;
 }
 #language-popup {
     position: fixed;
@@ -471,6 +474,7 @@ li {
     right: 1rem;
     bottom: 1rem;
     background-image: url(../media/icons/backtothetopbutton.svg);
+    z-index: 1;
 }
 #picture-box{
     display: flex;
