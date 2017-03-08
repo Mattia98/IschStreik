@@ -18,19 +18,19 @@
     
     <div id="picture-box" >
         <figure>
-            <img src="KEN" alt="KenZoeggeler" />
+            <img src="../media/about/ken.png" alt="KenZoeggeler" />
             <figcaption>Ken Zöggeler - Programmier</figcaption>
         </figure>
         <figure>
-            <img src="MATTEO" alt="MatteoScheitzVioli" />
+            <img src="../media/about/matteo.png" alt="MatteoScheitzVioli" />
             <figcaption>Matteo Scheitz Violi - Programmier</figcaption>
         </figure>
         <figure>
-            <img src="MATTIA" alt="MattiaDorigatti" />
+            <img src="../media/about/mattia1.jpg" alt="MattiaDorigatti" />
             <figcaption>Mattia Dorigatti - Programmier</figcaption>
         </figure>
         <figure>
-            <img src="IRIS" alt="IrisGasser" />
+            <img src="../media/about/iris.png" alt="IrisGasser" />
             <figcaption>Iris Gasser - Designerin</figcaption>
         </figure>
     </div>
