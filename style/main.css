@@ -241,7 +241,7 @@ div.box {
     justify-content: center;
     font-size: 1.3rem;
 }
-.box:hover, .separator-div:hover {
+.box:hover {
     transform: translateY(-3px);
     transition: transform 0.2s linear;   
 }
