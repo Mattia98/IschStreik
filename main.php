@@ -49,7 +49,6 @@
 		
 		<!--JScripts-->
 		<script type="text/javascript" src="../js/sandwitch.js" async defer></script>
-		<script type="text/javascript" src="../js/location.js" async defer></script>
 		<script type="text/javascript" src="../js/notifications.js" async defer></script>
 		<?php if(!isset($_GET["nojs"])): ?>
 		<script type="text/javascript">
@@ -143,6 +142,7 @@
                         <td><?= _("strike_2days") ?></td>
                     </tr>
                 </table>
+				<p><?= _("beta_alert") ?></p>
         </div>
         <div id="language-popup" class="popup-closed">
             <i class="material-icons">highlight_off</i>

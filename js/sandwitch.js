@@ -12,6 +12,11 @@
         $('.list-up li').addEventListener('click', triggerSwitch);
 
 		$$('.logo-cp').forEach((obj) => obj.addEventListener('error', replaceLogo));
+
+		if(localStorage.getItem("firsttime")==null) {
+			descriptionPopup();
+			localStorage.setItem("firsttime", false);
+		}
 	};
 	
 	const closeAll = () => {
