@@ -32,8 +32,8 @@
                     <img class="logo" src="../media/logos/companies/<?= $companies[$i]->getNameCode() ?>.svg" alt="<?= $companies[$i]->getNameCode() ?>" />
                 </div>
                 <span><?= $companies[$i]->getName() ?></span>
+                <div class="separator-div"></div>
             </div>
-            <div class="separator-div"></div>
             </a>
         <?php
         endfor;
