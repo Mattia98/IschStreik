@@ -146,19 +146,19 @@
         </div>
         <div id="language-popup" class="popup-closed">
             <i class="material-icons">highlight_off</i>
-                <a href="../en" style="text-decoration: none;">
+                <a href="../en/<?= substr(strrchr($_SERVER['REQUEST_URI'], "/"), 1) ?>" style="text-decoration: none;">
                     <figure>
                         <img src="../media/flags/en.svg"/>
                         <figcaption>EN</figcaption>
                     </figure>
                 </a>
-                <a href="../it" style="text-decoration: none;">
+                <a href="../it/<?= substr(strrchr($_SERVER['REQUEST_URI'], "/"), 1) ?>" style="text-decoration: none;">
                     <figure>
                         <img src="../media/flags/it.svg"/>
                         <figcaption>IT</figcaption>
                     </figure>
                 </a>
-                <a href="../de" style="text-decoration: none;">
+                <a href="../de/<?= substr(strrchr($_SERVER['REQUEST_URI'], "/"), 1) ?>" style="text-decoration: none;">
                     <figure>
                         <img src="../media/flags/de.svg"/>
                         <figcaption>DE</figcaption>
