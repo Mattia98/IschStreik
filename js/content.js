@@ -9,6 +9,8 @@
 
         if(sessionStorage.getItem("last_location")!=null)
             setRegion(sessionStorage.getItem("last_location"));
+        else
+            reloadCompanies("all");
 	};
 	
     const regionChanged = (e) => {
