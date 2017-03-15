@@ -9,8 +9,9 @@
     	$companies = Company::findByRegion($_GET["region"]);
     	$region = $_GET["region"];
     }
-    
     $regions = Company::getRegions();
+
+    $isScioperoGenerale = Strike::findBySomethingAmount(0, "companyId")>0;
 ?>
 <script type="text/javascript" src="../js/content.js" async defer></script>
 
@@ -35,6 +36,13 @@
         </noscript>
     </form>
 </div>
+
+<?php if($isScioperoGenerale): ?>
+<div id="sciopero-generale">
+    <p><a href="?site=company&id=0<?php if(isset($_GET["nojs"])): ?>&nojs=true<?php endif; ?>"><?= _("alert_sciopero_generale")?></a></p>
+</div>
+<?php endif; ?>
+
 <div class="box-container">
     <?php if(isset($_GET["nojs"])): ?>
         <?php for($i=0; $i<count($companies); $i++): ?>

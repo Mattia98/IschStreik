@@ -77,7 +77,7 @@ class Company extends DBObject {
 
 	public static function getRegions() {
 		$arr = static::getListByColumn("region");
-		return array_values(array_diff($arr, ["all"]));
+		return array_values(array_diff($arr, ["all", "-"]));
 	}
 
 	static function findByRegion($region) { //Find companies by region and order like in "findAllAndOrder"
