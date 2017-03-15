@@ -549,3 +549,10 @@ li {
 .onoffswitch input:checked + .onoffswitch-label:before {
     right: 0px;
 }
+#sciopero-generale {
+    display: flex;
+    margin-top: 1rem;
+}
+#sciopero-generale p {
+    margin: auto;
+}
