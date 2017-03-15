@@ -26,7 +26,7 @@
             <figcaption>Matteo Scheitz Violi - Programmier</figcaption>
         </figure>
         <figure>
-            <img src="../media/about/mattia1.jpg" alt="MattiaDorigatti" />
+            <img src="../media/about/mattia.png" alt="MattiaDorigatti" />
             <figcaption>Mattia Dorigatti - Programmier</figcaption>
         </figure>
         <figure>
