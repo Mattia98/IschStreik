@@ -248,7 +248,7 @@ div.box {
 .separator-div {
     width: 100%;
     height: 0.6rem;
-    margin-top: -0.6rem;
+    margin-top: 0.6rem;
 }
 .box-container {
     width: 100%;
