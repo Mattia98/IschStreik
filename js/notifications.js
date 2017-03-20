@@ -5,19 +5,33 @@
         if(localStorage.getItem("notifications_unsupported"))
             return;
         
-        if (!("Notification" in window)) {
-            alert("This browser does not support desktop notifications! Please use another browser.");
-            localStorage.setItem("notifications_unsupported", true);
-        } else {
-            Notification.requestPermission();
-            if(getSelectedCompanies() == null)
-            	setSelectedCompanies(["0"]);
-				$('#notification-test').addEventListener('click', testNotification);
+        console.log(localStorage.getItem("notifications_status"));
+        $('#settingsswitcher').checked = localStorage.getItem("notifications_status") === 'true';
+        $('#settingsswitcher').addEventListener('change', notificationSwitch);
+        if(localStorage.getItem("notifications_status") === 'true') {
+			$('#notification-test').addEventListener('click', testNotification);
             $$('.bell').forEach((obj) => obj.addEventListener('click', bellClicked));
             $$('.bell').forEach((obj) => updateBell(obj));
         }
 	};
 	
+    const notificationSwitch = (e) => {
+        console.log("change");
+        if (!("Notification" in window)) {
+            alert("This browser does not support desktop notifications! Please use another browser.");
+            localStorage.setItem("notifications_unsupported", true);
+        } else {
+            if(localStorage.getItem("notifications_status") === 'true') {
+                localStorage.setItem("notifications_status", false);
+            } else {
+                Notification.requestPermission();
+                if(getSelectedCompanies() == null)
+            	    setSelectedCompanies(["0"]);
+                localStorage.setItem("notifications_status", true);
+            }
+        }
+    };
+
     const bellClicked = (e) => {
         let id = e.target.dataset.cid;
         if(getSelectedCompanies().includes(id))
