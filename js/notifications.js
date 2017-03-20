@@ -11,7 +11,7 @@
         } else {
             Notification.requestPermission();
             if(getSelectedCompanies() == null)
-            	setSelectedCompanies([0]);
+            	setSelectedCompanies(["0"]);
 				$('#notification-test').addEventListener('click', testNotification);
             $$('.bell').forEach((obj) => obj.addEventListener('click', bellClicked));
             $$('.bell').forEach((obj) => updateBell(obj));
