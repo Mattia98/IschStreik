@@ -552,9 +552,11 @@ li {
 }
 #sciopero-generale p {
     display: flex;
-    height: 3rem;
 }
-#sciopero-generale p a {
+#sciopero-generale p a{
     margin: auto;
+    width: 100%;
+    padding: 0.5rem 0 0.5rem 0;
+    cursor: pointer;
     text-align: center;
 }

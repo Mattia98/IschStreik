@@ -79,14 +79,11 @@ div.box {
     right: 23rem !important;
 }
 #sciopero-generale {
-    margin-top: 1rem;
-}
-#sciopero-generale p {
-    margin: auto;
-    width: 86%;
-    border-radius: 10px;
+    margin-top: 1.2rem !important;
+    margin-bottom: -0.8rem;
 }
 #sciopero-generale p a {
     margin: auto;
-    text-align: center;
+    width: 86% !important;
+    border-radius: 10px;
 }
