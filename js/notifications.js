@@ -21,13 +21,13 @@
             alert("This browser does not support desktop notifications! Please use another browser.");
             localStorage.setItem("notifications_unsupported", true);
         } else {
-            if(localStorage.getItem("notifications_status") === 'true') {
-                localStorage.setItem("notifications_status", false);
+            if($('#settingsswitcher').checked) {
+                localStorage.setItem("notifications_status", true);
             } else {
                 Notification.requestPermission();
                 if(getSelectedCompanies() == null)
             	    setSelectedCompanies(["0"]);
-                localStorage.setItem("notifications_status", true);
+                localStorage.setItem("notifications_status", false);
             }
         }
     };
