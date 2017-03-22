@@ -18,10 +18,8 @@
 @media screen and (orientation: landscape) {
     #description-popup table {
         height: 18rem !important;
-        margin-top: 7rem !important;;
     }
     #description-popup i {
-        top: 9rem !important;
     }
 }
 /*main style*/

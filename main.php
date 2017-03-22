@@ -141,8 +141,13 @@
                         <th><img src="../media/icons/red.svg"/></th>
                         <td><?= _("strike_2days") ?></td>
                     </tr>
+                    <tr></tr>
+                    <tr>
+                        <th><img src="../media/icons/warning.svg"/></th>
+                        <td><?= _("beta_alert") ?></td>
+                    </tr>
                 </table>
-				<p><?= _("beta_alert") ?></p>
+				<p></p>
         </div>
         <div id="language-popup" class="popup-closed">
             <i class="material-icons">highlight_off</i>
