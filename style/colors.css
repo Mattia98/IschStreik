@@ -16,7 +16,7 @@ header a, h1, h2, h3, h4, h5, main a {
 .box:hover, #dropdown-menu select:hover, #dropdown-menu input:hover, #guarenteed-routes-div a:hover {
     box-shadow: 0px 0px 2px 1px #888888;
 }
-.red, .onoffswitch-label {
+.red, .onoffswitch-label, #sciopero-generale p {
     background-color: #71112e;
 }
 .orange {
@@ -71,13 +71,13 @@ option:hover, #div-bell span {
 #div-bell span:after {
     border-left: 8px solid #d3d3d3;
 }
-.strike-box p, .box span, .strike-box-desktop table, #guaranteed-routes-div a, #dropdown-menu select, #dropdown-menu label, #div-bell span {
+.strike-box p, .box span, .strike-box-desktop table, #guaranteed-routes-div a, #dropdown-menu select, #dropdown-menu label, #div-bell span, #sciopero-generale p a {
     color: #fff;
 }
 #dropdown-menu select, #dropdown-menu label {
     border: 0px solid transparent;
 }
-.box, header {
+.box, header, #sciopero-generale p {
     box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.75);
 }
 

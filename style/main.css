@@ -550,9 +550,13 @@ li {
     right: 0px;
 }
 #sciopero-generale {
-    display: flex;
     margin-top: 1rem;
 }
 #sciopero-generale p {
+    display: flex;
+    height: 3rem;
+}
+#sciopero-generale p a {
     margin: auto;
+    text-align: center;
 }
