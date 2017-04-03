@@ -243,6 +243,7 @@ div.box {
     margin-left: auto;
     margin-right: auto;
     padding-top: 2%;
+    height: 80%;
 }
 .box span {
     display: flex;
