@@ -87,3 +87,6 @@ body #sciopero-generale p a {
     width: 86%;
     border-radius: 10px;
 }
+#dropdown-menu {
+    margin-top: 0.3rem !important;
+}
