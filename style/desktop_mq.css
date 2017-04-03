@@ -82,8 +82,8 @@ div.box {
     margin-top: 1.2rem !important;
     margin-bottom: -0.8rem;
 }
-#sciopero-generale p a {
+body #sciopero-generale p a {
     margin: auto;
-    width: 86% !important;
+    width: 86%;
     border-radius: 10px;
 }

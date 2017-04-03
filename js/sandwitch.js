@@ -10,6 +10,13 @@
         $('#li-feedback').addEventListener('click', listFeedback);
 		$('#curtain').addEventListener('click', closeAll);
         $('.list-up li').addEventListener('click', triggerSwitch);
+        
+		// Workaround SG width
+		window.addEventListener('resize', (e) => {$('#sciopero-generale p a').style.width = 
+			(Math.floor($('body').clientWidth/($('.box-container a').clientWidth+3))
+			*($('.box-container a').clientWidth+3)
+			-(($('.box-container a').clientWidth-$('.box-container .box').clientWidth)/2+16) + "px")
+		});
 
 		$$('.logo-cp').forEach((obj) => obj.addEventListener('error', replaceLogo));
 
