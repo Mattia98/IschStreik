@@ -33,6 +33,15 @@
         }
     }
 }
+/*fix for Safari on iOS*/
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
+    .select {
+        height: 1.8rem !important;
+    }
+    #dropdown-menu label {
+        padding: 0.15rem 0.3rem 0.3rem 0.5rem !important;
+    }
+}
 /*main style*/
 html {
 	font-size: 100%;
@@ -217,7 +226,7 @@ select {
 	font-family: inherit;
 	font-size: inherit;
 	font-weight: bold;
-    height: 1.8rem;
+    /*height: 1.8rem;*/
 }
 select:focus {
 	border-radius: 1px;
