@@ -18,7 +18,7 @@
     
     <div id="picture-box" >
         <figure>
-            <img src="../media/about/ken.png" alt="KenZoeggeler" />
+            <img src="../media/about/ken.png" alt="KenZoeggeler" style="transform: rotate(15deg);" />
             <figcaption>Ken Zöggeler - Programmier</figcaption>
         </figure>
         <figure>

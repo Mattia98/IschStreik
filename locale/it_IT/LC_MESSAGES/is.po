@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: IschStreik\n"
-"POT-Creation-Date: 2017-03-15 13:56+0100\n"
-"PO-Revision-Date: 2017-03-15 13:56+0100\n"
+"POT-Creation-Date: 2017-04-05 15:20+0200\n"
+"PO-Revision-Date: 2017-04-05 15:20+0200\n"
 "Last-Translator: Ken Zöggeler\n"
 "Language-Team: \n"
 "Language: it_IT\n"
@@ -20,7 +20,7 @@ msgstr ""
 "\"C'è sciopero?\" La informa sugli ultimi scioperi in Italia e offre link "
 "per le linee garantite delle diverse ditte."
 
-#: main.php:26 main.php:76
+#: main.php:26 main.php:77
 msgid "sitename"
 msgstr "C'è sciopero?"
 
@@ -36,33 +36,37 @@ msgstr "Sciopero nelle prossime 2-3 settimane (possibilitá di essere revocato)"
 msgid "strike_2days"
 msgstr "Sciopero nelle prossime 48 ore"
 
-#: main.php:145
+#: main.php:147
 msgid "beta_alert"
 msgstr "Attenzione: Questa pagina e in fase beta!"
 
-#: sites/company.php:20
+#: sites/company.php:19
 msgid "guaranteed_routes"
 msgstr "Linee garantite"
 
-#: sites/company.php:25 sites/company.php:45 sites/start.php:23
+#: sites/company.php:24 sites/company.php:45 sites/start.php:25
 msgid "region"
 msgstr "Regione"
 
-#: sites/company.php:26 sites/company.php:50
+#: sites/company.php:25 sites/company.php:50
 msgid "province"
 msgstr "Provincia"
 
-#: sites/company.php:27 sites/company.php:56
+#: sites/company.php:26 sites/company.php:56
 msgid "date"
 msgstr "Data"
 
-#: sites/company.php:28 sites/company.php:62
+#: sites/company.php:27 sites/company.php:62
 msgid "timespan"
 msgstr "Arco di tempo"
 
-#: sites/company.php:29 sites/company.php:67
+#: sites/company.php:28 sites/company.php:67
 msgid "description"
 msgstr "Descrizione"
+
+#: sites/start.php:43
+msgid "alert_sciopero_generale"
+msgstr "Sciopero generale"
 
 #~ msgid "workers_union"
 #~ msgstr "Sindacato"
