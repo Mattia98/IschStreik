@@ -259,8 +259,8 @@ div.box {
     font-size: 1.3rem;
 }
 .box:hover {
-    transform: translateY(-3px);
-    transition: transform 0.2s linear;   
+    transform: scale(1.01);
+    transition: transform 0.1s linear;   
 }
 .separator-div {
     width: 100%;
