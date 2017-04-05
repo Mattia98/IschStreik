@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: IschStreik\n"
-"POT-Creation-Date: 2017-03-15 13:52+0100\n"
-"PO-Revision-Date: 2017-03-15 13:54+0100\n"
+"POT-Creation-Date: 2017-04-05 15:18+0200\n"
+"PO-Revision-Date: 2017-04-05 15:19+0200\n"
 "Last-Translator: Ken Zöggeler\n"
 "Language-Team: \n"
 "Language: en_GB\n"
@@ -20,7 +20,7 @@ msgstr ""
 "\"Is-Strike\" shows information about the newest Strikes in Italy and offers "
 "links to guaranteed lines on first glance."
 
-#: main.php:26 main.php:76
+#: main.php:26 main.php:77
 msgid "sitename"
 msgstr "IsStrike?"
 
@@ -36,33 +36,37 @@ msgstr "There will be a strike in the next 2-3 weeks (may be cancelled)"
 msgid "strike_2days"
 msgstr "Upcoming strike in the next 48h"
 
-#: main.php:145
+#: main.php:147
 msgid "beta_alert"
 msgstr "Disclaimer: Pay attention, this webpage is in beta!"
 
-#: sites/company.php:20
+#: sites/company.php:19
 msgid "guaranteed_routes"
 msgstr "Guaranteed routes"
 
-#: sites/company.php:25 sites/company.php:45 sites/start.php:23
+#: sites/company.php:24 sites/company.php:45 sites/start.php:25
 msgid "region"
 msgstr "Region"
 
-#: sites/company.php:26 sites/company.php:50
+#: sites/company.php:25 sites/company.php:50
 msgid "province"
 msgstr "Province"
 
-#: sites/company.php:27 sites/company.php:56
+#: sites/company.php:26 sites/company.php:56
 msgid "date"
 msgstr "Date"
 
-#: sites/company.php:28 sites/company.php:62
+#: sites/company.php:27 sites/company.php:62
 msgid "timespan"
 msgstr "Timespan"
 
-#: sites/company.php:29 sites/company.php:67
+#: sites/company.php:28 sites/company.php:67
 msgid "description"
 msgstr "Description"
+
+#: sites/start.php:43
+msgid "alert_sciopero_generale"
+msgstr "General strike"
 
 #~ msgid "workers_union"
 #~ msgstr "Workers union"

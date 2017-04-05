@@ -10,7 +10,6 @@
     <i class="material-icons bell" data-cid="<?= $company->getId() ?>">notifications_paused</i>
     <span>Notifications on / off</span>
 </div>
-
 <div class="company-logo-div">
     <a href="<?= $company->getWebsite() ?>">
         <img src="../media/logos/companies/<?= $company->getNameCode() ?>.svg" alt="<?= $company->getName() ?>" class="logo-cp" />
@@ -39,6 +38,7 @@
         <?php endfor; ?>
     </table>
 </div>
+
 <?php for($i=0; $i<count($strikes); $i++): ?>
 <div class="strike-box">
     <div id="content-div">

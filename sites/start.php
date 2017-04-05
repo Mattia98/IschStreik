@@ -13,6 +13,7 @@
 
     $isScioperoGenerale = Strike::findBySomethingAmount(0, "companyId")>0;
 ?>
+
 <script type="text/javascript" src="../js/content.js" async defer></script>
 
 <?php if(!isset($_GET["nojs"])): ?>
