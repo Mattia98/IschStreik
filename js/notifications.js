@@ -54,10 +54,8 @@
         let companies = JSON.parse(httpGet("../API/?action=getCompanies"));
         if(companies.length == 0)
             alert("No strikes for today and tomorrow!");
-        
-        let wantCompanies = localStorage.getItem("selected_companies");
-        
-        let interestedCompanies = companies.filter((obj) => wantCompanies.includes(obj.cid));
+                
+        let interestedCompanies = companies.filter((obj) => getSelectedCompanies().includes(obj.cid+""));
         console.log(interestedCompanies);
 
         interestedCompanies.forEach(makeNotificationFromCompany);
@@ -66,16 +64,10 @@
     const makeNotificationFromCompany = (company) => {
         let options = {
             body: company.name+' is striking!',
-            icon: '../media/logos/companies/'+company.nameCode+'.png',
-            badge: '../favicon.png'
+            //icon: '../media/logos/companies/'+company.nameCode+'.png',
+            icon: '../media/icons/favicon/favicon transparent.svg'
         };
-
-        let not = new Notification("Strike!", options);
-        not.onclick = () => {
-            //window.location.replace("?site=company&id="+cid);
-            event.preventDefault(); // prevent the browser from focusing the Notification's tab
-            window.open("?site=company&id="+company.cid, '_blank');
-        };
+        navigator.serviceWorker.getRegistration().then((r)=>r.showNotification("Strike!", options));
     };
 
     const httpGet = (url) => {

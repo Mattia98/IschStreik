@@ -50,6 +50,7 @@
 		<!--JScripts-->
 		<script type="text/javascript" src="../js/sandwitch.js" async defer></script>
 		<script type="text/javascript" src="../js/notifications.js" async defer></script>
+		<script type="text/javascript" src="../js/init.js" async defer></script>
 		<?php if(!isset($_GET["nojs"])): ?>
 		<script type="text/javascript">
 			function check() {
