@@ -13,8 +13,11 @@ nav, .green, .strike-box:nth-child(even), .strike-box-desktop tr:nth-child(even)
 header a, h1, h2, h3, h4, h5, main a {
     color: #849824;
 }
-.box:hover, #dropdown-menu select:hover, #dropdown-menu input:hover, #guarenteed-routes-div a:hover {
-    box-shadow: 0px 0px 2px 1px #888888;
+.box:hover, #guarenteed-routes-div a:hover, #sciopero-generale a:hover {
+    box-shadow: 0px 0px 30px -3px rgba(0,0,0,0.6);
+}
+#dropdown-menu select:hover {
+    box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.6);
 }
 .red, .onoffswitch-label, #sciopero-generale p a {
     background-color: #71112e;
@@ -54,7 +57,7 @@ button, input[type="submit"], input[type="file"], input[type="button"], a.button
 button:active {
 	box-shadow: 6px 6px 5px #888888;
 }
-select {
+/*select {
 	background-color: transparent;
 	border-top: 1px solid gray;
 	border-bottom: 1px solid gray;
@@ -64,7 +67,7 @@ select {
 select:focus {
 	border: 1px solid white;
 	box-shadow: 1px 1px 5px #888888;
-}
+}*/
 option:hover, #div-bell span {
 	background-color: #d3d3d3;
 }
@@ -78,9 +81,8 @@ option:hover, #div-bell span {
     border: 0px solid transparent;
 }
 .box, header, #sciopero-generale p a {
-    box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.6);
 }
-
 #language-selector:hover, #description-selector:hover, #description-popup i:hover, #language-popup i:hover  {
     cursor: pointer;
 }
@@ -88,12 +90,12 @@ nav .list-up li:hover{
     background-color: #859F0E;
 }
 #div-bell span:after {
-  border-left: 9px solid #000000;
+    border-left: 9px solid #000000;
 }
 #div-bell span:after {
-  border-left: 9px solid #000000;
-  border-top: 9px solid transparent;
-  border-bottom: 8px solid transparent;
+    border-left: 9px solid #000000;
+    border-top: 9px solid transparent;
+    border-bottom: 8px solid transparent;
 }
 .onoffswitch-label:before {
     background: #ECECED;
