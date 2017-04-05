@@ -277,7 +277,7 @@ div.box {
     margin-left: -2rem;
 }
 .box, .separator-div {
-    transition: transform 0.2s linear;
+    transition: transform 0.1s linear;
 }
 li a {
     margin-left: 3.5rem;
