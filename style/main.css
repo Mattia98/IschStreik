@@ -221,12 +221,10 @@ button, input[type="submit"], input[type="file"], input[type="button"], a.button
 select {
 	margin: 8px 0;
 	padding: 4px 16px 4px 14px;
-	/*min-height: 35px;*/
 	min-width: 64px;
 	font-family: inherit;
 	font-size: inherit;
 	font-weight: bold;
-    /*height: 1.8rem;*/
 }
 select:focus {
 	border-radius: 1px;
@@ -483,18 +481,6 @@ li {
 .company-name-big {
     font-size: 8rem;
 }
-.without-logo  {/*to add to imgBox*/
-    height: 0%;
-}
-.centered-span {/*to add to span*/
-    height: 100%;
-    font-size: 5vh !important;
-    margin-top: 0%;
-}
-/*.size-up-span {Klasse für span in .box zu vergeben wenn img tag entfernt wird
-    font-size: 3rem !important;
-    padding-top: 4rem;
-}*/
 .back-to-the-top {
     position: fixed;
     background-repeat: no-repeat;

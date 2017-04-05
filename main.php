@@ -39,9 +39,10 @@
 		<link rel="stylesheet" type="text/css" href="../style/colors.css" />
 		<link rel="icon" href="../favicon.png" type="image/png" />
 		<link rel="icon" href="../media/icons/favicon/favicon.svg" type="image/svg+xml" />
-		<link href='//fonts.googleapis.com/css?family=Ubuntu:400,700,400italic' rel='stylesheet' type='text/css' />
+        
+        <!--Fonts-->
 		<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet" type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet" type='text/css' />
 
 		<!--GPlus-->
 		<link rel="canonical" href="https://sciopero.news/" />
@@ -69,7 +70,7 @@
 
 		<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
 		<script type="text/javascript">
-		    window.cookieconsent_options = {"message":"This website uses cookies and whoever thought up this law is an idiot","dismiss":"Got it!","learnMore":"More info","link":null,"theme":"dark-floating"};
+		    window.cookieconsent_options = {"message":"This site uses cookies. By continuing to browse the site, you are agreeing to our use of cookies.","dismiss":"Got it!","learnMore":"More info","link":null,"theme":"dark-floating"};
 		</script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
 
@@ -85,7 +86,6 @@
 			<i id="language-selector" class="material-icons">language</i>
 		</header>
 		<nav>
-
 		<ul class="list-up">
             <li><i class="material-icons">notifications</i>Notifications
                 <div class="onoffswitch">
@@ -147,7 +147,6 @@
                         <td><?= _("beta_alert") ?></td>
                     </tr>
                 </table>
-				<p></p>
         </div>
         <div id="language-popup" class="popup-closed">
             <i class="material-icons">highlight_off</i>

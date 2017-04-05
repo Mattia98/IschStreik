@@ -12,7 +12,7 @@
     <?php endif; if(SHORT_LANG == "en"): ?>
 
     <h3>About us</h3>
-    <p>Behind the website "is Strike" stand four south tyrolean high school graduates of the <a href="http://www.bozen.berufsschule.it/">Landesberufsschule für Handwerk und Industrie</a>. The Site got influenced by the constantly upcoming strikes which information was nearly ungiven. The idea behind the project is to inform commuter about upcomming strikes in time. </p>
+    <p>Behind the website "is Strike" stand four south tyrolean high school graduates of the <a href="http://www.bozen.berufsschule.it/">Landesberufsschule für Handwerk und Industrie</a>. The Site got influenced by the constantly upcoming strikes which information was nearly ungiven. The idea behind the project is to inform commuter about upcomming strikes in time.</p>
     
     <?php endif; ?>
     
