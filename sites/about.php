@@ -6,8 +6,8 @@
     
     <?php endif; if(SHORT_LANG == "it"): ?>
     
-    <h3>Über uns</h3>
-    <p></p>
+    <h3>Su di noi</h3>
+    <p>La pagina web "c'è sciopero" è stata creata da quattro alluni della<a href="http://www.bozen.berufsschule.it/">scuola professionale provinciale per l'industria e l'artigianato</a> a Bolzano. Il sito è stato influenzato da continui scioperi, che non sono stati segnalati, o ne mancavano le informazioni. L' idea di questo progetto è d'informare pendolari e scolari su scioperi futuri e di dare informazioni su trasporti garantiti in tutta l'Italia.</p>
     
     <?php endif; if(SHORT_LANG == "en"): ?>
 
