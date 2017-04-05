@@ -25,8 +25,8 @@
 		<meta property="og:image" content="https://sciopero.news/media/icons/favicon/512.png" />
 		<meta property="og:site_name" content="<?= _("sitename") ?>" />
 		
-		<!--Android meta-tags-->
-		<meta name="theme-color" content="#a7c712" />
+		<!--Mobile meta-tags-->
+		<meta name="theme-color" content="#849824" />
 		<link rel="icon" sizes="64x64" href="../media/icons/favicon/64.png" />
 		<link rel="icon" sizes="128x128" href="../media/icons/favicon/128.png" />
 		<link rel="icon" sizes="256x256" href="../media/icons/favicon/256.png" />
