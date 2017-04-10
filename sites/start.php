@@ -3,15 +3,17 @@
     include_once("../model/Strike.class.php");
     
     $region = "";
-    if(!isset($_GET["region"]) || $_GET["region"] == "")
-    	$companies = Company::findAllAndOrder();
-    else {
-    	$companies = Company::findByRegion($_GET["region"]);
-    	$region = $_GET["region"];
+    if(isset($_GET["nojs"])) {
+        if(!isset($_GET["region"]) || $_GET["region"] == "")
+            $companies = Company::findAllAndOrder();
+        else {
+            $companies = Company::findByRegion($_GET["region"]);
+            $region = $_GET["region"];
+        }
     }
     $regions = Company::getRegions();
 
-    $isScioperoGenerale = Strike::findBySomethingAmount(0, "companyId")>0;
+    $isScioperoGenerale = Strike::findBySomethingAmount("0", "companyId")>0;
 ?>
 
 <script type="text/javascript" src="../js/content.js" async defer></script>

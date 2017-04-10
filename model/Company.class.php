@@ -90,14 +90,14 @@ class Company extends DBObject {
 	}
 
 	static function findAllAndOrder() {
-		$sql = 'SELECT companies.* FROM strikes RIGHT JOIN companies ON "companyId"=companies.id GROUP BY companies.id ORDER BY age(min("startDate"))*-1, count(strikes) DESC';
+		$sql = 'SELECT companies.* FROM strikes RIGHT JOIN companies ON "companyId"=companies.id WHERE companies.region NOT LIKE \'-\' GROUP BY companies.id ORDER BY age(min("startDate"))*-1, count(strikes) DESC';
 		$query = DB::getDB()->query($sql);
 		$query->setFetchMode(PDO::FETCH_CLASS, get_class(new static()));
 		return $query->fetchAll();
 	}
 
 	static function findAllByTimeToNextStrike($days) {
-		$sql = 'SELECT companies.* FROM strikes RIGHT JOIN companies ON "companyId"=companies.id GROUP BY companies.id HAVING extract(epoch from age(min("startDate")))/60/60/-24 < '.$days.' ORDER BY age(min("startDate"))*-1, count(strikes) DESC';
+		$sql = 'SELECT companies.* FROM strikes RIGHT JOIN companies ON "companyId"=companies.id  WHERE companies.region NOT LIKE \'-\' GROUP BY companies.id HAVING extract(epoch from age(min("startDate")))/60/60/-24 < '.$days.' ORDER BY age(min("startDate"))*-1, count(strikes) DESC';
 		$query = DB::getDB()->query($sql);
 		$query->setFetchMode(PDO::FETCH_CLASS, get_class(new static()));
 		return $query->fetchAll();
