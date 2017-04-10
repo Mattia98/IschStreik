@@ -69,8 +69,9 @@
         let options = {
             body: company.name+' is striking!',
             icon: '../media/logos/companies/'+company.nameCode+'.png',
-            badge: '../media/icons/favicon/favicon transparent.png,',
-            "vibrate": [50, 50, 50, 50, 50, 200, 50, 50, 50, 50, 50, 200, 50, 50, 50, 50, 50, 200, 50, 50, 50, 50, 50]
+            badge: '../media/icons/favicon/favicon transparent.png',
+            "vibrate": [50, 50, 50, 50, 50, 200, 50, 50, 50, 50, 50, 200, 50, 50, 50, 50, 50, 200, 50, 50, 50, 50, 50],
+            data:	company.cid
         };
         navigator.serviceWorker.getRegistration().then((r)=>r.showNotification("Strike!", options));
     };

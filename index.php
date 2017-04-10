@@ -1,14 +1,18 @@
 <?php
-$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+if(isset($_COOKIE["lang"]))
+	$lang = $_COOKIE["lang"];
+else
+	$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+
 switch ($lang){
     case "it":
-        header("location: it");
+        header("location: it/".substr(strrchr($_SERVER['REQUEST_URI'], "/"), 1));
         break;
     case "de":
-        header("location: de");
+        header("location: de/".substr(strrchr($_SERVER['REQUEST_URI'], "/"), 1));
         break;       
     default:
-        header("location: en");
+        header("location: en/".substr(strrchr($_SERVER['REQUEST_URI'], "/"), 1));
         break;
 }
 ?>

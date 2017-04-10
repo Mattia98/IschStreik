@@ -38,3 +38,8 @@ self.addEventListener('fetch', function(event) {
     )
   );
 });
+
+self.addEventListener('notificationclick', event => {  
+  clients.openWindow("/?site=company&id="+event.notification.data);
+  event.notification.close();  
+});

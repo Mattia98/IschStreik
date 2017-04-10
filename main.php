@@ -151,19 +151,19 @@
         </div>
         <div id="language-popup" class="popup-closed">
             <i class="material-icons">highlight_off</i>
-                <a href="../en/<?= substr(strrchr($_SERVER['REQUEST_URI'], "/"), 1) ?>" style="text-decoration: none;">
+                <a href="../en/<?= substr(strrchr($_SERVER['REQUEST_URI'], "/"), 1) ?>" onclick="document.cookie = 'lang=en; expires='+new Date(9999999999999).toUTCString()+'; path=/'" style="text-decoration: none;">
                     <figure>
                         <img src="../media/flags/en.svg"/>
                         <figcaption>EN</figcaption>
                     </figure>
                 </a>
-                <a href="../it/<?= substr(strrchr($_SERVER['REQUEST_URI'], "/"), 1) ?>" style="text-decoration: none;">
+                <a href="../it/<?= substr(strrchr($_SERVER['REQUEST_URI'], "/"), 1) ?>" onclick="document.cookie = 'lang=it; expires='+new Date(9999999999999).toUTCString()+'; path=/'" style="text-decoration: none;">
                     <figure>
                         <img src="../media/flags/it.svg"/>
                         <figcaption>IT</figcaption>
                     </figure>
                 </a>
-                <a href="../de/<?= substr(strrchr($_SERVER['REQUEST_URI'], "/"), 1) ?>" style="text-decoration: none;">
+                <a href="../de/<?= substr(strrchr($_SERVER['REQUEST_URI'], "/"), 1) ?>" onclick="document.cookie = 'lang=de; expires='+new Date(9999999999999).toUTCString()+'; path=/'" style="text-decoration: none;">
                     <figure>
                         <img src="../media/flags/de.svg"/>
                         <figcaption>DE</figcaption>
