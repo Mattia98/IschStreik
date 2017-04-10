@@ -10,7 +10,8 @@ var urlsToCache = [
   'js/content.js',
   'js/init.js',
   'js/notifications.js',
-  'js/sandwitch.js'
+  'js/sandwitch.js',
+  'API/html.php?action=getCompanies'
 ];
 
 self.addEventListener('install', function(event) {

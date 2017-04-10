@@ -9,7 +9,7 @@
         $('#settingsswitcher').checked = localStorage.getItem("notifications_status") === 'true';
         $('#settingsswitcher').addEventListener('change', notificationSwitch);
         if(localStorage.getItem("notifications_status") === 'true') {
-			$('#notification-test').addEventListener('click', testNotification);
+        		$('#notification-test').addEventListener('click', testNotification);
             $$('.bell').forEach((obj) => obj.addEventListener('click', bellClicked));
             $$('.bell').forEach((obj) => updateBell(obj));
         }
@@ -23,10 +23,14 @@
         } else {
             if($('#settingsswitcher').checked) {
                 localStorage.setItem("notifications_status", true);
-            } else {
                 Notification.requestPermission();
                 if(getSelectedCompanies() == null)
             	    setSelectedCompanies(["0"]);
+            	 
+            	 $('#notification-test').addEventListener('click', testNotification);
+            	 $$('.bell').forEach((obj) => obj.addEventListener('click', bellClicked));
+            	 $$('.bell').forEach((obj) => updateBell(obj));
+            } else {
                 localStorage.setItem("notifications_status", false);
             }
         }
@@ -64,8 +68,9 @@
     const makeNotificationFromCompany = (company) => {
         let options = {
             body: company.name+' is striking!',
-            //icon: '../media/logos/companies/'+company.nameCode+'.png',
-            icon: '../media/icons/favicon/favicon transparent.svg'
+            icon: '../media/logos/companies/'+company.nameCode+'.png',
+            badge: '../media/icons/favicon/favicon transparent.png,',
+            "vibrate": [50, 50, 50, 50, 50, 200, 50, 50, 50, 50, 50, 200, 50, 50, 50, 50, 50, 200, 50, 50, 50, 50, 50]
         };
         navigator.serviceWorker.getRegistration().then((r)=>r.showNotification("Strike!", options));
     };
