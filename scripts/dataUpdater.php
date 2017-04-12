@@ -44,10 +44,15 @@
 		$endDate = $array[$i]["description"]["Data fine"];
 		$companyId = null;
 		for($j=0; $j<count($companyObj); $j++) {
-			if(strpos(strtolower($array[$i]["description"]["Categoria interessata"]), $companyObj[$j]->getNameCode()) !== false) {
-				$companyId = $companyObj[$j]->getId();
-				break;
-				echo strtolower($array[$i]["description"]["Categoria interessata"]);
+			$cNames = [$companyObj[$j]->getNameCode()]; //Company Names, standard -> original name
+			if(strpos($companyObj[$j]->getNameCode(), "-") !== false) { //Check if it has multiple names, --> put them in the array
+				$cNames = explode("-", $companyObj[$j]->getNameCode());
+			}
+			for($k=0; $k<count($cNames); $k++) {
+				if(strpos(strtolower($array[$i]["description"]["Categoria interessata"]), $cNames[$k]) !== false) {
+					$companyId = $companyObj[$j]->getId();
+					break 2;
+				}
 			}
 		}
 		/*
