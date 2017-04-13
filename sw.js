@@ -1,5 +1,5 @@
 var CACHE_NAME = 'is-cache-v1';
-var urlsToCache = [
+/*var urlsToCache = [
   'en/',
   'de/',
   'it/',
@@ -10,8 +10,13 @@ var urlsToCache = [
   'js/content.js',
   'js/init.js',
   'js/notifications.js',
-  'js/sandwitch.js',
-  'API/html.php?action=getCompanies'
+  'js/sandwitch.js'
+];*/
+var urlsToCache = [
+  '/media/logos/en_GB.svg',
+  '/media/logos/de_DE.svg',
+  '/media/logos/it_IT.svg',
+  '/media/sandwitch.svg'
 ];
 
 self.addEventListener('install', function(event) {
