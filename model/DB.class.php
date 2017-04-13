@@ -12,8 +12,8 @@ class DB {
 	public static function getDB() {
 		if (self::$db == null) {
 			try {
-				self::$db = new PDO('pgsql:host='.getenv("DB_HOST").';dbname=ischstreik', 'ischstreik', 'Nilpferd62!');
-				self::$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+				$host = getenv("DB_HOST") ?: 'localhost';
+				self::$db = new PDO('pgsql:host='.$host.';dbname=ischstreik', 'ischstreik', 'Nilpferd62!');				self::$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 				self::$db->exec("SET datestyle TO European;");
 			}
 			catch (PDOException $e) {
