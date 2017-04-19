@@ -219,9 +219,9 @@ button, input[type="submit"], input[type="file"], input[type="button"], a.button
 	font-weight: bold;
 }
 select {
-	margin: 8px 0;
+	/*margin: 8px 0;*/
 	padding: 4px 16px 4px 14px;
-	min-width: 64px;
+	/*min-width: 64px;*/
 	font-family: inherit;
 	font-size: inherit;
 	font-weight: bold;
@@ -422,8 +422,8 @@ li {
 }
 #dropdown-menu {
     display: flex;
-    margin-bottom: -1rem;
-    margin-top: 0.1rem;
+    margin-bottom: -0.5rem;
+    margin-top: 0.5rem;
 }
 #dropdown-menu form {
     margin: auto;
