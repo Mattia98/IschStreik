@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: IschStreik\n"
 "POT-Creation-Date: 2017-04-05 15:17+0200\n"
-"PO-Revision-Date: 2017-04-05 15:18+0200\n"
+"PO-Revision-Date: 2017-04-19 14:08+0200\n"
 "Last-Translator: Ken Zöggeler\n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -17,7 +17,7 @@ msgstr ""
 #: main.php:14
 msgid "site-description"
 msgstr ""
-"\"Isch-Streik\" informiert Sie über die aktuellen Streiks Italiens und "
+"'Isch-Streik' informiert Sie über die aktuellen Streiks Italiens und "
 "bietet Ihnen evtl. Links zu den garantierte Linien an."
 
 #: main.php:26 main.php:77

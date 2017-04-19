@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: IschStreik\n"
 "POT-Creation-Date: 2017-04-05 15:18+0200\n"
-"PO-Revision-Date: 2017-04-05 15:19+0200\n"
+"PO-Revision-Date: 2017-04-19 14:09+0200\n"
 "Last-Translator: Ken Zöggeler\n"
 "Language-Team: \n"
 "Language: en_GB\n"
@@ -17,7 +17,7 @@ msgstr ""
 #: main.php:14
 msgid "site-description"
 msgstr ""
-"\"Is-Strike\" shows information about the newest Strikes in Italy and offers "
+"'Is-Strike' shows information about the newest Strikes in Italy and offers "
 "links to guaranteed lines on first glance."
 
 #: main.php:26 main.php:77
