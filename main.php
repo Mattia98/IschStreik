@@ -80,7 +80,7 @@
 		      "background": "#333"
 		    },
 		    "button": {
-		      "background": "#a7c712"
+		      "background": "#859F0E"
 		    }
 		  },
 		  "theme": "edgeless",
