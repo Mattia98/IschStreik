@@ -27,7 +27,7 @@ div.box {
 }
 .company-logo-div {
     position: absolute;
-    margin-top: 0 !important;
+    margin-top: 0.2rem !important;
     width: 20rem !important;
     min-height: 4rem !important;
     max-height: 4rem !important;
