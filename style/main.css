@@ -26,7 +26,7 @@
 @media not all and (min-resolution:.001dpcm) { 
     @media {
         #dropdown-menu label {
-            padding: 0.05rem 0.3rem 0.1rem 0.5rem !important;
+            padding: 0.25rem 0.3rem 0.25rem 0.5rem !important;
         }
         #dropdown-menu {
             padding: 0.5rem 0 0.5rem 0;
@@ -39,7 +39,7 @@
         height: 1.8rem !important;
     }
     #dropdown-menu label {
-        padding: 0.15rem 0.3rem 0.3rem 0.5rem !important;
+        padding: 0.25rem 0.3rem 0.25rem 0.5rem !important;
     }
 }
 /*main style*/
@@ -431,6 +431,9 @@ li {
 #dropdown-menu select {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    -webkit-appearance: caret;
 }
 #dropdown-menu label {
     padding: 0.3rem;
