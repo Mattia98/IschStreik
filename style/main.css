@@ -506,6 +506,12 @@ li {
     width: 90%;
     border-radius: 50%;  
 }
+#picture-box figcaption {
+    hyphens: auto;
+}
+#picture-box figure:last-child {
+    margin-top: 0;
+}
 .bell {
     cursor: pointer;
     top: 0.5rem;
