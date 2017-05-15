@@ -37,7 +37,6 @@ div.box {
 .company-logo-div img {
     width: 100%;
     max-height: 4.2rem;
-    filter: invert(100%);
 }
 .company-logo-div span {
     font-size: 2rem !important;
@@ -95,4 +94,7 @@ body #sciopero-generale p a {
 #picture-box figcaption {
     letter-spacing: 0px !important;
     font-size: 100% !important;
+}
+#picture-box figure img {
+    margin: 1rem;
 }
