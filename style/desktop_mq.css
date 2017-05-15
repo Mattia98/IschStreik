@@ -42,6 +42,7 @@ div.box {
     font-size: 2rem !important;
     margin-top: 1rem !important;
     text-align: left !important;
+    width: 100% !important;
 }
 #guaranteed-routes-div {
     background-color: #fff !important;
@@ -71,10 +72,11 @@ div.box {
     top: 0.9rem !important;
     right: 21rem !important;
     padding: 0 !important;
+    margin-top: -0.1rem !important;
 }
 #div-bell span {
     top: 1.6rem !important;
-    right: 23rem !important;
+    right: 25rem !important;
 }
 #sciopero-generale {
     margin-top: 1.2rem !important;

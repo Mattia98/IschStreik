@@ -394,14 +394,16 @@ li {
     padding-bottom: 2%;
 }
 .company-logo-div img {
-    width: 100%;
+    width: 70%;
+    margin-left: 0.5rem;
     filter: invert(100%);
 }
 .company-logo-div span {
-    font-size: 5rem;
-    margin-top: -1rem;
+    font-size: 3rem;
+    /*margin-top: -1rem;*/
     text-align: center;
     display: block;
+    width: 85%;
 }
 #content-div {
     max-width: 100%;
@@ -526,12 +528,14 @@ li {
 }
 .bell {
     cursor: pointer;
-    top: 0.5rem;
-    right: 1rem;
+    margin-top: 0.5rem;
+    right: 0.5rem;
     padding: 1.5rem;
+    font-size: 50px !important;
 }
 #div-bell {
     position: relative;
+    z-index: 4;
 }
 #div-bell span {
     visibility: hidden;
