@@ -434,6 +434,8 @@ li {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     -webkit-appearance: caret;
+    font-weight: normal;
+    height: 1.85rem;
 }
 #dropdown-menu label {
     padding: 0.3rem;
