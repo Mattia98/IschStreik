@@ -253,8 +253,7 @@ div.box {
 }
 .box img {
     max-height: 80%;
-    max-width: calc(100% - 4%);
-    width: auto;
+    width: 94%;
     display: block;
     margin-left: auto;
     margin-right: auto;
