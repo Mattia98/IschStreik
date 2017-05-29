@@ -49,9 +49,10 @@
 		<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 		
 		<!--JScripts-->
+		<script type="text/javascript" src="../js/init.js" async defer></script>
 		<script type="text/javascript" src="../js/sandwitch.js" async defer></script>
 		<script type="text/javascript" src="../js/notifications.js" async defer></script>
-		<script type="text/javascript" src="../js/init.js" async defer></script>
+
 		<?php if(!isset($_GET["nojs"])): ?>
 		<script type="text/javascript">
 			function check() {
@@ -73,19 +74,19 @@
 		<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
 		<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
 		<script>
-		window.addEventListener("load", function(){
-		window.cookieconsent.initialise({
-		  "palette": {
-		    "popup": {
-		      "background": "#333"
-		    },
-		    "button": {
-		      "background": "#859F0E"
-		    }
-		  },
-		  "theme": "edgeless",
-		  "position": "bottom-right"
-		})});
+			window.addEventListener("load", function(){
+			window.cookieconsent.initialise({
+			"palette": {
+				"popup": {
+				"background": "#333"
+				},
+				"button": {
+				"background": "#859F0E"
+				}
+			},
+			"theme": "edgeless",
+			"position": "bottom-right"
+			})});
 		</script>		
 		<title><?= $GLOBALS["site-name"] ?> | <?= _("sitename") ?></title>
 	</head>

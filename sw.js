@@ -122,12 +122,10 @@ self.addEventListener('fetch', e => {
     caches.match(e.request)
       .then(function(response) {
         // Cache hit - return response
-        if (response) {
+        if (response)
           return response;
-        }
         return fetch(e.request);
-      }
-    )
+    })
   );
 });
 
