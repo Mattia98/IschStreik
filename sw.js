@@ -176,6 +176,7 @@ const urlB64ToUint8Array = (base64String) => {
 
 const sendSubscriptionToServer = (subscription) => {
   console.log(subscription);
+  swStorage.setItem("endpoint", subscription.endpoint);
   fetch("API/?action=submitPushSubscription&surl="+subscription.endpoint, {
     method: 'GET'
   }).then(console.log).catch(console.error);

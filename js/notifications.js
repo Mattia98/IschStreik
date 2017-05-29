@@ -92,7 +92,6 @@ class ServiceWorkerStorage {
 	const init = () => {
         $('#settingsswitcher').checked = localStorage.getItem("notifications_status") === 'true';
         $('#settingsswitcher').addEventListener('change', notificationSwitch);
-        console.log(swStorage.getItem("selected_companies"));
         if(localStorage.getItem("notifications_status") === 'true') {
             $$('.bell').forEach((obj) => obj.addEventListener('click', bellClicked));
             $$('.bell').forEach((obj) => updateBell(obj));
@@ -103,14 +102,33 @@ class ServiceWorkerStorage {
         console.log("change");
         if($('#settingsswitcher').checked) {
             localStorage.setItem("notifications_status", true);
-            Notification.requestPermission();
-            getSelectedCompanies().then((companies) => {
-                console.log(companies);
-                if(companies.length == 0)
-                    setSelectedCompanies(["0"]);
+            Notification.requestPermission().then((status) => {
+              if(status == "granted") {
+                if ('serviceWorker' in navigator) {
+                    console.log("registering");
+                    navigator.serviceWorker.register('../sw.js').then(function(registration) {
+                        // Registration was successful
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    }).catch(function(err) {
+                        // registration failed :(
+                        console.log('ServiceWorker registration failed: ', err);
+                        reject(err);
+                    });
+                }
+                getSelectedCompanies().then((companies) => {
+                    console.log(companies);
+                    if(companies.length == 0)
+                        setSelectedCompanies(["0"]);
+                });
+                $$('.bell').forEach((obj) => obj.addEventListener('click', bellClicked));
+                $$('.bell').forEach((obj) => updateBell(obj));
+              } else {
+                reject("Unknown Error");
+              }
+            }).catch(() => {
+              localStorage.setItem("notifications_status", false);
+              $('#settingsswitcher').checked = false;
             });
-            $$('.bell').forEach((obj) => obj.addEventListener('click', bellClicked));
-            $$('.bell').forEach((obj) => updateBell(obj));
         } else {
             localStorage.setItem("notifications_status", false);
             $('#settingsswitcher').checked = false;
