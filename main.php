@@ -86,14 +86,7 @@
 		  "theme": "edgeless",
 		  "position": "bottom-right"
 		})});
-		</script>
-		<!--
-		<script type="text/javascript">
-		    window.cookieconsent_options = {"message":"This site uses cookies. By continuing to browse the site, you are agreeing to our use of cookies.","dismiss":"Got it!","learnMore":"More info","link":null,"theme":"dark-floating"};
-		</script>
-		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
-		-->
-		
+		</script>		
 		<title><?= $GLOBALS["site-name"] ?> | <?= _("sitename") ?></title>
 	</head>
 	<body>
@@ -120,22 +113,8 @@
                 <a href="https://github.com/Mattia98/IschStreik/issues"><li><i class="material-icons">bug_report</i>GitHub</li></a>
             </ul>
             <a href="?site=about"><li><i class="material-icons">info</i>About</li></a>
-			<!--<li>
-				<div>
-				<table><tr><td>
-					<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
-						<img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
-					</a>
-					</td><td>
-					This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
-				</td></tr></table>
-				</div>
-			</li>-->
 		</ul>
         <ul class="list-down">
-			<li>
-				<button id="notification-test">Notification Test</button>
-			</li>
             <li>
 				<?=
 					$GLOBALS["views"]." Views"

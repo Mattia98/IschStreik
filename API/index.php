@@ -4,6 +4,9 @@
         case "getCompanies":
             getCompanies();
             break;
+        case "submitPushSubscription":
+            submitPushSubscription();
+            break;
         default:
             echo "Error";
             break;
@@ -20,5 +23,11 @@
             $outputCompanies[$i]["nameCode"] = $companies[$i]->getNameCode();
         }
         echo json_encode($outputCompanies);
+    }
+
+    function submitPushSubscription() {
+        include_once("../model/PushSubscription.class.php");
+        $subscription = new PushSubscription(array("url"=>$_GET["surl"], "date"=>(new DateTime())->format('Y-m-d H:i:s')));
+        $subscription->upsert();
     }
 ?>

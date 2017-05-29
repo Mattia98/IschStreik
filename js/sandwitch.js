@@ -10,20 +10,19 @@
         $('#li-feedback').addEventListener('click', listFeedback);
 		$('#curtain').addEventListener('click', closeAll);
         $('.list-up li').addEventListener('click', triggerSwitch);
-        
-		// Workaround SG width
-		window.addEventListener('resize', (e) => {$('#sciopero-generale p a').style.width = 
-			(Math.floor($('body').clientWidth/($('.box-container a').clientWidth+3))
-			*($('.box-container a').clientWidth+3)
-			-(($('.box-container a').clientWidth-$('.box-container .box').clientWidth)/2+16) + "px")
-		});
 
+		//Replace logo with text in company page
 		$$('.logo-cp').forEach((obj) => obj.addEventListener('error', replaceLogo));
 
+		//Show popup on first visit
 		if(localStorage.getItem("firsttime")==null) {
 			descriptionPopup();
 			localStorage.setItem("firsttime", false);
 		}
+
+		// Workaround SG width
+		window.addEventListener('resize', resize);
+		setTimeout(resize, 200);
 	};
 	
 	const closeAll = () => {
@@ -75,7 +74,14 @@
 			$('#list-feedback').setAttribute('class', 'dropdown-open');
         }
 	};
-    
+
+	const resize = () => 
+		$('#sciopero-generale p a').style.width = 
+		(Math.floor(($('body').clientWidth)/($('.box-container a').clientWidth+(0.0085*$('.box-container a').clientWidth)))
+		*($('.box-container a').clientWidth+3.2)
+		-(($('.box-container a').clientWidth-$('.box-container .box').clientWidth)) + "px")
+	;
+    //-(($('.box-container a').clientWidth-$('.box-container .box').clientWidth)/2+16)
     const triggerSwitch = () => $('.onoffswitch input[type=checkbox]').checked = !$('.onoffswitch input[type=checkbox]').checked;
 	
 	const replaceLogo = (e) => e.target.parentElement.innerHTML = "<span>"+e.target.alt+"</span>";

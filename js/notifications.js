@@ -1,15 +1,99 @@
+/**
+ * ServiceWorkerStorage by RyotaSugawara
+ * Including the code here is required until browsers support importing js classes via "import"
+ */
+
+const IDB_TRANSACTION_MODE = {
+  readonly: 'readonly',
+  readwrite: 'readwrite',
+  versionchange: 'versionchange'
+};
+
+function promisify(idbRequest) {
+  return new Promise(function(resolve, reject) {
+    idbRequest.onsuccess = function() {
+      resolve(idbRequest.result);
+    };
+    idbRequest.onerror = reject;
+  });
+}
+
+class ServiceWorkerStorage {
+  constructor(db_name, version) {
+    if (typeof db_name !== 'string') throw new TypeError('db_name must be string.');
+    if (typeof version !== 'number') throw new TypeError('version must be number.');
+    const VERSION = version;
+    this.DB_NAME = db_name;
+    this.STORE_NAME = 'sw_storage';
+
+    const db = self.indexedDB.open(this.DB_NAME, VERSION);
+    db.onupgradeneeded = event => {
+      const _db = event.target.result;
+      if (_db.objectStoreNames && _db.objectStoreNames.contains(this.STORE_NAME)) return;
+      _db.createObjectStore(this.STORE_NAME);
+    };
+    this.__db = promisify(db);
+  }
+
+  _accessAsyncStore(mode) {
+    return this.__db.then(db => {
+      const transaction = db.transaction(this.STORE_NAME, mode);
+      return transaction.objectStore(this.STORE_NAME);
+    });
+  }
+
+  length() {
+    return this._accessAsyncStore(IDB_TRANSACTION_MODE.readonly)
+      .then(store => promisify(store.getAllKeys()))
+      .then(keys => keys.length);
+  }
+
+  key(idx) {
+    if (!arguments.length) return Promise.reject(new TypeError('Failed to execute "key" on "Storage"'));
+    if (typeof idx !== 'number') idx = 0;
+    return this._accessAsyncStore(IDB_TRANSACTION_MODE.readonly)
+      .then(store => promisify(store.getAllKeys()))
+      .then(keys => keys[idx] || null);
+  }
+
+  getItem(key) {
+    return this._accessAsyncStore(IDB_TRANSACTION_MODE.readonly)
+      .then(store => store.get(key))
+      .then(promisify);
+  }
+  setItem(key, value) {
+    return this._accessAsyncStore(IDB_TRANSACTION_MODE.readwrite)
+      .then(store => store.put(value, key))
+      .then(promisify);
+  }
+  removeItem(key) {
+    return this._accessAsyncStore(IDB_TRANSACTION_MODE.readwrite)
+      .then(store => store['delete'](key))
+      .then(promisify);
+  }
+  clear() {
+    return this.__db
+      .then(db => {
+        const transaction = db.transaction(db.objectStoreNames, IDB_TRANSACTION_MODE.readwrite);
+        const q = [];
+        for (let i = 0, len = db.objectStoreNames.length; i < len; i++) {
+          let store_name = db.objectStoreNames[i];
+          q.push(promisify(transaction.objectStore(store_name).clear()));
+        }
+        return Promise.all(q);
+      });
+  }
+}
+/* END of ServiceWorkerStorage */
+
 (() => {
-  "use strict";
-  
+    "use strict";
+
 	const init = () => {
-        if(localStorage.getItem("notifications_unsupported"))
-            return;
-        
-        console.log(localStorage.getItem("notifications_status"));
         $('#settingsswitcher').checked = localStorage.getItem("notifications_status") === 'true';
         $('#settingsswitcher').addEventListener('change', notificationSwitch);
+        console.log(swStorage.getItem("selected_companies"));
         if(localStorage.getItem("notifications_status") === 'true') {
-        		$('#notification-test').addEventListener('click', testNotification);
             $$('.bell').forEach((obj) => obj.addEventListener('click', bellClicked));
             $$('.bell').forEach((obj) => updateBell(obj));
         }
@@ -17,75 +101,48 @@
 	
     const notificationSwitch = (e) => {
         console.log("change");
-        if (!("Notification" in window)) {
-            alert("This browser does not support desktop notifications! Please use another browser.");
-            localStorage.setItem("notifications_unsupported", true);
+        if($('#settingsswitcher').checked) {
+            localStorage.setItem("notifications_status", true);
+            Notification.requestPermission();
+            getSelectedCompanies().then((companies) => {
+                console.log(companies);
+                if(companies.length == 0)
+                    setSelectedCompanies(["0"]);
+            });
+            $$('.bell').forEach((obj) => obj.addEventListener('click', bellClicked));
+            $$('.bell').forEach((obj) => updateBell(obj));
         } else {
-            if($('#settingsswitcher').checked) {
-                localStorage.setItem("notifications_status", true);
-                Notification.requestPermission();
-                if(getSelectedCompanies() == null)
-            	    setSelectedCompanies(["0"]);
-            	 
-            	 $('#notification-test').addEventListener('click', testNotification);
-            	 $$('.bell').forEach((obj) => obj.addEventListener('click', bellClicked));
-            	 $$('.bell').forEach((obj) => updateBell(obj));
-            } else {
-                localStorage.setItem("notifications_status", false);
-            }
+            localStorage.setItem("notifications_status", false);
+            $('#settingsswitcher').checked = false;
         }
     };
 
     const bellClicked = (e) => {
         let id = e.target.dataset.cid;
-        if(getSelectedCompanies().includes(id))
-        		setSelectedCompanies(getSelectedCompanies().filter((obj) => obj != id));
-        else
-            setSelectedCompanies(getSelectedCompanies().concat([id]));
-        
-        updateBell(e.target);
+        getSelectedCompanies().then((companies) => {
+            if(companies.includes(id))
+                setSelectedCompanies(companies.filter((obj) => obj != id));
+            else
+                setSelectedCompanies(companies.concat([id]));
+            updateBell(e.target);
+        });
     };
 
     const updateBell = (bell) => {
         let id = bell.dataset.cid;
-        if(getSelectedCompanies().includes(id))
-            bell.innerHTML = "notifications_active";
-        else
-            bell.innerHTML = "notifications_off";
+        getSelectedCompanies().then((companies) => {
+            if(companies.includes(id))
+                bell.innerHTML = "notifications_active";
+            else
+                bell.innerHTML = "notifications_off";
+        });
     };
 
-    const testNotification = () => {
-        let companies = JSON.parse(httpGet("../API/?action=getCompanies"));
-        if(companies.length == 0)
-            alert("No strikes for today and tomorrow!");
-                
-        let interestedCompanies = companies.filter((obj) => getSelectedCompanies().includes(obj.cid+""));
-        console.log(interestedCompanies);
-
-        interestedCompanies.forEach(makeNotificationFromCompany);
-    };
-
-    const makeNotificationFromCompany = (company) => {
-        let options = {
-            body: company.name+' is striking!',
-            icon: '../media/logos/companies/'+company.nameCode+'.png',
-            badge: '../media/icons/favicon/favicon transparent.png',
-            "vibrate": [50, 50, 50, 50, 50, 200, 50, 50, 50, 50, 50, 200, 50, 50, 50, 50, 50, 200, 50, 50, 50, 50, 50],
-            data:	company.cid
-        };
-        navigator.serviceWorker.getRegistration().then((r)=>r.showNotification("Strike!", options));
-    };
-
-    const httpGet = (url) => {
-		let xmlHttp = new XMLHttpRequest();
-		xmlHttp.open( "GET", url, false ); // false for synchronous request
-		xmlHttp.send( null );
-		return xmlHttp.responseText;
-	}
+    const swStorage = new ServiceWorkerStorage('settings-storage', 1);
     
-    const getSelectedCompanies = () => JSON.parse(localStorage.getItem("selected_companies"));
+    const getSelectedCompanies = () => swStorage.getItem("selected_companies").then(JSON.parse).then((r) => {return r;}).catch(() => {return [];});
    
-    const setSelectedCompanies = (companies) => localStorage.setItem("selected_companies", JSON.stringify(companies));
+    const setSelectedCompanies = (companies) => swStorage.setItem("selected_companies", JSON.stringify(companies));
 
 	const $ = document.querySelector.bind(document);
 	const $$ = document.querySelectorAll.bind(document);
