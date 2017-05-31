@@ -1,11 +1,13 @@
 <?php
     include_once "../model/Company.class.php";
-    $company = Company::find($_GET["id"]);
+    $companyId = $_GET["id"];
+    $company = Company::find($companyId);
 
     include_once "../model/Strike.class.php";
-    $strikes = Strike::findBySomething($_GET["id"], "companyId");
+    $strikes = Strike::findBySomething($companyId, "companyId");
 ?>
 
+<?php if($companyId != 0): ?>
 <div id="div-bell">
     <i class="material-icons bell" data-cid="<?= $company->getId() ?>">notifications_paused</i>
     <span>Notifications on / off</span>
@@ -18,6 +20,10 @@
 <div id="guaranteed-routes-div">
     <a href="<?= $company->getGuaranteedRoutesUrl() ?>"><?= _("guaranteed_routes") ?></a>
 </div>
+<?php else: ?>
+<h1 class="company-name"><?= _("general-strike") ?></h1>
+<?php endif; ?>
+
 <div class="strike-box-desktop">
     <table>
         <tr>
@@ -31,7 +37,7 @@
         <tr>
             <td><?= $strikes[$i]->getRegion() ?></td>
             <td><?= $strikes[$i]->getProvince() ?></td>
-            <td><?= $strikes[$i]->getPrettyStartDate() ?> <?= $strikes[$i]->getPrettyEndDate() ?></td>
+            <td><?= _("from") ?> <?= $strikes[$i]->getPrettyStartDate() ?><br/><?= _("to") ?> <?= $strikes[$i]->getPrettyEndDate() ?></td>
             <td><?= $strikes[$i]->getTimespan() ?></td>
             <td><?= $strikes[$i]->getDescription() ?></td>
         </tr>
@@ -54,8 +60,8 @@
     <div class="first-separator-div"></div>
     <div id="content-div">
         <p id="when-where-tag"><?= _("date") ?>:</p>
-        <p><?= $strikes[$i]->getStartDate() ?></p>
-        <p><?= $strikes[$i]->getEndDate() ?></p>
+        <p><?= _("from") ?> <?= $strikes[$i]->getStartDate() ?></p>
+        <p><?= _("to") ?> <?= $strikes[$i]->getEndDate() ?></p>
     </div>
     <div class="first-separator-div"></div>
     <div id="content-div">

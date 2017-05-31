@@ -404,6 +404,11 @@ li {
     display: block;
     width: 85%;
 }
+h1.company-name {
+    font-size: 3rem;
+    font-weight: normal;
+    margin: 1rem;
+}
 #content-div {
     max-width: 100%;
     min-height: 3rem;
@@ -535,6 +540,7 @@ li {
 #div-bell {
     position: relative;
     z-index: 2;
+    display: none;
 }
 #div-bell span {
     visibility: hidden;

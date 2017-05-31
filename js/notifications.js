@@ -93,8 +93,9 @@ class ServiceWorkerStorage {
         $('#settingsswitcher').checked = localStorage.getItem("notifications_status") === 'true';
         $('#settingsswitcher').addEventListener('change', notificationSwitch);
         if(localStorage.getItem("notifications_status") === 'true') {
-            $$('.bell').forEach((obj) => obj.addEventListener('click', bellClicked));
-            $$('.bell').forEach((obj) => updateBell(obj));
+            $('.bell').addEventListener('click', bellClicked);
+            updateBell($('.bell'));
+            $('.bell').style.display = true;
         }
 	};
 	
@@ -120,8 +121,9 @@ class ServiceWorkerStorage {
                     if(companies.length == 0)
                         setSelectedCompanies(["0"]);
                 });
-                $$('.bell').forEach((obj) => obj.addEventListener('click', bellClicked));
-                $$('.bell').forEach((obj) => updateBell(obj));
+                $('.bell').addEventListener('click', bellClicked);
+	             updateBell($('.bell'));
+	             $('.bell').style.display = true;
               } else {
                 reject("Unknown Error");
               }

@@ -44,6 +44,9 @@ div.box {
     text-align: left !important;
     width: 100% !important;
 }
+h1.company-name {
+    font-size: 2rem !important;
+}
 #guaranteed-routes-div {
     background-color: #fff !important;
 }
