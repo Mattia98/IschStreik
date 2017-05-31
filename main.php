@@ -55,7 +55,7 @@
 		<script type="text/javascript" src="../js/notifications.js" async defer></script>
 		-->
 
-		<?php if(!isset($_GET["nojs"])): ?>
+		<?php if(!isset($_GET["legacy"])): ?>
 		<script type="text/javascript">
 			function check() {
 				"use strict";
@@ -67,7 +67,7 @@
 				return true;
 			}
 			if (!check()) {
-				window.location = "?nojs=true";
+				window.location = "?legacy=true";
 			}
 		</script>
 		<?php endif; ?>
