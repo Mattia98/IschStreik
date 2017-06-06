@@ -95,7 +95,7 @@ class ServiceWorkerStorage {
         if(localStorage.getItem("notifications_status") === 'true') {
             $('.bell').addEventListener('click', bellClicked);
             updateBell($('.bell'));
-            $('.bell').style.display = true;
+            $('#div-bell').style.display = "block";
         }
 	};
 	
@@ -123,7 +123,7 @@ class ServiceWorkerStorage {
                 });
                 $('.bell').addEventListener('click', bellClicked);
 	             updateBell($('.bell'));
-	             $('.bell').style.display = true;
+	             $('#div-bell').style.display = "block";
               } else {
                 reject("Unknown Error");
               }
