@@ -1,0 +1,17 @@
+# EditorConfig file
+# http://EditorConfig.org
+
+# top-most EditorConfig file
+	root = true
+
+# Every file
+[*]
+	end_of_line = lf
+	insert_final_newline = true
+	charset = utf-8
+	indent_style = tab
+	indent_size = 2
+
+# CSS files
+[*.css]
+	indent_size = 4
