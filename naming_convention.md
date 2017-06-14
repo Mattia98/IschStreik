@@ -6,6 +6,7 @@
   * propertyName
   * function_name (meant for global functions)
   * $variable_name
+  * CONSTANT_NAME
 
 [Source](http://programmers.stackexchange.com/a/149321)
 
@@ -18,3 +19,6 @@
 ## CSS
   * a-class
   * an-id
+
+## gettext
+  No convention. (Needs discussion)
