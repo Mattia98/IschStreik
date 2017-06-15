@@ -151,7 +151,7 @@ self.addEventListener('push', e => {
 const makeNotificationFromCompany = (company) => {
     let options = {
         body: company.name+' is striking!',
-        icon: '../media/logos/companies/'+company.nameCode+'.png',
+        icon: '../media/logos/companies-inv/'+company.nameCode+'.png',
         badge: '../media/icons/favicon/favicon transparent.png',
         "vibrate": [50, 50, 50, 50, 50, 200, 50, 50, 50, 50, 50, 200, 50, 50, 50, 50, 50, 200, 50, 50, 50, 50, 50],
         data:	company.cid
