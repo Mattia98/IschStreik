@@ -7,11 +7,9 @@
 	
 	echo "Getting data from \"$feedURL\"\n";
 	$feed = file_get_contents($feedURL);
-	//echo $feed;
 	
 	if(!$feed) {
-		echo "An error occurred during the getting of the feed!\n";
-		return;
+		die("An error occurred during the getting of the feed!\n");
 	} else {
 		echo "done.\n";
 	}
@@ -19,7 +17,6 @@
 	echo "Parsing feed...\n";
 	$xml = simplexml_load_string($feed, null, LIBXML_NOCDATA);
 	$json = json_encode($xml);
-	//echo $json;
 	$array = json_decode($json,TRUE)["channel"]["item"];
 	
 	for($i=0; $i<count($array); $i++) {
@@ -50,37 +47,21 @@
 			}
 			for($k=0; $k<count($cNames); $k++) {
 				if(strpos(strtolower($array[$i]["description"]["Categoria interessata"]), $cNames[$k]) !== false) {
-					$companyId = $companyObj[$j]->getId();
-					break 2;
+					$companyId = $companyObj[$j]->getId(); //Insert the companyId and then create a strike object and put it in the array
+					$strikes[] = new Strike(array(
+						"workersUnion" => $array[$i]["description"]["Sindacati"],
+						"startDate" => $startDate,
+						"endDate" => $endDate,
+						"timespan" => $array[$i]["description"]["modalità"],
+						"region" => $array[$i]["description"]["Regione"],
+						"province" => $array[$i]["description"]["Provincia"],
+						"description" => $array[$i]["description"]["Categoria interessata"],
+						"companyId" => $companyId
+					));
+					break; //Break only once so it can create muliple strikes in the case that a strike has multiple companies
 				}
 			}
 		}
-		/*
-		echo $array[$i]["description"]["modalità"]."\n";
-		echo (strpos($array[$i]["description"]["modalità"], "VARIE MODALITA'") === false)."\n";
-		if($array[$i]["description"]["modalità"] == "24 ORE") {
-			$endDate .= " 24:00";
-		} else if(strpos($array[$i]["description"]["modalità"], " ORE: ") !== false && strpos($array[$i]["description"]["modalità"], "VARIE MODALITA'") === false && strpos($array[$i]["description"]["modalità"], "DEL") === false) {
-			//$from_to = explode(" ORE: ", $array[$i]["description"]["modalità"], 2)[1]; 
-			$timeData = explode(" ", $array[$i]["description"]["modalità"]);
-			$from = str_replace(".", ":", $timeData[3]);
-			$to = str_replace(".", ":", $timeData[5]);
-			$startDate .= " ".$from;
-			$endDate .= " ".$to;
-		}
-		Code for parsing time. Information not consistent -> parsing not consistent.
-		*/
-		
-		$strikes[] = new Strike(array(
-					"workersUnion" => $array[$i]["description"]["Sindacati"],
-					"startDate" => $startDate,
-					"endDate" => $endDate,
-					"timespan" => $array[$i]["description"]["modalità"],
-					"region" => $array[$i]["description"]["Regione"],
-					"province" => $array[$i]["description"]["Provincia"],
-					"description" => $array[$i]["description"]["Categoria interessata"],
-					"companyId" => $companyId
-				));
 	}
 	echo "done.\n";
 
@@ -91,7 +72,4 @@
 		$strikes[$i]->upsert();
 	}
 	echo "done.\n";
-	
-	//print_r($strikes);
-	
 ?>
