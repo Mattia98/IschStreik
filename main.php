@@ -104,19 +104,19 @@
 		</header>
 		<nav>
 		<ul class="list-up">
-            <li><i class="material-icons">notifications</i>Notifications
+            <li><i class="material-icons">notifications</i><?= _("notifications") ?>
                 <div class="onoffswitch">
                     <input type="checkbox" name="onoffswitch" id="settingsswitcher" checked>
                     <label class="onoffswitch-label" for="settingsswitcher"></label>
                 </div>
             </li>
-			<a href="?site=stats"><li><i class="material-icons">timeline</i>Stats</li></a>
+			<a href="?site=stats"><li><i class="material-icons">timeline</i><?= _("stats") ?></li></a>
 			<li id="li-feedback"><i class="material-icons">feedback</i>Feedback<i class="material-icons arrow">arrow_drop_down</i></li>
             <ul id="list-feedback" class="dropdown-closed">
                 <a href="mailto:sciopero.news@gmail.com"><li><i class="material-icons">email</i>E-Mail</li></a>
                 <a href="https://github.com/Mattia98/IschStreik/issues"><li><i class="material-icons">bug_report</i>GitHub</li></a>
             </ul>
-            <a href="?site=about"><li><i class="material-icons">info</i>About</li></a>
+            <a href="?site=about"><li><i class="material-icons">info</i><?= _("about") ?></li></a>
 		</ul>
         <ul class="list-down">
             <li>
