@@ -2,10 +2,10 @@
 	include_once "../scripts/chartPrinter.php";
 ?>
 <p>Die Website hat bist jetzt <?= Viewer::getAmount(); ?> Besucher gezählt. Benutzer werden dank Cookies wiedererkannt.<p>
-<p>Die Diagramme beziehen sich auf den Besuchen der letzten 14 Tagen. Die Cookies verfallen nach 14 Tagen.</p>
+<p>Die Diagramme beziehen sich auf die Besuche der letzten 14 Tagen. Die Cookies verfallen nach 14 Tagen.</p>
 
 
-<p>Diagramme der letzten 14 Tagen:</p><section>
+<p>Diagramme der letzten 14 Tage:</p><section>
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> <!--Load Library-->
 	<script type="text/javascript">google.charts.load("current", {packages:["corechart"]});</script><!--Initialize Chart API-->
    <?php
@@ -19,7 +19,7 @@
 </section>
 
 
-<p>Liste der Besucher der letzten 30 Tagen:</p>
+<p>Liste der Besucher der letzten 30 Tage:</p>
 <?php
 $viewers = Viewer::findAll();
 foreach($viewers as $viewer): ?>
