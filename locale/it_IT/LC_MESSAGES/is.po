@@ -26,7 +26,7 @@ msgstr "C'è sciopero?"
 
 #: main.php:106
 msgid "notifications"
-msgstr "Notificazioni"
+msgstr "Notifiche"
 
 #: main.php:112
 msgid "stats"
