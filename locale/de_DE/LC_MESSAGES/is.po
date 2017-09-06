@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: IschStreik\n"
-"POT-Creation-Date: 2017-06-12 09:29+0200\n"
-"PO-Revision-Date: 2017-06-12 09:29+0200\n"
-"Last-Translator: Ken Zöggeler\n"
+"POT-Creation-Date: 2017-09-06 17:59+0200\n"
+"PO-Revision-Date: 2017-09-06 18:02+0200\n"
+"Last-Translator: Mattia Dorigatti <io.mattia98@gmail.com>\n"
 "Language-Team: \n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Poedit 2.0.1\n"
 "X-Poedit-Basepath: ../../..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -20,37 +20,45 @@ msgstr ""
 "'Isch-Streik' informiert Sie über die aktuellen Streiks Italiens und bietet "
 "Ihnen evtl. Links zu den garantierte Linien an."
 
-#: main.php:26 main.php:93
+#: main.php:26 main.php:94
 msgid "sitename"
 msgstr "IschStreik?"
 
-#: main.php:106
+#: main.php:107
 msgid "notifications"
 msgstr "Benachrichtigungen"
 
-#: main.php:112
+#: main.php:113
 msgid "stats"
 msgstr "Statistiken"
 
-#: main.php:118
+#: main.php:119
 msgid "about"
 msgstr "Über uns"
 
-#: main.php:136
+#: main.php:139
 msgid "no_strike"
 msgstr "Kein bekannter Streik"
 
-#: main.php:140
+#: main.php:143
 msgid "strike_near_future"
 msgstr "Streik in den nächsten 2-3 Wochen (kann gestrichen werden)"
 
-#: main.php:144
+#: main.php:147
 msgid "strike_2days"
 msgstr "Streik in den nächsten 48 Std."
 
-#: main.php:149
+#: main.php:152
 msgid "beta_alert"
 msgstr "Achtung, diese Seite ist in der Betaphase!"
+
+#: sites/about.php:22 sites/about.php:26 sites/about.php:30
+msgid "programmer"
+msgstr "Programmierer"
+
+#: sites/about.php:34
+msgid "designer"
+msgstr "Designerin"
 
 #: sites/company.php:21
 msgid "guaranteed_routes"
