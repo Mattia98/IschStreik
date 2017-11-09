@@ -60,8 +60,8 @@
     <div class="first-separator-div"></div>
     <div id="content-div">
         <p id="when-where-tag"><?= _("date") ?>:</p>
-        <p><?= _("from") ?> <?= $strikes[$i]->getStartDate() ?></p>
-        <p><?= _("to") ?> <?= $strikes[$i]->getEndDate() ?></p>
+        <p><?= _("from") ?> <?= $strikes[$i]->getPrettyStartDate() ?></p>
+        <p><?= _("to") ?> <?= $strikes[$i]->getPrettyEndDate() ?></p>
     </div>
     <div class="first-separator-div"></div>
     <div id="content-div">
