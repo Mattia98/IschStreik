@@ -67,7 +67,7 @@ class Company extends DBObject {
 	/* Virtual getters */
 	
 	public function getTimeToNextStrike() {
-		$sql = "SELECT age(min(\"startDate\"))*-1 FROM strikes WHERE \"companyId\" = ".$this->getId();
+		$sql = "SELECT extract(epoch from age(min(\"startDate\")))/60/60/-24 FROM strikes WHERE \"companyId\" = ".$this->getId();
 		$query = DB::getDB()->query($sql);
 		$query->setFetchMode(PDO::FETCH_COLUMN, 0);
  		return $query->fetch();
@@ -104,3 +104,4 @@ class Company extends DBObject {
 	}
 }
 ?>
+
