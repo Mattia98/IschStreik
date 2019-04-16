@@ -43,10 +43,6 @@
         <!--Fonts-->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet" type='text/css' />
-
-		<!--GPlus-->
-		<link rel="canonical" href="https://sciopero.news/" />
-		<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 		
 		<!--JScripts-->
 		<!--
@@ -123,7 +119,6 @@
 				<?=
 					$GLOBALS["views"]." Views"
 				?>
-				<g:plusone></g:plusone>
 			</li>
 			<li><?php echo date('Y'); ?> IschStreik-Team</li>    
         </ul>    
