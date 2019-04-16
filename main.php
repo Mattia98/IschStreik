@@ -51,7 +51,7 @@
 		<script type="text/javascript" src="../js/notifications.js" async defer></script>
 		-->
 
-		<?php if(!isset($_GET["legacy"])): ?>
+		<?php if(!$GLOBALS["is-bot"]): ?>
 		<script type="text/javascript">
 			function check() {
 				"use strict";
@@ -63,7 +63,8 @@
 				return true;
 			}
 			if (!check()) {
-				window.location = "?legacy=true";
+				alert("You are using an outdated browser. This site will not work.");
+				window.location = "/legacy.html";
 			}
 		</script>
 		<?php endif; ?>
@@ -170,45 +171,7 @@
                     </figure>
                 </a>
         </div>
-
-		<?php if(isset($_GET["legacy"])): ?>
-			<div id="legacy-popup" class="popup-closed">
-				<i id="legacy-popup-close" class="material-icons">&#xE888;</i>
-				<div>
-					<a href="../de/"><h2>Deutsch:</h2></a>
-					<p>Dieser Browser wird nicht vollständig unterstützt! Einige Funktionen könnten nicht oder nur teilweise verfügbar sein.</p>
-					<a href="../it/"><h2>Italiano:</h2></a>
-					<p>Questo browser non viene supportato! Certe funzioni poterebbero non essere disponibili o solo funzionare parzialmente.</p>
-					<a href="../en/"><h2>English:</h2></a>
-					<p>This browser is not supported! Some features may not work properly or at all.</p>
-				</div>
-			</div>
-			<style>
-				#legacy-popup {
-					background-color: #ececec;
-					position: fixed;
-					top: 5rem;
-					bottom: 5rem;
-					right: 5rem;
-					left: 5rem;
-					z-index: 3;
-				}
-				#legacy-popup-close {
-					background-color: #ececec;
-					position: relative;
-					font-size: 40px;
-					border-radius: 25px;
-					color: #333;
-					left: calc(100% - 0.25ex);
-					top: -1.5ex;
-				}
-				#legacy-popup div {
-					margin: 1rem;
-				}
-			</style>
-			<script type="text/javascript" src="../js/legacy.js"></script>
-		<?php endif; ?>
-
+		
         <a href="#">
             <div class="back-to-the-top" ></div>
         </a>

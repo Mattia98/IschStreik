@@ -30,10 +30,13 @@
 		$_SESSION["ViewerID"] = $_COOKIE[$vIDname];
 	}
 	
+	//Check if useragent is a bot
+	$GLOBALS["is-bot"] = preg_match('/bot|crawl|slurp|spider|mediapartners/i', $_SERVER['HTTP_USER_AGENT']);
+	
 	//Temporarily disable stat counter
 	//$firsttime = false;
 	
-	if($firsttime) {
+	if($firsttime && !$GLOBALS["is-bot"]) {
 		//Whatismybrowser.com Parser
 		$data = array('user_key' => '8b9d51e6661f8e8016f04db794c995f3', 'user_agent' => $_SERVER['HTTP_USER_AGENT']);
 		$options = array(
